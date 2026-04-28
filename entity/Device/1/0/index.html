@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Device — AAS ConceptDescription</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+           max-width: 980px; margin: 2rem auto; padding: 0 1rem; color: #1f2328; line-height: 1.55; }
+    h1 { color: #0969da; margin: 0 0 4px 0; font-size: 1.7rem; }
+    h2 { color: #1f2328; font-size: 1.15rem; margin-top: 2rem; border-bottom: 1px solid #d0d7de; padding-bottom: 4px; }
+    .subtitle { color: #656d76; font-size: 0.95rem; margin-bottom: 1.5rem; }
+    .card { background: #f6f8fa; border: 1px solid #d0d7de; border-radius: 8px; padding: 12px 16px; margin: 12px 0; }
+    .iri { font-family: ui-monospace, "SF Mono", Consolas, monospace; word-break: break-all;
+           background: #fff; padding: 6px 10px; border-radius: 4px; border: 1px solid #d0d7de;
+           font-size: 0.85rem; display: inline-block; margin-top: 4px; }
+    .lang-block { margin: 8px 0; padding: 8px 12px; border-left: 3px solid #0969da; background: #fff; }
+    .lang-block .label { font-weight: 600; color: #0969da; font-size: 0.78rem; margin-bottom: 4px; letter-spacing: 0.5px; }
+    .diagram { background: #fff; border: 1px solid #d0d7de; border-radius: 8px; padding: 1rem; text-align: center; margin: 1rem 0; }
+    .diagram svg { max-width: 100%; height: auto; }
+    .links a { color: #0969da; text-decoration: none; margin-right: 1rem; font-size: 0.9rem; }
+    .links a:hover { text-decoration: underline; }
+    .footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #d0d7de; color: #656d76; font-size: 0.85rem; }
+    code { background: #eef1f4; padding: 2px 6px; border-radius: 3px; font-size: 0.88em; }
+  </style>
+</head>
+<body>
+  <div class="links" style="margin-bottom: 1rem;">
+    <a href="../../../../">← Catalog</a>
+  </div>
+
+  <h1>Device — Device</h1>
+  <div class="subtitle">디바이스 · Gerät</div>
+
+  <div class="card">
+    <div><strong>IRI (semanticId)</strong></div>
+    <div class="iri">https://dualsoftdev.github.io/aas-semantics/entity/Device/1/0</div>
+    <div class="links" style="margin-top: 10px;">
+      <a href="cd.json">📄 cd.json (raw)</a>
+      <a href="https://github.com/DualsoftDev/aas-semantics/tree/main/entity/Device/1/0" target="_blank">📂 GitHub source</a>
+    </div>
+  </div>
+
+  <h2>설명 / Description / Beschreibung</h2>
+  <div class="card">
+    <div class="lang-block">
+      <div class="label">한국어</div>
+      <div>능동 시스템에서 호출되는 패시브 디바이스 / 액추에이터 / 센서.</div>
+    </div>
+    <div class="lang-block">
+      <div class="label">English</div>
+      <div>Passive device / actuator / sensor invoked by an active system.</div>
+    </div>
+    <div class="lang-block">
+      <div class="label">Deutsch</div>
+      <div>Passives Gerät / Aktor / Sensor, das von einem aktiven System aufgerufen wird.</div>
+    </div>
+  </div>
+
+  <h2>다이어그램 / Diagram</h2>
+  <div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L10,5 L0,10 Z" fill="#0969da"/>
+  </marker>
+  <marker id="arrow-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L10,5 L0,10 Z" fill="#bc4c00"/>
+  </marker>
+  <style>
+    .box      { fill:#fff; stroke:#0969da; stroke-width:2; }
+    .box-act  { fill:#dafbe1; stroke:#1a7f37; stroke-width:2; }
+    .box-dev  { fill:#fff8c5; stroke:#9a6700; stroke-width:2; }
+    .box-call { fill:#ddf4ff; stroke:#0969da; stroke-width:2; }
+    .box-tok  { fill:#fdd; stroke:#cf222e; stroke-width:2; }
+    .lbl      { font:13px ui-sans-serif,system-ui,sans-serif; fill:#1f2328; }
+    .lbl-bold { font:bold 14px ui-sans-serif,system-ui,sans-serif; fill:#1f2328; }
+    .meta     { font:11px ui-sans-serif,system-ui,sans-serif; fill:#656d76; }
+    .state    { fill:#0969da; }
+    .state-r  { fill:#1a7f37; }
+    .state-g  { fill:#bc4c00; }
+    .state-f  { fill:#0969da; }
+    .state-h  { fill:#656d76; }
+    .arrow    { stroke:#0969da; stroke-width:2; fill:none; marker-end:url(#arrow); }
+    .arrow-o  { stroke:#bc4c00; stroke-width:2; fill:none; marker-end:url(#arrow-orange); }
+  </style>
+</defs>
+
+      <rect class="box-dev" x="40" y="20" width="400" height="240" rx="8"/>
+      <text class="lbl-bold" x="60" y="50">Device "Cylinder1" (passive)</text>
+      <text class="meta" x="60" y="70">SystemType: Cylinder_2</text>
+
+      <text class="meta" x="60" y="100">Exposed APIs (ApiDef)</text>
+      <rect class="box" x="60"  y="115" width="110" height="40" rx="6"/><text class="lbl" x="92"  y="140">ADV</text>
+      <rect class="box" x="190" y="115" width="110" height="40" rx="6"/><text class="lbl" x="222" y="140">RET</text>
+      <rect class="box" x="320" y="115" width="110" height="40" rx="6"/><text class="lbl" x="343" y="140">DETECT</text>
+
+      <text class="meta" x="60" y="190">Tags</text>
+      <text class="lbl"  x="60" y="215">LS_Adv1, LS_Ret1, SOL_Adv, SOL_Ret …</text>
+    </svg></div>
+
+  <h2>메타 정보</h2>
+  <div class="card">
+    <div>idShort: <code>Device</code></div>
+    <div>dataType: <code>STRING</code></div>
+    
+    
+  </div>
+
+  <div class="footer">
+    Part of <a href="../../../../">DualSoft AAS Semantics catalog</a> ·
+    <a href="https://github.com/DualsoftDev/aas-semantics" target="_blank">GitHub repo</a>
+  </div>
+</body>
+</html>

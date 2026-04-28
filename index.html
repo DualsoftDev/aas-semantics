@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>DualSoft AAS Semantics Catalog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+           max-width: 1100px; margin: 2rem auto; padding: 0 1rem; color: #1f2328; line-height: 1.55; }
+    h1 { color: #0969da; margin: 0; }
+    .subtitle { color: #656d76; margin-bottom: 2rem; }
+    h2 { border-bottom: 1px solid #d0d7de; padding-bottom: 4px; margin-top: 2.5rem; color: #1f2328; font-size: 1.2rem; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+    th, td { text-align: left; padding: 8px 12px; border-bottom: 1px solid #d0d7de; vertical-align: top; }
+    th { background: #f6f8fa; color: #656d76; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    tr:hover { background: #f6f8fa; }
+    a { color: #0969da; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    code { background: #eef1f4; padding: 1px 6px; border-radius: 3px; font-size: 0.85em; }
+    .pill { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; }
+    .pill-entity { background: #dafbe1; color: #1a7f37; }
+    .pill-sm { background: #ddf4ff; color: #0969da; }
+    .pill-sim { background: #fff8c5; color: #9a6700; }
+    .footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #d0d7de; color: #656d76; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <h1>DualSoft AAS Semantics</h1>
+  <div class="subtitle">
+    AAS V3 ConceptDescription catalog — DualSoft ds2 / Sequence Model 도메인.
+    <a href="https://github.com/DualsoftDev/aas-semantics" target="_blank">GitHub repo</a> ·
+    <a href="index.json">index.json</a>
+  </div>
+
+  <h2><span class="pill pill-entity">Entities</span> ds2 핵심 엔티티 (11)</h2>
+  <table>
+    <thead><tr><th>idShort</th><th>한국어</th><th>English</th><th>Viewer</th><th>JSON</th></tr></thead>
+    <tbody>
+      <tr><td>Project</td><td>프로젝트</td><td>Project</td><td><a href="entity/Project/1/0/">📊 view</a></td><td><a href="entity/Project/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>System</td><td>활성 시스템</td><td>Active system</td><td><a href="entity/System/1/0/">📊 view</a></td><td><a href="entity/System/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>Device</td><td>디바이스</td><td>Device</td><td><a href="entity/Device/1/0/">📊 view</a></td><td><a href="entity/Device/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>Flow</td><td>플로우</td><td>Flow</td><td><a href="entity/Flow/1/0/">📊 view</a></td><td><a href="entity/Flow/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>Work</td><td>작업 단계</td><td>Work step</td><td><a href="entity/Work/1/0/">📊 view</a></td><td><a href="entity/Work/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>Call</td><td>콜</td><td>Call</td><td><a href="entity/Call/1/0/">📊 view</a></td><td><a href="entity/Call/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>ApiDef</td><td>API 정의</td><td>API definition</td><td><a href="entity/ApiDef/1/0/">📊 view</a></td><td><a href="entity/ApiDef/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>ApiCall</td><td>API 호출</td><td>API call</td><td><a href="entity/ApiCall/1/0/">📊 view</a></td><td><a href="entity/ApiCall/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>TokenSpec</td><td>토큰 사양</td><td>Token specification</td><td><a href="entity/TokenSpec/1/0/">📊 view</a></td><td><a href="entity/TokenSpec/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>ArrowWork</td><td>Work 전이</td><td>Work transition</td><td><a href="entity/ArrowWork/1/0/">📊 view</a></td><td><a href="entity/ArrowWork/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>ArrowCall</td><td>Call 전이</td><td>Call transition</td><td><a href="entity/ArrowCall/1/0/">📊 view</a></td><td><a href="entity/ArrowCall/1/0/cd.json">cd.json</a></td></tr>
+    </tbody>
+  </table>
+
+  <h2><span class="pill pill-sm">Submodels</span> 서브모델 자체 (9)</h2>
+  <table>
+    <thead><tr><th>idShort</th><th>한국어</th><th>JSON</th></tr></thead>
+    <tbody>
+      <tr><td>SeqModelSm</td><td>시퀀스 모델 서브모델</td><td><a href="sm/SequenceModel/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>SeqSimSm</td><td>시뮬레이션 서브모델</td><td><a href="sm/SequenceSimulation/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>SeqCtrlSm</td><td>제어 서브모델</td><td><a href="sm/SequenceControl/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>SeqMonSm</td><td>모니터링 서브모델</td><td><a href="sm/SequenceMonitoring/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>SeqLogSm</td><td>로깅 서브모델</td><td><a href="sm/SequenceLogging/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>SeqMaintSm</td><td>유지보수 서브모델</td><td><a href="sm/SequenceMaintenance/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>SeqHmiSm</td><td>HMI 서브모델</td><td><a href="sm/SequenceHmi/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>SeqQualSm</td><td>품질 서브모델</td><td><a href="sm/SequenceQuality/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>SeqCostSm</td><td>비용 분석 서브모델</td><td><a href="sm/SequenceCostAnalysis/1/0/cd.json">cd.json</a></td></tr>
+    </tbody>
+  </table>
+
+  <h2><span class="pill pill-sim">Simulation</span> 시뮬레이션 결과 (9)</h2>
+  <table>
+    <thead><tr><th>idShort</th><th>한국어</th><th>Unit</th><th>JSON</th></tr></thead>
+    <tbody>
+      <tr><td>SimResult</td><td>시뮬레이션 결과</td><td>—</td><td><a href="sim/Result/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>SimMeta</td><td>시뮬레이션 메타데이터</td><td>—</td><td><a href="sim/Meta/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>CTkpi</td><td>사이클 타임 KPI</td><td><code>s</code></td><td><a href="sim/Kpi/CycleTime/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>TPkpi</td><td>처리량 KPI</td><td><code>units/h</code></td><td><a href="sim/Kpi/Throughput/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>CAPkpi</td><td>능력 KPI</td><td><code>units/h</code></td><td><a href="sim/Kpi/Capacity/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>TOCkpi</td><td>제약 KPI</td><td>—</td><td><a href="sim/Kpi/Constraints/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>RUkpi</td><td>리소스 활용 KPI</td><td><code>%</code></td><td><a href="sim/Kpi/ResourceUtilization/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>OEEkpi</td><td>OEE 지표</td><td><code>ratio (0..1)</code></td><td><a href="sim/Kpi/OEE/1/0/cd.json">cd.json</a></td></tr>
+      <tr><td>PTkpi</td><td>토큰별 KPI</td><td>—</td><td><a href="sim/Kpi/PerToken/1/0/cd.json">cd.json</a></td></tr>
+    </tbody>
+  </table>
+
+  <div class="footer">
+    Each CD folder contains <code>cd.json</code> (AAS) + <code>index.html</code> (viewer) where applicable.<br>
+    IRI = <code>{baseUrl}/{path}</code> · Fetch URL = <code>{IRI}/cd.json</code> · Viewer = <code>{IRI}/</code>
+  </div>
+</body>
+</html>

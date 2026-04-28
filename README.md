@@ -4,11 +4,16 @@ DualSoft ds2 / Sequence Model 가 발급하는 AAS (Asset Administration Shell) 
 
 ## URL 규칙
 
-각 CD 의 IRI 는 파일 경로와 일치합니다. 예를 들어 `https://dualsoftdev.github.io/aas-semantics/sim/Result/1/0` 의 정의는 [`sim/Result/1/0.json`](sim/Result/1/0.json) 에 있습니다.
+각 CD 는 **자기 폴더 안 `cd.json`** 으로 호스팅됩니다 — 향후 examples / viewer 등 같은 폴더에 확장 가능.
 
-```
-https://dualsoftdev.github.io/aas-semantics/sim/Result/1/0   ← .json 자동
-```
+| 용도 | URL |
+|---|---|
+| **IRI / semanticId** (식별자) | `https://github.com/DualsoftDev/aas-semantics/blob/main/entity/ApiCall/1/0` |
+| **GitHub UI 폴더 보기** | https://github.com/DualsoftDev/aas-semantics/tree/main/entity/ApiCall/1/0 |
+| **Fetch URL** (도구가 JSON 가져올 때) | `https://dualsoftdev.github.io/aas-semantics/entity/ApiCall/1/0/cd.json` |
+| **Raw fetch** | `https://raw.githubusercontent.com/DualsoftDev/aas-semantics/main/entity/ApiCall/1/0/cd.json` |
+
+전체 카탈로그는 [`index.json`](index.json) 의 `items[].id` (IRI) + `path` (`<base>/cd.json`) 참조.
 
 ## 카탈로그 구조
 
@@ -27,7 +32,7 @@ https://dualsoftdev.github.io/aas-semantics/sim/Result/1/0   ← .json 자동
 ```json
 {
   "modelType": "ConceptDescription",
-  "id": "https://dualsoftdev.github.io/aas-semantics/sim/Kpi/OEE/1/0",
+  "id": "https://github.com/DualsoftDev/aas-semantics/blob/main/sim/Kpi/OEE/1/0",
   "idShort": "OEEkpi",
   "displayName": [
     { "language": "en", "text": "OEE KPI" },
