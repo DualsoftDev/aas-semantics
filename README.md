@@ -4,7 +4,7 @@ DualSoft ds2 / Sequence Model 가 발급하는 AAS (Asset Administration Shell) 
 
 ## URL 규칙
 
-각 CD 의 IRI 는 파일 경로와 일치합니다. 예를 들어 `https://github.com/DualsoftDev/aas-semantics/sim/Result/1/0` 의 정의는 [`sim/Result/1/0.json`](sim/Result/1/0.json) 에 있습니다.
+각 CD 의 IRI 는 파일 경로와 일치합니다. 예를 들어 `https://dualsoftdev.github.io/aas-semantics/sim/Result/1/0` 의 정의는 [`sim/Result/1/0.json`](sim/Result/1/0.json) 에 있습니다.
 
 ```
 https://dualsoftdev.github.io/aas-semantics/sim/Result/1/0   ← .json 자동
@@ -27,7 +27,7 @@ https://dualsoftdev.github.io/aas-semantics/sim/Result/1/0   ← .json 자동
 ```json
 {
   "modelType": "ConceptDescription",
-  "id": "https://github.com/DualsoftDev/aas-semantics/sim/Kpi/OEE/1/0",
+  "id": "https://dualsoftdev.github.io/aas-semantics/sim/Kpi/OEE/1/0",
   "idShort": "OEEkpi",
   "displayName": [
     { "language": "en", "text": "OEE KPI" },

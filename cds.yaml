@@ -2,7 +2,7 @@
 # 이 파일이 단일 진실 원천. 모든 JSON 파일은 generate.py 로 재생성 가능.
 # ds2 의 AasxSemantics.fs / Concepts/Catalog.fs 와 동기화되어야 함.
 
-baseUrl: "https://github.com/DualsoftDev/aas-semantics"
+baseUrl: "https://dualsoftdev.github.io/aas-semantics"
 
 # IEC 61360 dataType 약어:
 #   STRING / REAL_MEASURE / INTEGER_COUNT / BOOLEAN / DATE / TIME / TIMESTAMP / ENUM
