@@ -6,8 +6,6 @@ DualSoft ds2 / Sequence Model 가 발급하는 AAS (Asset Administration Shell) 
 
 각 CD 의 IRI 는 파일 경로와 일치합니다. 예를 들어 `https://github.com/DualsoftDev/aas-semantics/sim/Result/1/0` 의 정의는 [`sim/Result/1/0.json`](sim/Result/1/0.json) 에 있습니다.
 
-GitHub Pages 가 활성화되면 다음 URL 에서 직접 dereferenceable 됩니다:
-
 ```
 https://dualsoftdev.github.io/aas-semantics/sim/Result/1/0   ← .json 자동
 ```
