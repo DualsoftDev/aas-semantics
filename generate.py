@@ -22,6 +22,7 @@ except ImportError:
     sys.exit("PyYAML 필요: pip install pyyaml")
 
 import diagrams as _diagrams
+import entity_details as _details
 
 
 IEC61360_DATA_SPEC_REF = "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
@@ -35,9 +36,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {{ font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-           max-width: 980px; margin: 2rem auto; padding: 0 1rem; color: #1f2328; line-height: 1.55; }}
+           max-width: 1080px; margin: 2rem auto; padding: 0 1rem; color: #1f2328; line-height: 1.55; }}
     h1 {{ color: #0969da; margin: 0 0 4px 0; font-size: 1.7rem; }}
-    h2 {{ color: #1f2328; font-size: 1.15rem; margin-top: 2rem; border-bottom: 1px solid #d0d7de; padding-bottom: 4px; }}
+    h2 {{ color: #1f2328; font-size: 1.15rem; margin-top: 2.2rem; border-bottom: 1px solid #d0d7de; padding-bottom: 4px; }}
     .subtitle {{ color: #656d76; font-size: 0.95rem; margin-bottom: 1.5rem; }}
     .card {{ background: #f6f8fa; border: 1px solid #d0d7de; border-radius: 8px; padding: 12px 16px; margin: 12px 0; }}
     .iri {{ font-family: ui-monospace, "SF Mono", Consolas, monospace; word-break: break-all;
@@ -50,7 +51,21 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     .links a {{ color: #0969da; text-decoration: none; margin-right: 1rem; font-size: 0.9rem; }}
     .links a:hover {{ text-decoration: underline; }}
     .footer {{ margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #d0d7de; color: #656d76; font-size: 0.85rem; }}
-    code {{ background: #eef1f4; padding: 2px 6px; border-radius: 3px; font-size: 0.88em; }}
+    code {{ background: #eef1f4; padding: 2px 6px; border-radius: 3px; font-size: 0.88em; font-family: ui-monospace, "SF Mono", Consolas, monospace; }}
+    pre {{ background: #0d1117; color: #e6edf3; padding: 14px 16px; border-radius: 8px; overflow-x: auto;
+          font-family: ui-monospace, "SF Mono", Consolas, monospace; font-size: 0.85rem; line-height: 1.5;
+          border: 1px solid #30363d; }}
+    pre code {{ background: transparent; color: inherit; padding: 0; }}
+    table.fields {{ width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 0.88rem; }}
+    table.fields th, table.fields td {{ text-align: left; padding: 6px 10px; border-bottom: 1px solid #d0d7de; vertical-align: top; }}
+    table.fields th {{ background: #f6f8fa; color: #656d76; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }}
+    table.fields td.fname {{ font-family: ui-monospace, "SF Mono", Consolas, monospace; font-weight: 600; color: #0550ae; white-space: nowrap; }}
+    table.fields td.ftype {{ font-family: ui-monospace, "SF Mono", Consolas, monospace; color: #0a3069; font-size: 0.82rem; }}
+    table.fields td.fdef {{ font-family: ui-monospace, "SF Mono", Consolas, monospace; color: #6f42c1; font-size: 0.82rem; }}
+    .relations li {{ margin: 6px 0; }}
+    .pill {{ display: inline-block; padding: 1px 8px; border-radius: 12px; font-size: 0.72rem; font-weight: 600;
+            background: #ddf4ff; color: #0969da; margin-left: 6px; vertical-align: middle; }}
+    .pill-state {{ background: #fff8c5; color: #9a6700; }}
   </style>
 </head>
 <body>
@@ -58,8 +73,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
     <a href="{root_rel}">← Catalog</a>
   </div>
 
-  <h1>{idShort} — {nameEn}</h1>
-  <div class="subtitle">{nameKo} · {nameDe}</div>
+  <h1>{idShort} <span class="pill">{group}</span></h1>
+  <div class="subtitle"><strong>{nameEn}</strong> · {nameKo} · {nameDe}</div>
 
   <div class="card">
     <div><strong>IRI (semanticId)</strong></div>
@@ -88,7 +103,9 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
   {diagram_section}
 
-  <h2>메타 정보</h2>
+  {detail_sections}
+
+  <h2>AAS ConceptDescription 메타</h2>
   <div class="card">
     <div>idShort: <code>{idShort}</code></div>
     {dataType_line}
@@ -98,7 +115,8 @@ HTML_TEMPLATE = """<!DOCTYPE html>
 
   <div class="footer">
     Part of <a href="{root_rel}">DualSoft AAS Semantics catalog</a> ·
-    <a href="https://github.com/DualsoftDev/aas-semantics" target="_blank">GitHub repo</a>
+    <a href="https://github.com/DualsoftDev/aas-semantics" target="_blank">aas-semantics repo</a> ·
+    <a href="https://github.com/DualsoftDev/ds2" target="_blank">ds2 repo</a>
   </div>
 </body>
 </html>
@@ -147,25 +165,128 @@ def build_cd(cd: dict, base_url: str) -> dict:
     }
 
 
+def _group_for(path: str) -> str:
+    if path.startswith("entity/"): return "Entity"
+    if path.startswith("sm/"):     return "Submodel"
+    if path.startswith("sim/"):    return "Simulation"
+    return ""
+
+
+def _render_inheritance(inherits) -> str:
+    if not inherits: return ""
+    chain = " ← ".join(f'<a href="{href}" target="_blank">{name}</a>' for name, href in inherits)
+    return f'<div class="card"><strong>상속 체인 / Inheritance:</strong> {chain}</div>'
+
+
+def _render_fields_table(fields) -> str:
+    if not fields: return ""
+    rows = []
+    for name, ftype, fdef, aas, desc in fields:
+        rows.append(
+            f'<tr><td class="fname">{_esc(name)}</td>'
+            f'<td class="ftype">{_esc(ftype)}</td>'
+            f'<td class="fdef">{_esc(fdef)}</td>'
+            f'<td><code>{_esc(aas)}</code></td>'
+            f'<td>{_esc(desc)}</td></tr>'
+        )
+    return (
+        '<table class="fields">'
+        '<thead><tr><th>Field</th><th>Type</th><th>Default</th><th>AAS field</th><th>Description</th></tr></thead>'
+        f'<tbody>{"".join(rows)}</tbody></table>'
+    )
+
+
+def _render_relationships(rels) -> str:
+    if not rels: return ""
+    items = "".join(
+        f'<li><code>{_esc(label)}</code> {_esc(arrow)} <a href="../../../../{target}/">{_esc(target)}</a></li>'
+        for label, arrow, target in rels
+    )
+    return f'<ul class="relations">{items}</ul>'
+
+
+def _render_state_table(rows) -> str:
+    if not rows: return ""
+    body = "".join(
+        f'<tr><td class="fname"><span class="pill pill-state">{_esc(name)}</span></td><td>{_esc(desc)}</td></tr>'
+        for name, desc in rows
+    )
+    return (
+        '<table class="fields">'
+        '<thead><tr><th>State / Type</th><th>Meaning</th></tr></thead>'
+        f'<tbody>{body}</tbody></table>'
+    )
+
+
+def _render_source_files(srcs) -> str:
+    if not srcs: return ""
+    items = "".join(
+        f'<li><a href="{href}" target="_blank">{_esc(label)}</a></li>'
+        for href, label in srcs
+    )
+    return f'<ul>{items}</ul>'
+
+
+def _render_detail_sections(detail) -> str:
+    if not detail: return ""
+    parts = []
+
+    if detail.get("inherits"):
+        parts.append(_render_inheritance(detail["inherits"]))
+
+    if detail.get("fsharpType"):
+        parts.append('<h2>F# 타입 정의 / Type Definition</h2>')
+        parts.append(f'<pre><code>{_esc(detail["fsharpType"])}</code></pre>')
+
+    if detail.get("fields"):
+        parts.append('<h2>필드 / Fields</h2>')
+        parts.append(_render_fields_table(detail["fields"]))
+
+    if detail.get("stateMachine"):
+        parts.append('<h2>상태 / 의미 / States &amp; Semantics</h2>')
+        parts.append(_render_state_table(detail["stateMachine"]))
+
+    if detail.get("relationships"):
+        parts.append('<h2>관계 / Relationships</h2>')
+        parts.append('<div class="card">' + _render_relationships(detail["relationships"]) + '</div>')
+
+    if detail.get("exampleFsharp"):
+        parts.append('<h2>예제 (F#) / Example</h2>')
+        parts.append(f'<pre><code>{_esc(detail["exampleFsharp"])}</code></pre>')
+
+    if detail.get("aasMapping"):
+        parts.append('<h2>AAS 매핑 / AAS Mapping</h2>')
+        parts.append(f'<div class="card">{_esc(detail["aasMapping"])}</div>')
+
+    if detail.get("sourceFiles"):
+        parts.append('<h2>원본 코드 / Source files</h2>')
+        parts.append('<div class="card">' + _render_source_files(detail["sourceFiles"]) + '</div>')
+
+    return "\n".join(parts)
+
+
 def build_html(cd: dict, full_id: str) -> str:
     """index.html (사람용 viewer) 생성."""
     svg = _diagrams.get(cd["path"])
-    if svg:
-        diagram_section = f'<h2>다이어그램 / Diagram</h2>\n  <div class="diagram">{svg}</div>'
-    else:
-        diagram_section = ""
+    diagram_section = (
+        f'<h2>다이어그램 / Diagram</h2>\n  <div class="diagram">{svg}</div>'
+        if svg else ""
+    )
 
-    # 카탈로그 루트로 돌아가는 상대 경로 (path depth 만큼 ../)
+    detail = _details.get(cd["path"])
+    detail_sections = _render_detail_sections(detail)
+
     depth = len(cd["path"].split("/"))
     root_rel = "../" * depth
 
     dataType_line = f'<div>dataType: <code>{_esc(cd.get("dataType",""))}</code></div>' if cd.get("dataType") else ""
-    unit_line = f'<div>unit: <code>{_esc(cd.get("unit",""))}</code></div>' if cd.get("unit") else ""
-    source_line = f'<div>source: <code>{_esc(cd.get("sourceOfDefinition",""))}</code></div>' if cd.get("sourceOfDefinition") else ""
+    unit_line     = f'<div>unit: <code>{_esc(cd.get("unit",""))}</code></div>' if cd.get("unit") else ""
+    source_line   = f'<div>source: <code>{_esc(cd.get("sourceOfDefinition",""))}</code></div>' if cd.get("sourceOfDefinition") else ""
 
     return HTML_TEMPLATE.format(
         title=_esc(cd["idShort"]),
         idShort=_esc(cd["idShort"]),
+        group=_group_for(cd["path"]),
         nameEn=_esc(cd.get("en", "")),
         nameDe=_esc(cd.get("de", "")),
         nameKo=_esc(cd.get("ko", "")),
@@ -176,6 +297,7 @@ def build_html(cd: dict, full_id: str) -> str:
         path=cd["path"],
         root_rel=root_rel,
         diagram_section=diagram_section,
+        detail_sections=detail_sections,
         dataType_line=dataType_line,
         unit_line=unit_line,
         source_line=source_line,

@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
-           max-width: 980px; margin: 2rem auto; padding: 0 1rem; color: #1f2328; line-height: 1.55; }
+           max-width: 1080px; margin: 2rem auto; padding: 0 1rem; color: #1f2328; line-height: 1.55; }
     h1 { color: #0969da; margin: 0 0 4px 0; font-size: 1.7rem; }
-    h2 { color: #1f2328; font-size: 1.15rem; margin-top: 2rem; border-bottom: 1px solid #d0d7de; padding-bottom: 4px; }
+    h2 { color: #1f2328; font-size: 1.15rem; margin-top: 2.2rem; border-bottom: 1px solid #d0d7de; padding-bottom: 4px; }
     .subtitle { color: #656d76; font-size: 0.95rem; margin-bottom: 1.5rem; }
     .card { background: #f6f8fa; border: 1px solid #d0d7de; border-radius: 8px; padding: 12px 16px; margin: 12px 0; }
     .iri { font-family: ui-monospace, "SF Mono", Consolas, monospace; word-break: break-all;
@@ -21,7 +21,21 @@
     .links a { color: #0969da; text-decoration: none; margin-right: 1rem; font-size: 0.9rem; }
     .links a:hover { text-decoration: underline; }
     .footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid #d0d7de; color: #656d76; font-size: 0.85rem; }
-    code { background: #eef1f4; padding: 2px 6px; border-radius: 3px; font-size: 0.88em; }
+    code { background: #eef1f4; padding: 2px 6px; border-radius: 3px; font-size: 0.88em; font-family: ui-monospace, "SF Mono", Consolas, monospace; }
+    pre { background: #0d1117; color: #e6edf3; padding: 14px 16px; border-radius: 8px; overflow-x: auto;
+          font-family: ui-monospace, "SF Mono", Consolas, monospace; font-size: 0.85rem; line-height: 1.5;
+          border: 1px solid #30363d; }
+    pre code { background: transparent; color: inherit; padding: 0; }
+    table.fields { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 0.88rem; }
+    table.fields th, table.fields td { text-align: left; padding: 6px 10px; border-bottom: 1px solid #d0d7de; vertical-align: top; }
+    table.fields th { background: #f6f8fa; color: #656d76; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+    table.fields td.fname { font-family: ui-monospace, "SF Mono", Consolas, monospace; font-weight: 600; color: #0550ae; white-space: nowrap; }
+    table.fields td.ftype { font-family: ui-monospace, "SF Mono", Consolas, monospace; color: #0a3069; font-size: 0.82rem; }
+    table.fields td.fdef { font-family: ui-monospace, "SF Mono", Consolas, monospace; color: #6f42c1; font-size: 0.82rem; }
+    .relations li { margin: 6px 0; }
+    .pill { display: inline-block; padding: 1px 8px; border-radius: 12px; font-size: 0.72rem; font-weight: 600;
+            background: #ddf4ff; color: #0969da; margin-left: 6px; vertical-align: middle; }
+    .pill-state { background: #fff8c5; color: #9a6700; }
   </style>
 </head>
 <body>
@@ -29,8 +43,8 @@
     <a href="../../../../">← Catalog</a>
   </div>
 
-  <h1>ArrowCall — Call transition</h1>
-  <div class="subtitle">Call 전이 · Aufruf-Übergang</div>
+  <h1>ArrowCall <span class="pill">Entity</span></h1>
+  <div class="subtitle"><strong>Call transition</strong> · Call 전이 · Aufruf-Übergang</div>
 
   <div class="card">
     <div><strong>IRI (semanticId)</strong></div>
@@ -103,7 +117,28 @@
       <text class="meta" x="40" y="195">Work 내부 Call 들의 직렬 실행 순서를 지정.</text>
     </svg></div>
 
-  <h2>메타 정보</h2>
+  <div class="card"><strong>상속 체인 / Inheritance:</strong> <a href="https://github.com/DualsoftDev/ds2/blob/master/Solutions/Core/Ds2.Core/AbstractClass.fs" target="_blank">DsEntity</a> ← <a href="https://github.com/DualsoftDev/ds2/blob/master/Solutions/Core/Ds2.Core/AbstractClass.fs" target="_blank">DsChild</a> ← <a href="https://github.com/DualsoftDev/ds2/blob/master/Solutions/Core/Ds2.Core/AbstractClass.fs" target="_blank">DsArrow</a></div>
+<h2>F# 타입 정의 / Type Definition</h2>
+<pre><code>type ArrowBetweenCalls [&lt;JsonConstructor&gt;] internal (parentId, sourceId, targetId, arrowType) =
+    inherit DsArrow(parentId, sourceId, targetId, arrowType)
+
+// DsArrow 상속 — ArrowBetweenWorks 와 같은 구조, parentId 가 Work Id 인 점만 다름</code></pre>
+<h2>필드 / Fields</h2>
+<table class="fields"><thead><tr><th>Field</th><th>Type</th><th>Default</th><th>AAS field</th><th>Description</th></tr></thead><tbody><tr><td class="fname">Id</td><td class="ftype">Guid</td><td class="fdef">Guid.NewGuid()</td><td><code>Guid</code></td><td>전역 고유 식별자 (자동 생성)</td></tr><tr><td class="fname">Name</td><td class="ftype">string</td><td class="fdef">(생성자 인자)</td><td><code>Name</code></td><td>엔티티 이름</td></tr><tr><td class="fname">ParentId</td><td class="ftype">Guid</td><td class="fdef">(생성자 인자)</td><td><code>ParentId</code></td><td>부모 엔티티 Id 참조</td></tr><tr><td class="fname">SourceId</td><td class="ftype">Guid</td><td class="fdef">(인자)</td><td><code>Source</code></td><td>출발 Call Id</td></tr><tr><td class="fname">TargetId</td><td class="ftype">Guid</td><td class="fdef">(인자)</td><td><code>Target</code></td><td>도착 Call Id</td></tr><tr><td class="fname">ArrowType</td><td class="ftype">ArrowType</td><td class="fdef">(인자)</td><td><code>Type</code></td><td>Call 간 전이 의미 (대부분 Start)</td></tr></tbody></table>
+<h2>관계 / Relationships</h2>
+<div class="card"><ul class="relations"><li><code>ArrowCall.ParentId</code> → Work (Call 들의 부모) <a href="../../../../entity/Work/1/0/">entity/Work/1/0</a></li><li><code>ArrowCall.SourceId / TargetId</code> → Call <a href="../../../../entity/Call/1/0/">entity/Call/1/0</a></li></ul></div>
+<h2>예제 (F#) / Example</h2>
+<pre><code>let callArrow = ArrowBetweenCalls(
+    parentId  = pickup.Id,
+    sourceId  = call1.Id,
+    targetId  = call2.Id,
+    arrowType = ArrowType.Start)</code></pre>
+<h2>AAS 매핑 / AAS Mapping</h2>
+<div class="card">ArrowCall 은 Work SMC 하위 Arrows SML 안 SMC 로 export.</div>
+<h2>원본 코드 / Source files</h2>
+<div class="card"><ul><li><a href="https://github.com/DualsoftDev/ds2/blob/master/Solutions/Core/Ds2.Core/Entities.fs" target="_blank">Entities.fs (ArrowBetweenCalls)</a></li><li><a href="https://github.com/DualsoftDev/ds2/blob/master/Solutions/Core/Ds2.Core/AbstractClass.fs" target="_blank">AbstractClass.fs (DsArrow)</a></li></ul></div>
+
+  <h2>AAS ConceptDescription 메타</h2>
   <div class="card">
     <div>idShort: <code>ArrowCall</code></div>
     <div>dataType: <code>STRING</code></div>
@@ -113,7 +148,8 @@
 
   <div class="footer">
     Part of <a href="../../../../">DualSoft AAS Semantics catalog</a> ·
-    <a href="https://github.com/DualsoftDev/aas-semantics" target="_blank">GitHub repo</a>
+    <a href="https://github.com/DualsoftDev/aas-semantics" target="_blank">aas-semantics repo</a> ·
+    <a href="https://github.com/DualsoftDev/ds2" target="_blank">ds2 repo</a>
   </div>
 </body>
 </html>
