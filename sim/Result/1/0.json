@@ -1,0 +1,84 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/sim/Result/1/0",
+  "idShort": "SimResult",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "Simulation result"
+    },
+    {
+      "language": "de",
+      "text": "Simulationsergebnis"
+    },
+    {
+      "language": "ko",
+      "text": "시뮬레이션 결과"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "Embedded simulation result (meta + KPI groups) for a single run."
+    },
+    {
+      "language": "de",
+      "text": "Eingebettetes Simulationsergebnis (Meta + KPI-Gruppen) für einen einzelnen Lauf."
+    },
+    {
+      "language": "ko",
+      "text": "단일 시뮬레이션 실행 결과 (메타 + KPI 그룹) 의 임베디드 표현."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "Simulation result"
+          },
+          {
+            "language": "de",
+            "text": "Simulationsergebnis"
+          },
+          {
+            "language": "ko",
+            "text": "시뮬레이션 결과"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "SimResult"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "Embedded simulation result (meta + KPI groups) for a single run."
+          },
+          {
+            "language": "de",
+            "text": "Eingebettetes Simulationsergebnis (Meta + KPI-Gruppen) für einen einzelnen Lauf."
+          },
+          {
+            "language": "ko",
+            "text": "단일 시뮬레이션 실행 결과 (메타 + KPI 그룹) 의 임베디드 표현."
+          }
+        ],
+        "dataType": "STRING"
+      }
+    }
+  ]
+}

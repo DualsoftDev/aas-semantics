@@ -1,0 +1,84 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/sm/SequenceControl/1/0",
+  "idShort": "SeqCtrlSm",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "Control submodel"
+    },
+    {
+      "language": "de",
+      "text": "Steuerungs-Submodel"
+    },
+    {
+      "language": "ko",
+      "text": "제어 서브모델"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "Submodel carrying control properties (FBTagMap presets, IO configuration)."
+    },
+    {
+      "language": "de",
+      "text": "Submodel mit Steuerungseigenschaften (FBTagMap-Presets, IO-Konfiguration)."
+    },
+    {
+      "language": "ko",
+      "text": "제어 속성을 담는 서브모델 (FBTagMap 프리셋, IO 설정)."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "Control submodel"
+          },
+          {
+            "language": "de",
+            "text": "Steuerungs-Submodel"
+          },
+          {
+            "language": "ko",
+            "text": "제어 서브모델"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "SeqCtrlSm"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "Submodel carrying control properties (FBTagMap presets, IO configuration)."
+          },
+          {
+            "language": "de",
+            "text": "Submodel mit Steuerungseigenschaften (FBTagMap-Presets, IO-Konfiguration)."
+          },
+          {
+            "language": "ko",
+            "text": "제어 속성을 담는 서브모델 (FBTagMap 프리셋, IO 설정)."
+          }
+        ],
+        "dataType": "STRING"
+      }
+    }
+  ]
+}

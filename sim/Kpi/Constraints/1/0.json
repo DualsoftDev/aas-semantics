@@ -1,0 +1,85 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/sim/Kpi/Constraints/1/0",
+  "idShort": "TOCkpi",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "Constraints KPI"
+    },
+    {
+      "language": "de",
+      "text": "Engpass-KPI"
+    },
+    {
+      "language": "ko",
+      "text": "제약 KPI"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "TOC-based constraint analysis per resource."
+    },
+    {
+      "language": "de",
+      "text": "TOC-basierte Engpassanalyse je Ressource."
+    },
+    {
+      "language": "ko",
+      "text": "리소스 별 TOC 기반 제약 분석."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "Constraints KPI"
+          },
+          {
+            "language": "de",
+            "text": "Engpass-KPI"
+          },
+          {
+            "language": "ko",
+            "text": "제약 KPI"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "TOCkpi"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "TOC-based constraint analysis per resource."
+          },
+          {
+            "language": "de",
+            "text": "TOC-basierte Engpassanalyse je Ressource."
+          },
+          {
+            "language": "ko",
+            "text": "리소스 별 TOC 기반 제약 분석."
+          }
+        ],
+        "dataType": "STRING",
+        "sourceOfDefinition": "Theory of Constraints (Goldratt)"
+      }
+    }
+  ]
+}

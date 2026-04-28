@@ -1,0 +1,12 @@
+# GitHub Pages (Jekyll) 기본 설정
+# Settings → Pages → Source: Deploy from branch (main / root) 활성화 시
+# https://dualsoftdev.github.io/aas-semantics/sim/Result/1/0(.json) 으로 서빙됨
+title: "DualSoft AAS Semantics"
+description: "ConceptDescriptions for DualSoft ds2 / Sequence Model"
+exclude:
+  - generate.py
+  - cds.yaml
+  - .gitignore
+include:
+  - "*.json"
+  - "**/*.json"

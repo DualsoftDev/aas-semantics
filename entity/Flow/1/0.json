@@ -1,0 +1,84 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/entity/Flow/1/0",
+  "idShort": "Flow",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "Flow"
+    },
+    {
+      "language": "de",
+      "text": "Flow"
+    },
+    {
+      "language": "ko",
+      "text": "플로우"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "Sequential flow within an active system, composed of work steps."
+    },
+    {
+      "language": "de",
+      "text": "Sequenzieller Ablauf innerhalb eines aktiven Systems, bestehend aus Arbeitsschritten."
+    },
+    {
+      "language": "ko",
+      "text": "능동 시스템 내부의 순차 흐름 — 여러 Work 로 구성됨."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "Flow"
+          },
+          {
+            "language": "de",
+            "text": "Flow"
+          },
+          {
+            "language": "ko",
+            "text": "플로우"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "Flow"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "Sequential flow within an active system, composed of work steps."
+          },
+          {
+            "language": "de",
+            "text": "Sequenzieller Ablauf innerhalb eines aktiven Systems, bestehend aus Arbeitsschritten."
+          },
+          {
+            "language": "ko",
+            "text": "능동 시스템 내부의 순차 흐름 — 여러 Work 로 구성됨."
+          }
+        ],
+        "dataType": "STRING"
+      }
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/sm/SequenceMaintenance/1/0",
+  "idShort": "SeqMaintSm",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "Maintenance submodel"
+    },
+    {
+      "language": "de",
+      "text": "Wartungs-Submodel"
+    },
+    {
+      "language": "ko",
+      "text": "유지보수 서브모델"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "Submodel carrying maintenance properties (intervals, wear parts)."
+    },
+    {
+      "language": "de",
+      "text": "Submodel mit Wartungseigenschaften (Intervalle, Verschleißteile)."
+    },
+    {
+      "language": "ko",
+      "text": "유지보수 속성을 담는 서브모델 (주기, 마모 부품)."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "Maintenance submodel"
+          },
+          {
+            "language": "de",
+            "text": "Wartungs-Submodel"
+          },
+          {
+            "language": "ko",
+            "text": "유지보수 서브모델"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "SeqMaintSm"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "Submodel carrying maintenance properties (intervals, wear parts)."
+          },
+          {
+            "language": "de",
+            "text": "Submodel mit Wartungseigenschaften (Intervalle, Verschleißteile)."
+          },
+          {
+            "language": "ko",
+            "text": "유지보수 속성을 담는 서브모델 (주기, 마모 부품)."
+          }
+        ],
+        "dataType": "STRING"
+      }
+    }
+  ]
+}

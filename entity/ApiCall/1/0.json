@@ -1,0 +1,84 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/entity/ApiCall/1/0",
+  "idShort": "ApiCall",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "API call"
+    },
+    {
+      "language": "de",
+      "text": "API-Aufruf"
+    },
+    {
+      "language": "ko",
+      "text": "API 호출"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "Concrete binding of a Call to an ApiDef with values / tags at runtime."
+    },
+    {
+      "language": "de",
+      "text": "Konkrete Bindung eines Calls an eine ApiDef mit Werten / Tags zur Laufzeit."
+    },
+    {
+      "language": "ko",
+      "text": "Call 과 ApiDef 의 런타임 바인딩 (실제 값/태그 연결)."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "API call"
+          },
+          {
+            "language": "de",
+            "text": "API-Aufruf"
+          },
+          {
+            "language": "ko",
+            "text": "API 호출"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "ApiCall"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "Concrete binding of a Call to an ApiDef with values / tags at runtime."
+          },
+          {
+            "language": "de",
+            "text": "Konkrete Bindung eines Calls an eine ApiDef mit Werten / Tags zur Laufzeit."
+          },
+          {
+            "language": "ko",
+            "text": "Call 과 ApiDef 의 런타임 바인딩 (실제 값/태그 연결)."
+          }
+        ],
+        "dataType": "STRING"
+      }
+    }
+  ]
+}

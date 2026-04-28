@@ -1,0 +1,84 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/sim/Meta/1/0",
+  "idShort": "SimMeta",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "Simulation metadata"
+    },
+    {
+      "language": "de",
+      "text": "Simulationsmetadaten"
+    },
+    {
+      "language": "ko",
+      "text": "시뮬레이션 메타데이터"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "Provenance: simulator, version, model hash, scenario id, run time, seed."
+    },
+    {
+      "language": "de",
+      "text": "Provenienz: Simulator, Version, Modell-Hash, Szenario-ID, Laufzeit, Seed."
+    },
+    {
+      "language": "ko",
+      "text": "출처 정보: 시뮬레이터, 버전, 모델 해시, 시나리오 ID, 실행 시각, 시드."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "Simulation metadata"
+          },
+          {
+            "language": "de",
+            "text": "Simulationsmetadaten"
+          },
+          {
+            "language": "ko",
+            "text": "시뮬레이션 메타데이터"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "SimMeta"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "Provenance: simulator, version, model hash, scenario id, run time, seed."
+          },
+          {
+            "language": "de",
+            "text": "Provenienz: Simulator, Version, Modell-Hash, Szenario-ID, Laufzeit, Seed."
+          },
+          {
+            "language": "ko",
+            "text": "출처 정보: 시뮬레이터, 버전, 모델 해시, 시나리오 ID, 실행 시각, 시드."
+          }
+        ],
+        "dataType": "STRING"
+      }
+    }
+  ]
+}

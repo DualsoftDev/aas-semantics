@@ -1,0 +1,86 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/sim/Kpi/CycleTime/1/0",
+  "idShort": "CTkpi",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "Cycle time KPI"
+    },
+    {
+      "language": "de",
+      "text": "Zykluszeit-KPI"
+    },
+    {
+      "language": "ko",
+      "text": "사이클 타임 KPI"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "Statistical analysis of cycle time per work step (mean / min / max / stddev / CI95)."
+    },
+    {
+      "language": "de",
+      "text": "Statistische Auswertung der Zykluszeit pro Arbeitsschritt (Mittelwert / Min / Max / StdAbw / KI95)."
+    },
+    {
+      "language": "ko",
+      "text": "Work 별 사이클 타임 통계 분석 (평균 / 최소 / 최대 / 표준편차 / 95% 신뢰구간)."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "Cycle time KPI"
+          },
+          {
+            "language": "de",
+            "text": "Zykluszeit-KPI"
+          },
+          {
+            "language": "ko",
+            "text": "사이클 타임 KPI"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "CTkpi"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "Statistical analysis of cycle time per work step (mean / min / max / stddev / CI95)."
+          },
+          {
+            "language": "de",
+            "text": "Statistische Auswertung der Zykluszeit pro Arbeitsschritt (Mittelwert / Min / Max / StdAbw / KI95)."
+          },
+          {
+            "language": "ko",
+            "text": "Work 별 사이클 타임 통계 분석 (평균 / 최소 / 최대 / 표준편차 / 95% 신뢰구간)."
+          }
+        ],
+        "dataType": "REAL_MEASURE",
+        "unit": "s",
+        "sourceOfDefinition": "VDI 4500"
+      }
+    }
+  ]
+}

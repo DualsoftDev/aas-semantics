@@ -1,0 +1,84 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/entity/ApiDef/1/0",
+  "idShort": "ApiDef",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "API definition"
+    },
+    {
+      "language": "de",
+      "text": "API-Definition"
+    },
+    {
+      "language": "ko",
+      "text": "API 정의"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "API exposed by a device (signature — input/output tags + behavior)."
+    },
+    {
+      "language": "de",
+      "text": "Vom Gerät bereitgestellte API (Signatur — Eingangs-/Ausgangstags + Verhalten)."
+    },
+    {
+      "language": "ko",
+      "text": "디바이스가 노출하는 API 정의 (입력/출력 태그 + 동작 시그니처)."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "API definition"
+          },
+          {
+            "language": "de",
+            "text": "API-Definition"
+          },
+          {
+            "language": "ko",
+            "text": "API 정의"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "ApiDef"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "API exposed by a device (signature — input/output tags + behavior)."
+          },
+          {
+            "language": "de",
+            "text": "Vom Gerät bereitgestellte API (Signatur — Eingangs-/Ausgangstags + Verhalten)."
+          },
+          {
+            "language": "ko",
+            "text": "디바이스가 노출하는 API 정의 (입력/출력 태그 + 동작 시그니처)."
+          }
+        ],
+        "dataType": "STRING"
+      }
+    }
+  ]
+}

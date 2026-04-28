@@ -1,0 +1,84 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/entity/ArrowWork/1/0",
+  "idShort": "ArrowWork",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "Work transition"
+    },
+    {
+      "language": "de",
+      "text": "Arbeitsschritt-Übergang"
+    },
+    {
+      "language": "ko",
+      "text": "Work 전이"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "Directed edge between work steps — defines reset / sequencing rules."
+    },
+    {
+      "language": "de",
+      "text": "Gerichtete Kante zwischen Arbeitsschritten — definiert Reset-/Sequenzierungsregeln."
+    },
+    {
+      "language": "ko",
+      "text": "Work 간 방향성 엣지 — 리셋/시퀀스 규칙 정의."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "Work transition"
+          },
+          {
+            "language": "de",
+            "text": "Arbeitsschritt-Übergang"
+          },
+          {
+            "language": "ko",
+            "text": "Work 전이"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "ArrowWork"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "Directed edge between work steps — defines reset / sequencing rules."
+          },
+          {
+            "language": "de",
+            "text": "Gerichtete Kante zwischen Arbeitsschritten — definiert Reset-/Sequenzierungsregeln."
+          },
+          {
+            "language": "ko",
+            "text": "Work 간 방향성 엣지 — 리셋/시퀀스 규칙 정의."
+          }
+        ],
+        "dataType": "STRING"
+      }
+    }
+  ]
+}

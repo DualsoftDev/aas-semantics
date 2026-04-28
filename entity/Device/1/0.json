@@ -1,0 +1,84 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/entity/Device/1/0",
+  "idShort": "Device",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "Device"
+    },
+    {
+      "language": "de",
+      "text": "Gerät"
+    },
+    {
+      "language": "ko",
+      "text": "디바이스"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "Passive device / actuator / sensor invoked by an active system."
+    },
+    {
+      "language": "de",
+      "text": "Passives Gerät / Aktor / Sensor, das von einem aktiven System aufgerufen wird."
+    },
+    {
+      "language": "ko",
+      "text": "능동 시스템에서 호출되는 패시브 디바이스 / 액추에이터 / 센서."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "Device"
+          },
+          {
+            "language": "de",
+            "text": "Gerät"
+          },
+          {
+            "language": "ko",
+            "text": "디바이스"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "Device"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "Passive device / actuator / sensor invoked by an active system."
+          },
+          {
+            "language": "de",
+            "text": "Passives Gerät / Aktor / Sensor, das von einem aktiven System aufgerufen wird."
+          },
+          {
+            "language": "ko",
+            "text": "능동 시스템에서 호출되는 패시브 디바이스 / 액추에이터 / 센서."
+          }
+        ],
+        "dataType": "STRING"
+      }
+    }
+  ]
+}

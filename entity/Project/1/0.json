@@ -1,0 +1,84 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/entity/Project/1/0",
+  "idShort": "Project",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "Project"
+    },
+    {
+      "language": "de",
+      "text": "Projekt"
+    },
+    {
+      "language": "ko",
+      "text": "프로젝트"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "Root entity of a DualSoft ds2 project (collection of active/passive systems + metadata)."
+    },
+    {
+      "language": "de",
+      "text": "Wurzelentität eines DualSoft ds2 Projekts (Sammlung aktiver/passiver Systeme + Metadaten)."
+    },
+    {
+      "language": "ko",
+      "text": "DualSoft ds2 프로젝트의 최상위 엔티티 (활성/패시브 시스템 모음 + 메타데이터)."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "Project"
+          },
+          {
+            "language": "de",
+            "text": "Projekt"
+          },
+          {
+            "language": "ko",
+            "text": "프로젝트"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "Project"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "Root entity of a DualSoft ds2 project (collection of active/passive systems + metadata)."
+          },
+          {
+            "language": "de",
+            "text": "Wurzelentität eines DualSoft ds2 Projekts (Sammlung aktiver/passiver Systeme + Metadaten)."
+          },
+          {
+            "language": "ko",
+            "text": "DualSoft ds2 프로젝트의 최상위 엔티티 (활성/패시브 시스템 모음 + 메타데이터)."
+          }
+        ],
+        "dataType": "STRING"
+      }
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/entity/TokenSpec/1/0",
+  "idShort": "TokenSpec",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "Token specification"
+    },
+    {
+      "language": "de",
+      "text": "Token-Spezifikation"
+    },
+    {
+      "language": "ko",
+      "text": "토큰 사양"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "Specification of a token type (recipe/product) — maps a token number to data."
+    },
+    {
+      "language": "de",
+      "text": "Spezifikation eines Token-Typs (Rezept/Produkt) — bildet Token-Nummer auf Daten ab."
+    },
+    {
+      "language": "ko",
+      "text": "토큰 유형 사양 (레시피/제품) — 토큰 번호를 실데이터에 매핑."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "Token specification"
+          },
+          {
+            "language": "de",
+            "text": "Token-Spezifikation"
+          },
+          {
+            "language": "ko",
+            "text": "토큰 사양"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "TokenSpec"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "Specification of a token type (recipe/product) — maps a token number to data."
+          },
+          {
+            "language": "de",
+            "text": "Spezifikation eines Token-Typs (Rezept/Produkt) — bildet Token-Nummer auf Daten ab."
+          },
+          {
+            "language": "ko",
+            "text": "토큰 유형 사양 (레시피/제품) — 토큰 번호를 실데이터에 매핑."
+          }
+        ],
+        "dataType": "STRING"
+      }
+    }
+  ]
+}

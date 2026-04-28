@@ -1,0 +1,86 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/sim/Kpi/OEE/1/0",
+  "idShort": "OEEkpi",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "OEE KPI"
+    },
+    {
+      "language": "de",
+      "text": "OEE-KPI"
+    },
+    {
+      "language": "ko",
+      "text": "OEE 지표"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "Overall Equipment Effectiveness = Availability × Performance × Quality."
+    },
+    {
+      "language": "de",
+      "text": "Overall Equipment Effectiveness = Verfügbarkeit × Leistung × Qualität."
+    },
+    {
+      "language": "ko",
+      "text": "종합설비효율 = 가동률 × 성능률 × 양품률."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "OEE KPI"
+          },
+          {
+            "language": "de",
+            "text": "OEE-KPI"
+          },
+          {
+            "language": "ko",
+            "text": "OEE 지표"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "OEEkpi"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "Overall Equipment Effectiveness = Availability × Performance × Quality."
+          },
+          {
+            "language": "de",
+            "text": "Overall Equipment Effectiveness = Verfügbarkeit × Leistung × Qualität."
+          },
+          {
+            "language": "ko",
+            "text": "종합설비효율 = 가동률 × 성능률 × 양품률."
+          }
+        ],
+        "dataType": "REAL_MEASURE",
+        "unit": "ratio (0..1)",
+        "sourceOfDefinition": "ISO 22400-2:2014"
+      }
+    }
+  ]
+}

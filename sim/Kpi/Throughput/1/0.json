@@ -1,0 +1,86 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/sim/Kpi/Throughput/1/0",
+  "idShort": "TPkpi",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "Throughput KPI"
+    },
+    {
+      "language": "de",
+      "text": "Durchsatz-KPI"
+    },
+    {
+      "language": "ko",
+      "text": "처리량 KPI"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "Throughput per hour / day / week / month with takt and cycle time."
+    },
+    {
+      "language": "de",
+      "text": "Durchsatzkennzahlen je Stunde/Tag/Woche/Monat sowie Takt- und Zykluszeit."
+    },
+    {
+      "language": "ko",
+      "text": "시간/일/주/월별 처리량 + Takt/사이클 타임 지표."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "Throughput KPI"
+          },
+          {
+            "language": "de",
+            "text": "Durchsatz-KPI"
+          },
+          {
+            "language": "ko",
+            "text": "처리량 KPI"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "TPkpi"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "Throughput per hour / day / week / month with takt and cycle time."
+          },
+          {
+            "language": "de",
+            "text": "Durchsatzkennzahlen je Stunde/Tag/Woche/Monat sowie Takt- und Zykluszeit."
+          },
+          {
+            "language": "ko",
+            "text": "시간/일/주/월별 처리량 + Takt/사이클 타임 지표."
+          }
+        ],
+        "dataType": "REAL_MEASURE",
+        "unit": "units/h",
+        "sourceOfDefinition": "ISA-95 (IEC 62264)"
+      }
+    }
+  ]
+}

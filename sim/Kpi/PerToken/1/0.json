@@ -1,0 +1,84 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/sim/Kpi/PerToken/1/0",
+  "idShort": "PTkpi",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "Per-token KPIs"
+    },
+    {
+      "language": "de",
+      "text": "Token-spezifische KPIs"
+    },
+    {
+      "language": "ko",
+      "text": "토큰별 KPI"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "KPI breakdown per token type (origin / spec) for mixed-flow scenarios."
+    },
+    {
+      "language": "de",
+      "text": "KPI-Aufschlüsselung je Token-Typ (Origin / Spec) für Mischfluss-Szenarien."
+    },
+    {
+      "language": "ko",
+      "text": "혼류 환경에서 토큰 유형(origin / spec) 별 KPI 분해."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "Per-token KPIs"
+          },
+          {
+            "language": "de",
+            "text": "Token-spezifische KPIs"
+          },
+          {
+            "language": "ko",
+            "text": "토큰별 KPI"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "PTkpi"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "KPI breakdown per token type (origin / spec) for mixed-flow scenarios."
+          },
+          {
+            "language": "de",
+            "text": "KPI-Aufschlüsselung je Token-Typ (Origin / Spec) für Mischfluss-Szenarien."
+          },
+          {
+            "language": "ko",
+            "text": "혼류 환경에서 토큰 유형(origin / spec) 별 KPI 분해."
+          }
+        ],
+        "dataType": "STRING"
+      }
+    }
+  ]
+}

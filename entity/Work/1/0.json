@@ -1,0 +1,84 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/entity/Work/1/0",
+  "idShort": "Work",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "Work step"
+    },
+    {
+      "language": "de",
+      "text": "Arbeitsschritt"
+    },
+    {
+      "language": "ko",
+      "text": "작업 단계"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "Individual work step — a unit of sequence execution with R/G/F/H state machine."
+    },
+    {
+      "language": "de",
+      "text": "Einzelner Arbeitsschritt — eine Einheit der Sequenzausführung mit R/G/F/H Zustandsmaschine."
+    },
+    {
+      "language": "ko",
+      "text": "단일 작업 단계 — R/G/F/H 상태머신을 가진 시퀀스 실행 단위."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "Work step"
+          },
+          {
+            "language": "de",
+            "text": "Arbeitsschritt"
+          },
+          {
+            "language": "ko",
+            "text": "작업 단계"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "Work"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "Individual work step — a unit of sequence execution with R/G/F/H state machine."
+          },
+          {
+            "language": "de",
+            "text": "Einzelner Arbeitsschritt — eine Einheit der Sequenzausführung mit R/G/F/H Zustandsmaschine."
+          },
+          {
+            "language": "ko",
+            "text": "단일 작업 단계 — R/G/F/H 상태머신을 가진 시퀀스 실행 단위."
+          }
+        ],
+        "dataType": "STRING"
+      }
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/sm/SequenceMonitoring/1/0",
+  "idShort": "SeqMonSm",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "Monitoring submodel"
+    },
+    {
+      "language": "de",
+      "text": "Monitoring-Submodel"
+    },
+    {
+      "language": "ko",
+      "text": "모니터링 서브모델"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "Submodel carrying monitoring properties (alarm / trend / status)."
+    },
+    {
+      "language": "de",
+      "text": "Submodel mit Monitoring-Eigenschaften (Alarm / Trend / Status)."
+    },
+    {
+      "language": "ko",
+      "text": "모니터링 속성을 담는 서브모델 (알람 / 트렌드 / 상태)."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "Monitoring submodel"
+          },
+          {
+            "language": "de",
+            "text": "Monitoring-Submodel"
+          },
+          {
+            "language": "ko",
+            "text": "모니터링 서브모델"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "SeqMonSm"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "Submodel carrying monitoring properties (alarm / trend / status)."
+          },
+          {
+            "language": "de",
+            "text": "Submodel mit Monitoring-Eigenschaften (Alarm / Trend / Status)."
+          },
+          {
+            "language": "ko",
+            "text": "모니터링 속성을 담는 서브모델 (알람 / 트렌드 / 상태)."
+          }
+        ],
+        "dataType": "STRING"
+      }
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/sm/SequenceModel/1/0",
+  "idShort": "SeqModelSm",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "Sequence model submodel"
+    },
+    {
+      "language": "de",
+      "text": "Sequenzmodell-Submodel"
+    },
+    {
+      "language": "ko",
+      "text": "시퀀스 모델 서브모델"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "Submodel describing the sequence control structure of a ds2 project (Systems/Flows/Works/Calls)."
+    },
+    {
+      "language": "de",
+      "text": "Submodel zur Beschreibung der Sequenzsteuerungsstruktur eines ds2 Projekts (Systeme/Flows/Works/Calls)."
+    },
+    {
+      "language": "ko",
+      "text": "ds2 프로젝트의 시퀀스 제어 구조(System/Flow/Work/Call)를 기술하는 서브모델."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "Sequence model submodel"
+          },
+          {
+            "language": "de",
+            "text": "Sequenzmodell-Submodel"
+          },
+          {
+            "language": "ko",
+            "text": "시퀀스 모델 서브모델"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "SeqModelSm"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "Submodel describing the sequence control structure of a ds2 project (Systems/Flows/Works/Calls)."
+          },
+          {
+            "language": "de",
+            "text": "Submodel zur Beschreibung der Sequenzsteuerungsstruktur eines ds2 Projekts (Systeme/Flows/Works/Calls)."
+          },
+          {
+            "language": "ko",
+            "text": "ds2 프로젝트의 시퀀스 제어 구조(System/Flow/Work/Call)를 기술하는 서브모델."
+          }
+        ],
+        "dataType": "STRING"
+      }
+    }
+  ]
+}

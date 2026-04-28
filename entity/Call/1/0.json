@@ -1,0 +1,84 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/entity/Call/1/0",
+  "idShort": "Call",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "Call"
+    },
+    {
+      "language": "de",
+      "text": "Aufruf"
+    },
+    {
+      "language": "ko",
+      "text": "콜"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "Invocation of a device API within a work step (consumer of ApiDef)."
+    },
+    {
+      "language": "de",
+      "text": "Aufruf einer Geräte-API innerhalb eines Arbeitsschritts (Verbraucher der ApiDef)."
+    },
+    {
+      "language": "ko",
+      "text": "Work 내부에서 디바이스 API 를 호출하는 요소 (ApiDef 의 소비자)."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "Call"
+          },
+          {
+            "language": "de",
+            "text": "Aufruf"
+          },
+          {
+            "language": "ko",
+            "text": "콜"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "Call"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "Invocation of a device API within a work step (consumer of ApiDef)."
+          },
+          {
+            "language": "de",
+            "text": "Aufruf einer Geräte-API innerhalb eines Arbeitsschritts (Verbraucher der ApiDef)."
+          },
+          {
+            "language": "ko",
+            "text": "Work 내부에서 디바이스 API 를 호출하는 요소 (ApiDef 의 소비자)."
+          }
+        ],
+        "dataType": "STRING"
+      }
+    }
+  ]
+}

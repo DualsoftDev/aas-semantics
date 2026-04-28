@@ -1,0 +1,84 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/entity/System/1/0",
+  "idShort": "System",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "Active system"
+    },
+    {
+      "language": "de",
+      "text": "Aktives System"
+    },
+    {
+      "language": "ko",
+      "text": "활성 시스템"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "Active control system (plant / line / cell) composed of flows and devices."
+    },
+    {
+      "language": "de",
+      "text": "Aktives Steuersystem (Anlage/Linie/Zelle) bestehend aus Flows und Geräten."
+    },
+    {
+      "language": "ko",
+      "text": "Flow 와 Device 로 구성된 능동 제어 시스템 (설비/라인/셀)."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "Active system"
+          },
+          {
+            "language": "de",
+            "text": "Aktives System"
+          },
+          {
+            "language": "ko",
+            "text": "활성 시스템"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "System"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "Active control system (plant / line / cell) composed of flows and devices."
+          },
+          {
+            "language": "de",
+            "text": "Aktives Steuersystem (Anlage/Linie/Zelle) bestehend aus Flows und Geräten."
+          },
+          {
+            "language": "ko",
+            "text": "Flow 와 Device 로 구성된 능동 제어 시스템 (설비/라인/셀)."
+          }
+        ],
+        "dataType": "STRING"
+      }
+    }
+  ]
+}

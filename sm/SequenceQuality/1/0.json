@@ -1,0 +1,84 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/sm/SequenceQuality/1/0",
+  "idShort": "SeqQualSm",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "Quality submodel"
+    },
+    {
+      "language": "de",
+      "text": "Qualitäts-Submodel"
+    },
+    {
+      "language": "ko",
+      "text": "품질 서브모델"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "Submodel carrying quality properties (inspection, SPC, defects)."
+    },
+    {
+      "language": "de",
+      "text": "Submodel mit Qualitätseigenschaften (Inspektion, SPC, Defekte)."
+    },
+    {
+      "language": "ko",
+      "text": "품질 속성을 담는 서브모델 (검사 / SPC / 결함)."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "Quality submodel"
+          },
+          {
+            "language": "de",
+            "text": "Qualitäts-Submodel"
+          },
+          {
+            "language": "ko",
+            "text": "품질 서브모델"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "SeqQualSm"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "Submodel carrying quality properties (inspection, SPC, defects)."
+          },
+          {
+            "language": "de",
+            "text": "Submodel mit Qualitätseigenschaften (Inspektion, SPC, Defekte)."
+          },
+          {
+            "language": "ko",
+            "text": "품질 속성을 담는 서브모델 (검사 / SPC / 결함)."
+          }
+        ],
+        "dataType": "STRING"
+      }
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/entity/ArrowCall/1/0",
+  "idShort": "ArrowCall",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "Call transition"
+    },
+    {
+      "language": "de",
+      "text": "Aufruf-Übergang"
+    },
+    {
+      "language": "ko",
+      "text": "Call 전이"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "Directed edge between Calls within a work step."
+    },
+    {
+      "language": "de",
+      "text": "Gerichtete Kante zwischen Calls innerhalb eines Arbeitsschritts."
+    },
+    {
+      "language": "ko",
+      "text": "Work 내부 Call 간 방향성 엣지."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "Call transition"
+          },
+          {
+            "language": "de",
+            "text": "Aufruf-Übergang"
+          },
+          {
+            "language": "ko",
+            "text": "Call 전이"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "ArrowCall"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "Directed edge between Calls within a work step."
+          },
+          {
+            "language": "de",
+            "text": "Gerichtete Kante zwischen Calls innerhalb eines Arbeitsschritts."
+          },
+          {
+            "language": "ko",
+            "text": "Work 내부 Call 간 방향성 엣지."
+          }
+        ],
+        "dataType": "STRING"
+      }
+    }
+  ]
+}

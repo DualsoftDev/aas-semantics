@@ -1,0 +1,296 @@
+{
+  "baseUrl": "https://github.com/DualsoftDev/aas-semantics",
+  "count": 29,
+  "items": [
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/entity/Project/1/0",
+      "idShort": "Project",
+      "path": "entity/Project/1/0.json",
+      "displayName": {
+        "en": "Project",
+        "de": "Projekt",
+        "ko": "프로젝트"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/entity/System/1/0",
+      "idShort": "System",
+      "path": "entity/System/1/0.json",
+      "displayName": {
+        "en": "Active system",
+        "de": "Aktives System",
+        "ko": "활성 시스템"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/entity/Device/1/0",
+      "idShort": "Device",
+      "path": "entity/Device/1/0.json",
+      "displayName": {
+        "en": "Device",
+        "de": "Gerät",
+        "ko": "디바이스"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/entity/Flow/1/0",
+      "idShort": "Flow",
+      "path": "entity/Flow/1/0.json",
+      "displayName": {
+        "en": "Flow",
+        "de": "Flow",
+        "ko": "플로우"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/entity/Work/1/0",
+      "idShort": "Work",
+      "path": "entity/Work/1/0.json",
+      "displayName": {
+        "en": "Work step",
+        "de": "Arbeitsschritt",
+        "ko": "작업 단계"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/entity/Call/1/0",
+      "idShort": "Call",
+      "path": "entity/Call/1/0.json",
+      "displayName": {
+        "en": "Call",
+        "de": "Aufruf",
+        "ko": "콜"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/entity/ApiDef/1/0",
+      "idShort": "ApiDef",
+      "path": "entity/ApiDef/1/0.json",
+      "displayName": {
+        "en": "API definition",
+        "de": "API-Definition",
+        "ko": "API 정의"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/entity/ApiCall/1/0",
+      "idShort": "ApiCall",
+      "path": "entity/ApiCall/1/0.json",
+      "displayName": {
+        "en": "API call",
+        "de": "API-Aufruf",
+        "ko": "API 호출"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/entity/TokenSpec/1/0",
+      "idShort": "TokenSpec",
+      "path": "entity/TokenSpec/1/0.json",
+      "displayName": {
+        "en": "Token specification",
+        "de": "Token-Spezifikation",
+        "ko": "토큰 사양"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/entity/ArrowWork/1/0",
+      "idShort": "ArrowWork",
+      "path": "entity/ArrowWork/1/0.json",
+      "displayName": {
+        "en": "Work transition",
+        "de": "Arbeitsschritt-Übergang",
+        "ko": "Work 전이"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/entity/ArrowCall/1/0",
+      "idShort": "ArrowCall",
+      "path": "entity/ArrowCall/1/0.json",
+      "displayName": {
+        "en": "Call transition",
+        "de": "Aufruf-Übergang",
+        "ko": "Call 전이"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/sm/SequenceModel/1/0",
+      "idShort": "SeqModelSm",
+      "path": "sm/SequenceModel/1/0.json",
+      "displayName": {
+        "en": "Sequence model submodel",
+        "de": "Sequenzmodell-Submodel",
+        "ko": "시퀀스 모델 서브모델"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/sm/SequenceSimulation/1/0",
+      "idShort": "SeqSimSm",
+      "path": "sm/SequenceSimulation/1/0.json",
+      "displayName": {
+        "en": "Simulation submodel",
+        "de": "Simulations-Submodel",
+        "ko": "시뮬레이션 서브모델"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/sm/SequenceControl/1/0",
+      "idShort": "SeqCtrlSm",
+      "path": "sm/SequenceControl/1/0.json",
+      "displayName": {
+        "en": "Control submodel",
+        "de": "Steuerungs-Submodel",
+        "ko": "제어 서브모델"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/sm/SequenceMonitoring/1/0",
+      "idShort": "SeqMonSm",
+      "path": "sm/SequenceMonitoring/1/0.json",
+      "displayName": {
+        "en": "Monitoring submodel",
+        "de": "Monitoring-Submodel",
+        "ko": "모니터링 서브모델"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/sm/SequenceLogging/1/0",
+      "idShort": "SeqLogSm",
+      "path": "sm/SequenceLogging/1/0.json",
+      "displayName": {
+        "en": "Logging submodel",
+        "de": "Logging-Submodel",
+        "ko": "로깅 서브모델"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/sm/SequenceMaintenance/1/0",
+      "idShort": "SeqMaintSm",
+      "path": "sm/SequenceMaintenance/1/0.json",
+      "displayName": {
+        "en": "Maintenance submodel",
+        "de": "Wartungs-Submodel",
+        "ko": "유지보수 서브모델"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/sm/SequenceHmi/1/0",
+      "idShort": "SeqHmiSm",
+      "path": "sm/SequenceHmi/1/0.json",
+      "displayName": {
+        "en": "HMI submodel",
+        "de": "HMI-Submodel",
+        "ko": "HMI 서브모델"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/sm/SequenceQuality/1/0",
+      "idShort": "SeqQualSm",
+      "path": "sm/SequenceQuality/1/0.json",
+      "displayName": {
+        "en": "Quality submodel",
+        "de": "Qualitäts-Submodel",
+        "ko": "품질 서브모델"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/sm/SequenceCostAnalysis/1/0",
+      "idShort": "SeqCostSm",
+      "path": "sm/SequenceCostAnalysis/1/0.json",
+      "displayName": {
+        "en": "Cost analysis submodel",
+        "de": "Kostenanalyse-Submodel",
+        "ko": "비용 분석 서브모델"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/sim/Result/1/0",
+      "idShort": "SimResult",
+      "path": "sim/Result/1/0.json",
+      "displayName": {
+        "en": "Simulation result",
+        "de": "Simulationsergebnis",
+        "ko": "시뮬레이션 결과"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/sim/Meta/1/0",
+      "idShort": "SimMeta",
+      "path": "sim/Meta/1/0.json",
+      "displayName": {
+        "en": "Simulation metadata",
+        "de": "Simulationsmetadaten",
+        "ko": "시뮬레이션 메타데이터"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/sim/Kpi/CycleTime/1/0",
+      "idShort": "CTkpi",
+      "path": "sim/Kpi/CycleTime/1/0.json",
+      "displayName": {
+        "en": "Cycle time KPI",
+        "de": "Zykluszeit-KPI",
+        "ko": "사이클 타임 KPI"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/sim/Kpi/Throughput/1/0",
+      "idShort": "TPkpi",
+      "path": "sim/Kpi/Throughput/1/0.json",
+      "displayName": {
+        "en": "Throughput KPI",
+        "de": "Durchsatz-KPI",
+        "ko": "처리량 KPI"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/sim/Kpi/Capacity/1/0",
+      "idShort": "CAPkpi",
+      "path": "sim/Kpi/Capacity/1/0.json",
+      "displayName": {
+        "en": "Capacity KPI",
+        "de": "Kapazitäts-KPI",
+        "ko": "능력 KPI"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/sim/Kpi/Constraints/1/0",
+      "idShort": "TOCkpi",
+      "path": "sim/Kpi/Constraints/1/0.json",
+      "displayName": {
+        "en": "Constraints KPI",
+        "de": "Engpass-KPI",
+        "ko": "제약 KPI"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/sim/Kpi/ResourceUtilization/1/0",
+      "idShort": "RUkpi",
+      "path": "sim/Kpi/ResourceUtilization/1/0.json",
+      "displayName": {
+        "en": "Resource utilization KPI",
+        "de": "Ressourcenauslastung-KPI",
+        "ko": "리소스 활용 KPI"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/sim/Kpi/OEE/1/0",
+      "idShort": "OEEkpi",
+      "path": "sim/Kpi/OEE/1/0.json",
+      "displayName": {
+        "en": "OEE KPI",
+        "de": "OEE-KPI",
+        "ko": "OEE 지표"
+      }
+    },
+    {
+      "id": "https://github.com/DualsoftDev/aas-semantics/sim/Kpi/PerToken/1/0",
+      "idShort": "PTkpi",
+      "path": "sim/Kpi/PerToken/1/0.json",
+      "displayName": {
+        "en": "Per-token KPIs",
+        "de": "Token-spezifische KPIs",
+        "ko": "토큰별 KPI"
+      }
+    }
+  ]
+}

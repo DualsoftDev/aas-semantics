@@ -1,0 +1,84 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/sm/SequenceLogging/1/0",
+  "idShort": "SeqLogSm",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "Logging submodel"
+    },
+    {
+      "language": "de",
+      "text": "Logging-Submodel"
+    },
+    {
+      "language": "ko",
+      "text": "로깅 서브모델"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "Submodel carrying logging properties (data points, retention)."
+    },
+    {
+      "language": "de",
+      "text": "Submodel mit Logging-Eigenschaften (Datenpunkte, Aufbewahrung)."
+    },
+    {
+      "language": "ko",
+      "text": "로깅 속성을 담는 서브모델 (데이터 포인트, 보존 정책)."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "Logging submodel"
+          },
+          {
+            "language": "de",
+            "text": "Logging-Submodel"
+          },
+          {
+            "language": "ko",
+            "text": "로깅 서브모델"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "SeqLogSm"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "Submodel carrying logging properties (data points, retention)."
+          },
+          {
+            "language": "de",
+            "text": "Submodel mit Logging-Eigenschaften (Datenpunkte, Aufbewahrung)."
+          },
+          {
+            "language": "ko",
+            "text": "로깅 속성을 담는 서브모델 (데이터 포인트, 보존 정책)."
+          }
+        ],
+        "dataType": "STRING"
+      }
+    }
+  ]
+}

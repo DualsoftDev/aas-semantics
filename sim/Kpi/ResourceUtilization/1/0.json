@@ -1,0 +1,85 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/sim/Kpi/ResourceUtilization/1/0",
+  "idShort": "RUkpi",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "Resource utilization KPI"
+    },
+    {
+      "language": "de",
+      "text": "Ressourcenauslastung-KPI"
+    },
+    {
+      "language": "ko",
+      "text": "리소스 활용 KPI"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "Time breakdown (production / changeover / idle / down) and utilization rates per resource."
+    },
+    {
+      "language": "de",
+      "text": "Zeitliche Aufschlüsselung und Auslastungsraten je Ressource."
+    },
+    {
+      "language": "ko",
+      "text": "리소스 별 시간 분해 (생산 / 준비 / 유휴 / 고장) 및 활용률."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "Resource utilization KPI"
+          },
+          {
+            "language": "de",
+            "text": "Ressourcenauslastung-KPI"
+          },
+          {
+            "language": "ko",
+            "text": "리소스 활용 KPI"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "RUkpi"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "Time breakdown (production / changeover / idle / down) and utilization rates per resource."
+          },
+          {
+            "language": "de",
+            "text": "Zeitliche Aufschlüsselung und Auslastungsraten je Ressource."
+          },
+          {
+            "language": "ko",
+            "text": "리소스 별 시간 분해 (생산 / 준비 / 유휴 / 고장) 및 활용률."
+          }
+        ],
+        "dataType": "REAL_MEASURE",
+        "unit": "%"
+      }
+    }
+  ]
+}

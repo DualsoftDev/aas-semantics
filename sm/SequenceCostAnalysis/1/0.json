@@ -1,0 +1,84 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/sm/SequenceCostAnalysis/1/0",
+  "idShort": "SeqCostSm",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "Cost analysis submodel"
+    },
+    {
+      "language": "de",
+      "text": "Kostenanalyse-Submodel"
+    },
+    {
+      "language": "ko",
+      "text": "비용 분석 서브모델"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "Submodel carrying cost analysis properties (material / labor / overhead costs)."
+    },
+    {
+      "language": "de",
+      "text": "Submodel mit Kostenanalyse-Eigenschaften (Materialkosten, Arbeitskosten, Gemeinkosten)."
+    },
+    {
+      "language": "ko",
+      "text": "비용 분석 속성을 담는 서브모델 (재료비 / 인건비 / 간접비)."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "Cost analysis submodel"
+          },
+          {
+            "language": "de",
+            "text": "Kostenanalyse-Submodel"
+          },
+          {
+            "language": "ko",
+            "text": "비용 분석 서브모델"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "SeqCostSm"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "Submodel carrying cost analysis properties (material / labor / overhead costs)."
+          },
+          {
+            "language": "de",
+            "text": "Submodel mit Kostenanalyse-Eigenschaften (Materialkosten, Arbeitskosten, Gemeinkosten)."
+          },
+          {
+            "language": "ko",
+            "text": "비용 분석 속성을 담는 서브모델 (재료비 / 인건비 / 간접비)."
+          }
+        ],
+        "dataType": "STRING"
+      }
+    }
+  ]
+}

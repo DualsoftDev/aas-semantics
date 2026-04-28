@@ -1,0 +1,85 @@
+{
+  "modelType": "ConceptDescription",
+  "id": "https://github.com/DualsoftDev/aas-semantics/sim/Kpi/Capacity/1/0",
+  "idShort": "CAPkpi",
+  "displayName": [
+    {
+      "language": "en",
+      "text": "Capacity KPI"
+    },
+    {
+      "language": "de",
+      "text": "Kapazitäts-KPI"
+    },
+    {
+      "language": "ko",
+      "text": "능력 KPI"
+    }
+  ],
+  "description": [
+    {
+      "language": "en",
+      "text": "Design / effective / actual / planned capacity with utilization and bottlenecks."
+    },
+    {
+      "language": "de",
+      "text": "Design-, Effektiv-, Ist- und Plan-Kapazität mit Auslastung und Engpässen."
+    },
+    {
+      "language": "ko",
+      "text": "설계 / 실효 / 실제 / 계획 능력 + 활용률 + 병목 분석."
+    }
+  ],
+  "embeddedDataSpecifications": [
+    {
+      "dataSpecification": {
+        "type": "ExternalReference",
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "https://admin-shell.io/aas/3/0/DataSpecificationIec61360"
+          }
+        ]
+      },
+      "dataSpecificationContent": {
+        "modelType": "DataSpecificationIec61360",
+        "preferredName": [
+          {
+            "language": "en",
+            "text": "Capacity KPI"
+          },
+          {
+            "language": "de",
+            "text": "Kapazitäts-KPI"
+          },
+          {
+            "language": "ko",
+            "text": "능력 KPI"
+          }
+        ],
+        "shortName": [
+          {
+            "language": "EN",
+            "text": "CAPkpi"
+          }
+        ],
+        "definition": [
+          {
+            "language": "en",
+            "text": "Design / effective / actual / planned capacity with utilization and bottlenecks."
+          },
+          {
+            "language": "de",
+            "text": "Design-, Effektiv-, Ist- und Plan-Kapazität mit Auslastung und Engpässen."
+          },
+          {
+            "language": "ko",
+            "text": "설계 / 실효 / 실제 / 계획 능력 + 활용률 + 병목 분석."
+          }
+        ],
+        "dataType": "REAL_MEASURE",
+        "unit": "units/h"
+      }
+    }
+  ]
+}
