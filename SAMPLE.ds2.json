@@ -1,0 +1,175 @@
+{
+  "projects": {
+    "11111111-1111-1111-1111-111111111111": {
+      "id": "11111111-1111-1111-1111-111111111111",
+      "name": "MinimalSample",
+      "author": "AI",
+      "version": "1.0.0",
+      "dateTime": "2026-04-29T00:00:00+09:00",
+      "activeSystemIds":  ["22222222-2222-2222-2222-222222222222"],
+      "passiveSystemIds": ["33333333-3333-3333-3333-333333333333"],
+      "tokenSpecs": []
+    }
+  },
+
+  "systems": {
+    "22222222-2222-2222-2222-222222222222": {
+      "id": "22222222-2222-2222-2222-222222222222",
+      "name": "S1",
+      "properties": []
+    },
+    "33333333-3333-3333-3333-333333333333": {
+      "id": "33333333-3333-3333-3333-333333333333",
+      "name": "Cyl1",
+      "systemType": "Unit",
+      "properties": []
+    }
+  },
+
+  "flows": {
+    "44444444-4444-4444-4444-444444444444": {
+      "id": "44444444-4444-4444-4444-444444444444",
+      "name": "F1",
+      "parentId": "22222222-2222-2222-2222-222222222222",
+      "properties": []
+    },
+    "55555555-5555-5555-5555-555555555555": {
+      "id": "55555555-5555-5555-5555-555555555555",
+      "name": "Cyl1_Flow",
+      "parentId": "33333333-3333-3333-3333-333333333333",
+      "properties": []
+    }
+  },
+
+  "works": {
+    "66666666-6666-6666-6666-666666666666": {
+      "id": "66666666-6666-6666-6666-666666666666",
+      "parentId": "44444444-4444-4444-4444-444444444444",
+      "name": "F1.Start",
+      "flowPrefix": "F1",
+      "localName": "Start",
+      "status4": 0,
+      "tokenRole": 0,
+      "position": { "x": 100, "y": 200, "w": 120, "h": 40 },
+      "properties": []
+    },
+    "77777777-7777-7777-7777-777777777777": {
+      "id": "77777777-7777-7777-7777-777777777777",
+      "parentId": "44444444-4444-4444-4444-444444444444",
+      "name": "F1.End",
+      "flowPrefix": "F1",
+      "localName": "End",
+      "status4": 0,
+      "tokenRole": 0,
+      "position": { "x": 300, "y": 200, "w": 120, "h": 40 },
+      "properties": []
+    },
+    "88888888-8888-8888-8888-888888888888": {
+      "id": "88888888-8888-8888-8888-888888888888",
+      "parentId": "55555555-5555-5555-5555-555555555555",
+      "name": "Cyl1_Flow.ADV",
+      "flowPrefix": "Cyl1_Flow",
+      "localName": "ADV",
+      "status4": 0,
+      "tokenRole": 0,
+      "duration": "00:00:00.5000000",
+      "properties": []
+    },
+    "99999999-9999-9999-9999-999999999999": {
+      "id": "99999999-9999-9999-9999-999999999999",
+      "parentId": "55555555-5555-5555-5555-555555555555",
+      "name": "Cyl1_Flow.RET",
+      "flowPrefix": "Cyl1_Flow",
+      "localName": "RET",
+      "status4": 0,
+      "tokenRole": 0,
+      "duration": "00:00:00.5000000",
+      "properties": []
+    }
+  },
+
+  "calls": {
+    "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa": {
+      "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+      "parentId": "66666666-6666-6666-6666-666666666666",
+      "name": "Cyl1.ADV",
+      "devicesAlias": "Cyl1",
+      "apiName": "ADV",
+      "status4": 0,
+      "position": { "x": 100, "y": 240, "w": 120, "h": 40 },
+      "apiCalls": [
+        {
+          "id": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+          "name": "Cyl1.ADV",
+          "apiDefId": "cccccccc-cccc-cccc-cccc-cccccccccccc",
+          "originFlowId": "44444444-4444-4444-4444-444444444444",
+          "inputSpec":  { "Case": "UndefinedValue" },
+          "outputSpec": { "Case": "UndefinedValue" }
+        }
+      ],
+      "callConditions": [],
+      "properties": []
+    },
+    "dddddddd-dddd-dddd-dddd-dddddddddddd": {
+      "id": "dddddddd-dddd-dddd-dddd-dddddddddddd",
+      "parentId": "77777777-7777-7777-7777-777777777777",
+      "name": "Cyl1.RET",
+      "devicesAlias": "Cyl1",
+      "apiName": "RET",
+      "status4": 0,
+      "position": { "x": 300, "y": 240, "w": 120, "h": 40 },
+      "apiCalls": [
+        {
+          "id": "eeeeeeee-eeee-eeee-eeee-eeeeeeeeeeee",
+          "name": "Cyl1.RET",
+          "apiDefId": "ffffffff-ffff-ffff-ffff-ffffffffffff",
+          "originFlowId": "44444444-4444-4444-4444-444444444444",
+          "inputSpec":  { "Case": "UndefinedValue" },
+          "outputSpec": { "Case": "UndefinedValue" }
+        }
+      ],
+      "callConditions": [],
+      "properties": []
+    }
+  },
+
+  "apiDefs": {
+    "cccccccc-cccc-cccc-cccc-cccccccccccc": {
+      "id": "cccccccc-cccc-cccc-cccc-cccccccccccc",
+      "name": "ADV",
+      "parentId": "33333333-3333-3333-3333-333333333333",
+      "apiDefActionType": { "Case": "Normal" },
+      "txGuid": "88888888-8888-8888-8888-888888888888",
+      "rxGuid": "88888888-8888-8888-8888-888888888888"
+    },
+    "ffffffff-ffff-ffff-ffff-ffffffffffff": {
+      "id": "ffffffff-ffff-ffff-ffff-ffffffffffff",
+      "name": "RET",
+      "parentId": "33333333-3333-3333-3333-333333333333",
+      "apiDefActionType": { "Case": "Normal" },
+      "txGuid": "99999999-9999-9999-9999-999999999999",
+      "rxGuid": "99999999-9999-9999-9999-999999999999"
+    }
+  },
+
+  "arrowWorks": {
+    "12121212-1212-1212-1212-121212121212": {
+      "id": "12121212-1212-1212-1212-121212121212",
+      "parentId": "22222222-2222-2222-2222-222222222222",
+      "sourceId": "66666666-6666-6666-6666-666666666666",
+      "targetId": "77777777-7777-7777-7777-777777777777",
+      "arrowType": 1,
+      "name": ""
+    },
+    "13131313-1313-1313-1313-131313131313": {
+      "id": "13131313-1313-1313-1313-131313131313",
+      "parentId": "33333333-3333-3333-3333-333333333333",
+      "sourceId": "88888888-8888-8888-8888-888888888888",
+      "targetId": "99999999-9999-9999-9999-999999999999",
+      "arrowType": 4,
+      "name": ""
+    }
+  },
+
+  "arrowCalls": {}
+}

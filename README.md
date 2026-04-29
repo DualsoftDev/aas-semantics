@@ -4,6 +4,20 @@ DualSoft ds2 / Sequence Model 가 발급하는 AAS (Asset Administration Shell) 
 
 전체 29개 CD — Entities (11) · Submodels (9) · Simulation (9).
 
+---
+
+## 🤖 AI 가 AAS 모델을 만들 때 (필독)
+
+> **AI 는 절대 `.aasx` 를 직접 생성하지 말 것.** 산출물은 항상 **`*.ds2.json` 한 파일**.
+>
+> 사용자가 그 ds2.json 을 **Promaker** 로 열어서(`File → Open`) 검토 후 **`Save As → AASX`** 로 패키징한다.
+>
+> 자세한 스키마·예시·검증 체크리스트:
+> - 📘 [`AI_GUIDE_DS2_JSON.md`](AI_GUIDE_DS2_JSON.md) — 가이드 (반드시 먼저 읽을 것)
+> - 📄 [`SAMPLE.ds2.json`](SAMPLE.ds2.json) — 최소 동작 샘플 (1 Active System × 1 Flow × 2 Work × 1 Arrow + 1 Passive Device)
+
+---
+
 ## URL 규칙
 
 각 CD 는 **자기 폴더** 안에 `cd.json` (AAS) + `index.html` (사람용 viewer) 로 호스팅됩니다.
