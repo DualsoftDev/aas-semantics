@@ -19,15 +19,15 @@
   "description": [
     {
       "language": "en",
-      "text": "Statistical analysis of cycle time per work step (mean / min / max / stddev / CI95)."
+      "text": "Statistical analysis of cycle time per work step"
     },
     {
       "language": "de",
-      "text": "Statistische Auswertung der Zykluszeit pro Arbeitsschritt (Mittelwert / Min / Max / StdAbw / KI95)."
+      "text": "Statistische Auswertung der Zykluszeit pro Arbeitsschritt"
     },
     {
       "language": "ko",
-      "text": "Work 별 사이클 타임 통계 분석 (평균 / 최소 / 최대 / 표준편차 / 95% 신뢰구간)."
+      "text": "Work 별 사이클 타임 통계 분석 (평균/최소/최대/표준편차/CI95)"
     }
   ],
   "embeddedDataSpecifications": [
@@ -66,15 +66,15 @@
         "definition": [
           {
             "language": "en",
-            "text": "Statistical analysis of cycle time per work step (mean / min / max / stddev / CI95)."
+            "text": "Statistical analysis of cycle time per work step"
           },
           {
             "language": "de",
-            "text": "Statistische Auswertung der Zykluszeit pro Arbeitsschritt (Mittelwert / Min / Max / StdAbw / KI95)."
+            "text": "Statistische Auswertung der Zykluszeit pro Arbeitsschritt"
           },
           {
             "language": "ko",
-            "text": "Work 별 사이클 타임 통계 분석 (평균 / 최소 / 최대 / 표준편차 / 95% 신뢰구간)."
+            "text": "Work 별 사이클 타임 통계 분석 (평균/최소/최대/표준편차/CI95)"
           }
         ],
         "dataType": "REAL_MEASURE",

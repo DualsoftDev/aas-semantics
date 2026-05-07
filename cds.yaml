@@ -1,6 +1,13 @@
 # DualSoft AAS Semantics — ConceptDescription master manifest
 # 이 파일이 단일 진실 원천. 모든 JSON 파일은 generate.py 로 재생성 가능.
 # ds2 의 AasxSemantics.fs / Concepts/Catalog.fs 와 동기화되어야 함.
+#
+# ─── 범위 ──────────────────────────────────────────────────────────────────
+#   본 카탈로그는 **ds2 자체 발급 CD 만** 정의 (entity / sm / sim 29개).
+#   IDTA 표준 SM (Nameplate/HD/TD 등) 의 CD 는 IDTA published .aasx 템플릿이
+#   직접 제공하므로 본 리포에 없음. ds2 v2026 이후 export 시 IDTA 템플릿이
+#   해당 SM 의 구조/CD/semanticId/언어슬롯의 단일 진실 원천.
+#   참조: ds2/Solutions/Convert/Ds2.Aasx/Concepts/Templates/README.md
 
 baseUrl: "https://dualsoftdev.github.io/aas-semantics"
 
@@ -138,9 +145,9 @@ cds:
     en: "Simulation submodel"
     de: "Simulations-Submodel"
     ko: "시뮬레이션 서브모델"
-    defEn: "Submodel carrying simulation properties for each System / Flow / Work / Call."
-    defDe: "Submodel mit Simulationseigenschaften je System / Flow / Work / Call."
-    defKo: "System / Flow / Work / Call 별 시뮬레이션 속성을 담는 서브모델."
+    defEn: "Submodel carrying simulation properties for each System / Flow / Work / Call, plus the embedded SimulationResult snapshot (meta + KPI groups). Previously embedded under TechnicalData; relocated for AAS standard SM separation."
+    defDe: "Submodel mit Simulationseigenschaften je System / Flow / Work / Call sowie eingebettetem SimulationResult-Snapshot (Meta + KPI-Gruppen). Zuvor in TechnicalData; gemäß AAS-Standardtrennung verlagert."
+    defKo: "System / Flow / Work / Call 별 시뮬레이션 속성 + SimulationResult 박제(메타 + KPI 그룹) 를 함께 보유. 이전엔 TechnicalData 안에 있었으나 AAS 표준 SM 분리 정책에 따라 이전됨."
     dataType: "STRING"
 
   - path: "sm/SequenceControl/1/0"
@@ -214,14 +221,20 @@ cds:
     dataType: "STRING"
 
   # ── SIMULATION (9) ───────────────────────────────────────────────────────
+  # NOTE: 본 섹션은 ds2 소스의 simulationConceptDescriptionInfos (Catalog.fs) 와
+  #       단일 진실 원천을 공유. 텍스트(en/de/ko/def*) 는 소스와 일치시킨다.
+  #
+  # PLACEMENT: 모든 sim/* CD 는 SequenceSimulation 서브모델(SeqSimSm) 안의
+  #            SimulationResult SMC (top-level) 하위에서 참조됨.
+  #            (이전엔 TechnicalData 서브모델 안에 있었음 — AAS 표준 SM 분리에 따라 이동)
   - path: "sim/Result/1/0"
     idShort: "SimResult"
     en: "Simulation result"
     de: "Simulationsergebnis"
     ko: "시뮬레이션 결과"
-    defEn: "Embedded simulation result (meta + KPI groups) for a single run."
-    defDe: "Eingebettetes Simulationsergebnis (Meta + KPI-Gruppen) für einen einzelnen Lauf."
-    defKo: "단일 시뮬레이션 실행 결과 (메타 + KPI 그룹) 의 임베디드 표현."
+    defEn: "Embedded simulation result (meta + KPI groups) for a single run; placed under SequenceSimulation submodel"
+    defDe: "Eingebettetes Simulationsergebnis (Meta + KPI-Gruppen) für einen einzelnen Lauf; im SequenceSimulation-Submodell"
+    defKo: "단일 시뮬레이션 실행 결과 (메타 + KPI 그룹) 의 임베디드 표현; SequenceSimulation 서브모델 내 위치"
     dataType: "STRING"
 
   - path: "sim/Meta/1/0"
@@ -229,9 +242,9 @@ cds:
     en: "Simulation metadata"
     de: "Simulationsmetadaten"
     ko: "시뮬레이션 메타데이터"
-    defEn: "Provenance: simulator, version, model hash, scenario id, run time, seed."
-    defDe: "Provenienz: Simulator, Version, Modell-Hash, Szenario-ID, Laufzeit, Seed."
-    defKo: "출처 정보: 시뮬레이터, 버전, 모델 해시, 시나리오 ID, 실행 시각, 시드."
+    defEn: "Provenance: simulator, version, model hash, scenario id, run time, seed"
+    defDe: "Provenienz: Simulator, Version, Modell-Hash, Szenario-ID, Laufzeit, Seed"
+    defKo: "출처 정보: 시뮬레이터, 버전, 모델 해시, 시나리오 ID, 실행 시각, 시드"
     dataType: "STRING"
 
   - path: "sim/Kpi/CycleTime/1/0"
@@ -239,9 +252,9 @@ cds:
     en: "Cycle time KPI"
     de: "Zykluszeit-KPI"
     ko: "사이클 타임 KPI"
-    defEn: "Statistical analysis of cycle time per work step (mean / min / max / stddev / CI95)."
-    defDe: "Statistische Auswertung der Zykluszeit pro Arbeitsschritt (Mittelwert / Min / Max / StdAbw / KI95)."
-    defKo: "Work 별 사이클 타임 통계 분석 (평균 / 최소 / 최대 / 표준편차 / 95% 신뢰구간)."
+    defEn: "Statistical analysis of cycle time per work step"
+    defDe: "Statistische Auswertung der Zykluszeit pro Arbeitsschritt"
+    defKo: "Work 별 사이클 타임 통계 분석 (평균/최소/최대/표준편차/CI95)"
     dataType: "REAL_MEASURE"
     unit: "s"
     sourceOfDefinition: "VDI 4500"
@@ -251,9 +264,9 @@ cds:
     en: "Throughput KPI"
     de: "Durchsatz-KPI"
     ko: "처리량 KPI"
-    defEn: "Throughput per hour / day / week / month with takt and cycle time."
-    defDe: "Durchsatzkennzahlen je Stunde/Tag/Woche/Monat sowie Takt- und Zykluszeit."
-    defKo: "시간/일/주/월별 처리량 + Takt/사이클 타임 지표."
+    defEn: "Throughput per hour/day/week/month with takt and cycle time"
+    defDe: "Durchsatzkennzahlen je Stunde/Tag/Woche/Monat sowie Takt- und Zykluszeit"
+    defKo: "시간/일/주/월별 처리량 + Takt/사이클 타임 지표"
     dataType: "REAL_MEASURE"
     unit: "units/h"
     sourceOfDefinition: "ISA-95 (IEC 62264)"
@@ -263,9 +276,9 @@ cds:
     en: "Capacity KPI"
     de: "Kapazitäts-KPI"
     ko: "능력 KPI"
-    defEn: "Design / effective / actual / planned capacity with utilization and bottlenecks."
-    defDe: "Design-, Effektiv-, Ist- und Plan-Kapazität mit Auslastung und Engpässen."
-    defKo: "설계 / 실효 / 실제 / 계획 능력 + 활용률 + 병목 분석."
+    defEn: "Design, effective, actual, and planned capacity with utilization and bottlenecks"
+    defDe: "Design-, Effektiv-, Ist- und Plan-Kapazität mit Auslastung und Engpässen"
+    defKo: "설계/실효/실제/계획 능력 + 활용률 + 병목 분석"
     dataType: "REAL_MEASURE"
     unit: "units/h"
 
@@ -274,9 +287,9 @@ cds:
     en: "Constraints KPI"
     de: "Engpass-KPI"
     ko: "제약 KPI"
-    defEn: "TOC-based constraint analysis per resource."
-    defDe: "TOC-basierte Engpassanalyse je Ressource."
-    defKo: "리소스 별 TOC 기반 제약 분석."
+    defEn: "TOC-based constraint analysis per resource"
+    defDe: "TOC-basierte Engpassanalyse je Ressource"
+    defKo: "리소스 별 TOC 기반 제약 분석"
     dataType: "STRING"
     sourceOfDefinition: "Theory of Constraints (Goldratt)"
 
@@ -285,9 +298,9 @@ cds:
     en: "Resource utilization KPI"
     de: "Ressourcenauslastung-KPI"
     ko: "리소스 활용 KPI"
-    defEn: "Time breakdown (production / changeover / idle / down) and utilization rates per resource."
-    defDe: "Zeitliche Aufschlüsselung und Auslastungsraten je Ressource."
-    defKo: "리소스 별 시간 분해 (생산 / 준비 / 유휴 / 고장) 및 활용률."
+    defEn: "Time breakdown and utilization rates per resource"
+    defDe: "Zeitliche Aufschlüsselung und Auslastungsraten je Ressource"
+    defKo: "리소스 별 시간 분해 (생산/준비/유휴/고장) 및 활용률"
     dataType: "REAL_MEASURE"
     unit: "%"
 
@@ -296,9 +309,9 @@ cds:
     en: "OEE KPI"
     de: "OEE-KPI"
     ko: "OEE 지표"
-    defEn: "Overall Equipment Effectiveness = Availability × Performance × Quality."
-    defDe: "Overall Equipment Effectiveness = Verfügbarkeit × Leistung × Qualität."
-    defKo: "종합설비효율 = 가동률 × 성능률 × 양품률."
+    defEn: "Overall Equipment Effectiveness with availability, performance, and quality"
+    defDe: "Overall Equipment Effectiveness mit Verfügbarkeit, Leistung und Qualität"
+    defKo: "종합설비효율 (가동률 × 성능률 × 양품률)"
     dataType: "REAL_MEASURE"
     unit: "ratio (0..1)"
     sourceOfDefinition: "ISO 22400-2:2014"
@@ -308,7 +321,7 @@ cds:
     en: "Per-token KPIs"
     de: "Token-spezifische KPIs"
     ko: "토큰별 KPI"
-    defEn: "KPI breakdown per token type (origin / spec) for mixed-flow scenarios."
-    defDe: "KPI-Aufschlüsselung je Token-Typ (Origin / Spec) für Mischfluss-Szenarien."
-    defKo: "혼류 환경에서 토큰 유형(origin / spec) 별 KPI 분해."
+    defEn: "KPI breakdown per token type (origin/spec) for mixed-flow scenarios"
+    defDe: "KPI-Aufschlüsselung je Token-Typ (Origin/Spec) für Mischfluss-Szenarien"
+    defKo: "혼류 환경에서 토큰 유형(origin/spec) 별 KPI 분해"
     dataType: "STRING"

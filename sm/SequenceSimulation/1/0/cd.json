@@ -19,15 +19,15 @@
   "description": [
     {
       "language": "en",
-      "text": "Submodel carrying simulation properties for each System / Flow / Work / Call."
+      "text": "Submodel carrying simulation properties for each System / Flow / Work / Call, plus the embedded SimulationResult snapshot (meta + KPI groups). Previously embedded under TechnicalData; relocated for AAS standard SM separation."
     },
     {
       "language": "de",
-      "text": "Submodel mit Simulationseigenschaften je System / Flow / Work / Call."
+      "text": "Submodel mit Simulationseigenschaften je System / Flow / Work / Call sowie eingebettetem SimulationResult-Snapshot (Meta + KPI-Gruppen). Zuvor in TechnicalData; gemäß AAS-Standardtrennung verlagert."
     },
     {
       "language": "ko",
-      "text": "System / Flow / Work / Call 별 시뮬레이션 속성을 담는 서브모델."
+      "text": "System / Flow / Work / Call 별 시뮬레이션 속성 + SimulationResult 박제(메타 + KPI 그룹) 를 함께 보유. 이전엔 TechnicalData 안에 있었으나 AAS 표준 SM 분리 정책에 따라 이전됨."
     }
   ],
   "embeddedDataSpecifications": [
@@ -66,15 +66,15 @@
         "definition": [
           {
             "language": "en",
-            "text": "Submodel carrying simulation properties for each System / Flow / Work / Call."
+            "text": "Submodel carrying simulation properties for each System / Flow / Work / Call, plus the embedded SimulationResult snapshot (meta + KPI groups). Previously embedded under TechnicalData; relocated for AAS standard SM separation."
           },
           {
             "language": "de",
-            "text": "Submodel mit Simulationseigenschaften je System / Flow / Work / Call."
+            "text": "Submodel mit Simulationseigenschaften je System / Flow / Work / Call sowie eingebettetem SimulationResult-Snapshot (Meta + KPI-Gruppen). Zuvor in TechnicalData; gemäß AAS-Standardtrennung verlagert."
           },
           {
             "language": "ko",
-            "text": "System / Flow / Work / Call 별 시뮬레이션 속성을 담는 서브모델."
+            "text": "System / Flow / Work / Call 별 시뮬레이션 속성 + SimulationResult 박제(메타 + KPI 그룹) 를 함께 보유. 이전엔 TechnicalData 안에 있었으나 AAS 표준 SM 분리 정책에 따라 이전됨."
           }
         ],
         "dataType": "STRING"

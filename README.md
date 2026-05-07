@@ -4,6 +4,27 @@ DualSoft ds2 / Sequence Model 가 발급하는 AAS (Asset Administration Shell) 
 
 전체 29개 CD — Entities (11) · Submodels (9) · Simulation (9).
 
+## 🎯 카탈로그 범위 — ds2 자체 CD 만
+
+본 리포는 **ds2 가 자체 발급하는 CD** 만 호스팅합니다. AAS 표준 SM (Nameplate / HandoverDocumentation / TechnicalData 등) 의 CD 는 **IDTA 가 published `.aasx` 템플릿** 으로 직접 제공하므로 이 리포에 없습니다.
+
+| 카테고리 | 출처 | 위치 |
+|---|---|---|
+| **ds2 도메인 CD** (entity / sm / sim 29개) | ✅ 본 리포 | `entity/`, `sm/`, `sim/` |
+| **IDTA 표준 SM CD** (Nameplate v3.0.1, HD v2.0, TD v2.0 등) | ❌ 본 리포에 없음 | [admin-shell-io/submodel-templates](https://github.com/admin-shell-io/submodel-templates) |
+
+ds2 v2026 이후 export 흐름:
+```
+ds2 사용자 데이터 ──┐
+                   ├─→ AAS Submodel emit
+IDTA 표준 .aasx ───┘    (템플릿이 구조/CD/언어슬롯 정의, ds2 가 값 주입)
+```
+- ds2 의 **자체** SM (`SequenceModel`, `SequenceSimulation` 등 9 종) → **본 리포의 sm/* CD** 사용
+- ds2 가 emit 하는 **IDTA 표준 SM** (`Nameplate`, `HandoverDocumentation`, `TechnicalData`) → **IDTA 의 published 템플릿** 사용 (본 리포 비관여)
+
+따라서 **IDTA 가 v3.0.2 등 새 버전 publish → ds2 의 임베디드 .aasx 만 교체** (본 리포 갱신 불필요).
+**ds2 의 자체 도메인 CD 변경 → 본 리포 + ds2 `Catalog.fs` 양쪽 동기화 필요**.
+
 ---
 
 ## 🤖 AI 가 AAS 모델을 만들 때 (필독)
@@ -39,8 +60,11 @@ DualSoft ds2 / Sequence Model 가 발급하는 AAS (Asset Administration Shell) 
 | 그룹 | 경로 | 개수 | 용도 |
 |---|---|---|---|
 | **Entities** | [`entity/`](entity/) | 11 | ds2 핵심 엔티티 (Project · System · Device · Flow · Work · Call · ApiDef · ApiCall · TokenSpec · ArrowWork · ArrowCall) |
-| **Submodels** | [`sm/`](sm/) | 9 | 서브모델 자체 (SequenceModel + 8개 도메인: Simulation · Control · Monitoring · Logging · Maintenance · Hmi · Quality · CostAnalysis) |
-| **Simulation** | [`sim/`](sim/) | 9 | 시뮬레이션 결과 박제 (Result · Meta + 7 KPI: CycleTime · Throughput · Capacity · Constraints · ResourceUtilization · OEE · PerToken) |
+| **Submodels** | [`sm/`](sm/) | 9 | ds2 자체 서브모델 (SequenceModel + 8 도메인). IDTA 표준 SM 은 본 리포 비관여 |
+| **Simulation** | [`sim/`](sim/) | 9 | 시뮬결과 박제 (Result · Meta + 7 KPI). **SequenceSimulation 서브모델 안의 SimulationResult SMC 하위에서 참조됨** |
+
+> **참고**: `SimulationResult` 박제는 ds2 v2026 이전에 TechnicalData (IDTA 02003) 안에 있었으나,
+> AAS 표준 SM 분리 정책에 따라 **SequenceSimulation 서브모델 (sm/SequenceSimulation/1/0)** 으로 이동했습니다.
 
 ## CD 형식
 
@@ -125,11 +149,29 @@ CD IRI 베이스는 ds2 측 `AasxSemantics.fs` 의 `CdBaseUrl` 와 일치해야 
 let [<Literal>] CdBaseUrl = "https://dualsoftdev.github.io/aas-semantics"
 ```
 
-CD 항목 추가 시:
+ds2 의 AASX export 인프라 (v2026):
+| 파일 | 역할 |
+|---|---|
+| `AasxSemantics.fs` | `CdBaseUrl` + 모든 ds2 자체 SemanticId 상수 |
+| `Concepts/Catalog.fs` | ds2 자체 발급 CD 의 `ConceptDescriptionInfo` (entity 11 + sm 9 + sim 9) — 본 리포 `cds.yaml` 의 진실 원천 미러 |
+| `Concepts/Builder.fs` | 임베디드 SequenceModel.aasx 로드 + 본 리포 CD 와 통합 |
+| `Concepts/TemplateLoader.fs` | IDTA 표준 .aasx 템플릿 (Nameplate/HD/TD) 임베디드 로드 + 사용자 폴더 .aasx 스캔 |
+| `Concepts/TemplateScaffold.fs` | 템플릿 SM 의 path 기반 값 주입 (사용자 데이터만, 구조는 무수정) |
+| `Concepts/Templates/*.aasx` | IDTA published 템플릿 (Nameplate v3.0.1 / HD v2.0 / TD v2.0) — 새 버전 publish 시 파일만 교체 |
+
+**ds2 자체 도메인 CD 항목 추가 시** (본 리포 관할):
 1. `cds.yaml` 에 새 entry 추가
 2. (옵션) `diagrams.py` 에 SVG 추가
 3. `python3 generate.py` 실행
 4. ds2 측 [`AasxSemantics.fs`](https://github.com/DualsoftDev/ds2/blob/master/Solutions/Convert/Ds2.Aasx/AasxSemantics.fs) 와 [`Concepts/Catalog.fs`](https://github.com/DualsoftDev/ds2/blob/master/Solutions/Convert/Ds2.Aasx/Concepts/Catalog.fs) 에도 동일하게 추가
+
+**IDTA 표준 SM 새 버전 publish 시** (본 리포 비관여):
+- ds2 측 `Concepts/Templates/*.aasx` 만 [admin-shell-io/submodel-templates](https://github.com/admin-shell-io/submodel-templates) 에서 다운로드 받아 교체
+- 본 리포는 변경 없음
+
+**사용자 정의 SM 첨부** (Promaker 사용자 워크플로우):
+- 사용자가 임의 .aasx 를 `%APPDATA%\Dualsoft\Promaker\AasxUserTemplates\` 에 떨궈두면 export 시 자동 첨부
+- ds2 자체 표준 SM 과 idShort 충돌 시 사용자 SM 이 override (Promaker UI 가 안내)
 
 ## License
 

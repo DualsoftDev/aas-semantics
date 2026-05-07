@@ -19,15 +19,15 @@
   "description": [
     {
       "language": "en",
-      "text": "Provenance: simulator, version, model hash, scenario id, run time, seed."
+      "text": "Provenance: simulator, version, model hash, scenario id, run time, seed"
     },
     {
       "language": "de",
-      "text": "Provenienz: Simulator, Version, Modell-Hash, Szenario-ID, Laufzeit, Seed."
+      "text": "Provenienz: Simulator, Version, Modell-Hash, Szenario-ID, Laufzeit, Seed"
     },
     {
       "language": "ko",
-      "text": "출처 정보: 시뮬레이터, 버전, 모델 해시, 시나리오 ID, 실행 시각, 시드."
+      "text": "출처 정보: 시뮬레이터, 버전, 모델 해시, 시나리오 ID, 실행 시각, 시드"
     }
   ],
   "embeddedDataSpecifications": [
@@ -66,15 +66,15 @@
         "definition": [
           {
             "language": "en",
-            "text": "Provenance: simulator, version, model hash, scenario id, run time, seed."
+            "text": "Provenance: simulator, version, model hash, scenario id, run time, seed"
           },
           {
             "language": "de",
-            "text": "Provenienz: Simulator, Version, Modell-Hash, Szenario-ID, Laufzeit, Seed."
+            "text": "Provenienz: Simulator, Version, Modell-Hash, Szenario-ID, Laufzeit, Seed"
           },
           {
             "language": "ko",
-            "text": "출처 정보: 시뮬레이터, 버전, 모델 해시, 시나리오 ID, 실행 시각, 시드."
+            "text": "출처 정보: 시뮬레이터, 버전, 모델 해시, 시나리오 ID, 실행 시각, 시드"
           }
         ],
         "dataType": "STRING"

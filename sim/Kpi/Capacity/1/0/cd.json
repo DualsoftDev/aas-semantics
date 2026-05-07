@@ -19,15 +19,15 @@
   "description": [
     {
       "language": "en",
-      "text": "Design / effective / actual / planned capacity with utilization and bottlenecks."
+      "text": "Design, effective, actual, and planned capacity with utilization and bottlenecks"
     },
     {
       "language": "de",
-      "text": "Design-, Effektiv-, Ist- und Plan-Kapazität mit Auslastung und Engpässen."
+      "text": "Design-, Effektiv-, Ist- und Plan-Kapazität mit Auslastung und Engpässen"
     },
     {
       "language": "ko",
-      "text": "설계 / 실효 / 실제 / 계획 능력 + 활용률 + 병목 분석."
+      "text": "설계/실효/실제/계획 능력 + 활용률 + 병목 분석"
     }
   ],
   "embeddedDataSpecifications": [
@@ -66,15 +66,15 @@
         "definition": [
           {
             "language": "en",
-            "text": "Design / effective / actual / planned capacity with utilization and bottlenecks."
+            "text": "Design, effective, actual, and planned capacity with utilization and bottlenecks"
           },
           {
             "language": "de",
-            "text": "Design-, Effektiv-, Ist- und Plan-Kapazität mit Auslastung und Engpässen."
+            "text": "Design-, Effektiv-, Ist- und Plan-Kapazität mit Auslastung und Engpässen"
           },
           {
             "language": "ko",
-            "text": "설계 / 실효 / 실제 / 계획 능력 + 활용률 + 병목 분석."
+            "text": "설계/실효/실제/계획 능력 + 활용률 + 병목 분석"
           }
         ],
         "dataType": "REAL_MEASURE",

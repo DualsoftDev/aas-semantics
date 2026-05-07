@@ -19,15 +19,15 @@
   "description": [
     {
       "language": "en",
-      "text": "Time breakdown (production / changeover / idle / down) and utilization rates per resource."
+      "text": "Time breakdown and utilization rates per resource"
     },
     {
       "language": "de",
-      "text": "Zeitliche Aufschlüsselung und Auslastungsraten je Ressource."
+      "text": "Zeitliche Aufschlüsselung und Auslastungsraten je Ressource"
     },
     {
       "language": "ko",
-      "text": "리소스 별 시간 분해 (생산 / 준비 / 유휴 / 고장) 및 활용률."
+      "text": "리소스 별 시간 분해 (생산/준비/유휴/고장) 및 활용률"
     }
   ],
   "embeddedDataSpecifications": [
@@ -66,15 +66,15 @@
         "definition": [
           {
             "language": "en",
-            "text": "Time breakdown (production / changeover / idle / down) and utilization rates per resource."
+            "text": "Time breakdown and utilization rates per resource"
           },
           {
             "language": "de",
-            "text": "Zeitliche Aufschlüsselung und Auslastungsraten je Ressource."
+            "text": "Zeitliche Aufschlüsselung und Auslastungsraten je Ressource"
           },
           {
             "language": "ko",
-            "text": "리소스 별 시간 분해 (생산 / 준비 / 유휴 / 고장) 및 활용률."
+            "text": "리소스 별 시간 분해 (생산/준비/유휴/고장) 및 활용률"
           }
         ],
         "dataType": "REAL_MEASURE",

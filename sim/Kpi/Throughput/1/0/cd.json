@@ -19,15 +19,15 @@
   "description": [
     {
       "language": "en",
-      "text": "Throughput per hour / day / week / month with takt and cycle time."
+      "text": "Throughput per hour/day/week/month with takt and cycle time"
     },
     {
       "language": "de",
-      "text": "Durchsatzkennzahlen je Stunde/Tag/Woche/Monat sowie Takt- und Zykluszeit."
+      "text": "Durchsatzkennzahlen je Stunde/Tag/Woche/Monat sowie Takt- und Zykluszeit"
     },
     {
       "language": "ko",
-      "text": "시간/일/주/월별 처리량 + Takt/사이클 타임 지표."
+      "text": "시간/일/주/월별 처리량 + Takt/사이클 타임 지표"
     }
   ],
   "embeddedDataSpecifications": [
@@ -66,15 +66,15 @@
         "definition": [
           {
             "language": "en",
-            "text": "Throughput per hour / day / week / month with takt and cycle time."
+            "text": "Throughput per hour/day/week/month with takt and cycle time"
           },
           {
             "language": "de",
-            "text": "Durchsatzkennzahlen je Stunde/Tag/Woche/Monat sowie Takt- und Zykluszeit."
+            "text": "Durchsatzkennzahlen je Stunde/Tag/Woche/Monat sowie Takt- und Zykluszeit"
           },
           {
             "language": "ko",
-            "text": "시간/일/주/월별 처리량 + Takt/사이클 타임 지표."
+            "text": "시간/일/주/월별 처리량 + Takt/사이클 타임 지표"
           }
         ],
         "dataType": "REAL_MEASURE",

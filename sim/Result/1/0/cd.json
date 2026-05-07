@@ -19,15 +19,15 @@
   "description": [
     {
       "language": "en",
-      "text": "Embedded simulation result (meta + KPI groups) for a single run."
+      "text": "Embedded simulation result (meta + KPI groups) for a single run; placed under SequenceSimulation submodel"
     },
     {
       "language": "de",
-      "text": "Eingebettetes Simulationsergebnis (Meta + KPI-Gruppen) für einen einzelnen Lauf."
+      "text": "Eingebettetes Simulationsergebnis (Meta + KPI-Gruppen) für einen einzelnen Lauf; im SequenceSimulation-Submodell"
     },
     {
       "language": "ko",
-      "text": "단일 시뮬레이션 실행 결과 (메타 + KPI 그룹) 의 임베디드 표현."
+      "text": "단일 시뮬레이션 실행 결과 (메타 + KPI 그룹) 의 임베디드 표현; SequenceSimulation 서브모델 내 위치"
     }
   ],
   "embeddedDataSpecifications": [
@@ -66,15 +66,15 @@
         "definition": [
           {
             "language": "en",
-            "text": "Embedded simulation result (meta + KPI groups) for a single run."
+            "text": "Embedded simulation result (meta + KPI groups) for a single run; placed under SequenceSimulation submodel"
           },
           {
             "language": "de",
-            "text": "Eingebettetes Simulationsergebnis (Meta + KPI-Gruppen) für einen einzelnen Lauf."
+            "text": "Eingebettetes Simulationsergebnis (Meta + KPI-Gruppen) für einen einzelnen Lauf; im SequenceSimulation-Submodell"
           },
           {
             "language": "ko",
-            "text": "단일 시뮬레이션 실행 결과 (메타 + KPI 그룹) 의 임베디드 표현."
+            "text": "단일 시뮬레이션 실행 결과 (메타 + KPI 그룹) 의 임베디드 표현; SequenceSimulation 서브모델 내 위치"
           }
         ],
         "dataType": "STRING"

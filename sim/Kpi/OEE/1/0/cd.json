@@ -19,15 +19,15 @@
   "description": [
     {
       "language": "en",
-      "text": "Overall Equipment Effectiveness = Availability × Performance × Quality."
+      "text": "Overall Equipment Effectiveness with availability, performance, and quality"
     },
     {
       "language": "de",
-      "text": "Overall Equipment Effectiveness = Verfügbarkeit × Leistung × Qualität."
+      "text": "Overall Equipment Effectiveness mit Verfügbarkeit, Leistung und Qualität"
     },
     {
       "language": "ko",
-      "text": "종합설비효율 = 가동률 × 성능률 × 양품률."
+      "text": "종합설비효율 (가동률 × 성능률 × 양품률)"
     }
   ],
   "embeddedDataSpecifications": [
@@ -66,15 +66,15 @@
         "definition": [
           {
             "language": "en",
-            "text": "Overall Equipment Effectiveness = Availability × Performance × Quality."
+            "text": "Overall Equipment Effectiveness with availability, performance, and quality"
           },
           {
             "language": "de",
-            "text": "Overall Equipment Effectiveness = Verfügbarkeit × Leistung × Qualität."
+            "text": "Overall Equipment Effectiveness mit Verfügbarkeit, Leistung und Qualität"
           },
           {
             "language": "ko",
-            "text": "종합설비효율 = 가동률 × 성능률 × 양품률."
+            "text": "종합설비효율 (가동률 × 성능률 × 양품률)"
           }
         ],
         "dataType": "REAL_MEASURE",
