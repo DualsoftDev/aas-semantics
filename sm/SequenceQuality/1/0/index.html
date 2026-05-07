@@ -36,6 +36,67 @@
     .pill { display: inline-block; padding: 1px 8px; border-radius: 12px; font-size: 0.72rem; font-weight: 600;
             background: #ddf4ff; color: #0969da; margin-left: 6px; vertical-align: middle; }
     .pill-state { background: #fff8c5; color: #9a6700; }
+    /* === Phase 0 enrichment: scenarios / vendors / IDTA / events / KPI / standards / related / appendix === */
+    .scenario-card { background: #fff; border: 1px solid #d0d7de; border-radius: 8px; padding: 14px 16px; margin: 12px 0; }
+    .scenario-header { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .scenario-domain { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; background: #ddf4ff; color: #0969da; }
+    .scenario-system { font-weight: 600; color: #1f2328; }
+    .scenario-meta { color: #656d76; font-size: 0.85rem; }
+    .scenario-body { font-size: 0.9rem; color: #1f2328; line-height: 1.55; }
+    .call-strip { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+    .call-chip { background: #f6f8fa; border: 1px solid #d0d7de; border-radius: 6px; padding: 4px 10px; font-size: 0.8rem; }
+    .call-chip .call-dur { color: #656d76; font-size: 0.75rem; margin-left: 6px; }
+    .vendor-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+    .vendor-card { background: #fff; border: 1px solid #d0d7de; border-radius: 6px; padding: 10px 12px; }
+    .vendor-card .v-name { font-weight: 600; color: #0550ae; font-size: 0.85rem; margin-bottom: 6px; }
+    .vendor-card code { display: block; margin: 2px 0; font-size: 0.78rem; background: #eef1f4; padding: 2px 6px; border-radius: 3px; }
+    .iota-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; margin: 8px 0; }
+    .iota-table th, .iota-table td { padding: 6px 8px; border: 1px solid #d0d7de; text-align: left; vertical-align: top; }
+    .iota-table th { background: #f6f8fa; color: #656d76; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.4px; }
+    .iota-table td.idShort { font-family: ui-monospace, Consolas, monospace; color: #0550ae; font-weight: 600; white-space: nowrap; }
+    .iota-table td.semId { font-family: ui-monospace, Consolas, monospace; color: #6f42c1; font-size: 0.7rem; word-break: break-all; }
+    .iota-table td.vt { font-family: ui-monospace, Consolas, monospace; color: #0a3069; font-size: 0.78rem; }
+    .iota-table td.mult { text-align: center; font-family: ui-monospace, Consolas, monospace; color: #1a7f37; font-size: 0.78rem; }
+    .event-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin: 10px 0; }
+    .event-card { background: #f6f8fa; border-left: 3px solid #0969da; border-radius: 4px; padding: 10px 12px; }
+    .event-card .ev-name { font-weight: 600; color: #0550ae; font-size: 0.85rem; }
+    .event-card .ev-params { color: #656d76; font-size: 0.78rem; margin-top: 4px; font-family: ui-monospace, Consolas, monospace; }
+    .event-card .ev-use { color: #1f2328; font-size: 0.8rem; margin-top: 6px; }
+    .kpi-formula { background: #fff; border: 2px solid #0969da; border-radius: 8px; padding: 14px 18px; margin: 10px 0; text-align: center; }
+    .kpi-formula .expr { font-family: 'Cambria Math', Georgia, serif; font-size: 1.15rem; color: #0550ae; font-weight: 600; }
+    .kpi-formula .source { color: #656d76; font-size: 0.78rem; margin-top: 6px; }
+    .kpi-components { margin-top: 12px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; text-align: left; }
+    .kpi-comp-card { background: #f6f8fa; border-radius: 6px; padding: 8px 10px; font-size: 0.82rem; }
+    .kpi-comp-card .sym { font-weight: 600; color: #0550ae; }
+    .kpi-comp-card .formula { font-family: ui-monospace, Consolas, monospace; color: #6f42c1; font-size: 0.78rem; margin-top: 2px; }
+    .kpi-example { background: #dafbe1; border-left: 4px solid #1a7f37; border-radius: 4px; padding: 10px 14px; margin-top: 10px; font-size: 0.88rem; }
+    .kpi-example .calc { font-family: 'Cambria Math', Georgia, serif; font-size: 1rem; color: #1f2328; margin: 6px 0; }
+    .kpi-example .result { font-weight: 700; color: #1a7f37; font-size: 1.1rem; }
+    .standards-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+    .std-badge { background: #fff8c5; color: #9a6700; border: 1px solid #d4a72c; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+    .std-badge a { color: inherit; text-decoration: none; }
+    .std-badge .scope { font-weight: 400; color: #6e5500; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin: 8px 0; }
+    .related-card { background: #fff; border: 1px solid #d0d7de; border-radius: 6px; padding: 8px 12px; transition: border-color 0.15s; }
+    .related-card:hover { border-color: #0969da; }
+    .related-card a { display: block; text-decoration: none; }
+    .related-card .r-name { font-weight: 600; color: #0550ae; font-size: 0.88rem; }
+    .related-card .r-desc { color: #656d76; font-size: 0.78rem; margin-top: 3px; }
+    .appendix-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+    .appendix-card { background: linear-gradient(135deg, #ddf4ff, #fff); border: 1px solid #0969da; border-radius: 8px; padding: 10px 14px; }
+    .appendix-card a { text-decoration: none; color: #0550ae; font-weight: 600; }
+    .appendix-card .a-desc { color: #1f2328; font-size: 0.82rem; margin-top: 4px; font-weight: 400; }
+    .timing-strip { background: #fff; border: 1px solid #d0d7de; border-radius: 6px; padding: 10px; margin: 10px 0; overflow-x: auto; }
+    .timing-strip table { border-collapse: collapse; font-size: 0.78rem; }
+    .timing-strip td { padding: 4px 10px; text-align: center; border: 1px solid #d0d7de; min-width: 36px; font-family: ui-monospace, Consolas, monospace; }
+    .timing-strip th { padding: 4px 10px; background: #f6f8fa; text-align: center; font-weight: 600; font-size: 0.72rem; color: #656d76; text-transform: uppercase; }
+    .timing-strip td.r { background: #dafbe1; color: #1a7f37; font-weight: 600; }
+    .timing-strip td.g { background: #ffd8b5; color: #bc4c00; font-weight: 600; }
+    .timing-strip td.f { background: #ddf4ff; color: #0969da; font-weight: 600; }
+    .timing-strip td.h { background: #eaeef2; color: #656d76; font-weight: 600; }
+    .timing-strip td.sig1 { background: #ffeaea; color: #cf222e; font-weight: 700; }
+    .timing-strip td.row-label { background: #f6f8fa; font-weight: 600; color: #1f2328; text-align: left; padding-left: 12px; padding-right: 14px; }
+    .section-sub { color: #656d76; font-size: 0.95rem; margin: 14px 0 6px 0; font-weight: 600; }
   </style>
 </head>
 <body>
@@ -59,7 +120,7 @@
   <div class="card">
     <div class="lang-block">
       <div class="label">한국어</div>
-      <div>품질 속성을 담는 서브모델 (검사 / SPC / 결함).</div>
+      <div>품질 속성을 담는 서브모델 (검사/SPC/결함)</div>
     </div>
     <div class="lang-block">
       <div class="label">English</div>

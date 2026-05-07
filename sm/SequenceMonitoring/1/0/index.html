@@ -36,6 +36,67 @@
     .pill { display: inline-block; padding: 1px 8px; border-radius: 12px; font-size: 0.72rem; font-weight: 600;
             background: #ddf4ff; color: #0969da; margin-left: 6px; vertical-align: middle; }
     .pill-state { background: #fff8c5; color: #9a6700; }
+    /* === Phase 0 enrichment: scenarios / vendors / IDTA / events / KPI / standards / related / appendix === */
+    .scenario-card { background: #fff; border: 1px solid #d0d7de; border-radius: 8px; padding: 14px 16px; margin: 12px 0; }
+    .scenario-header { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .scenario-domain { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; background: #ddf4ff; color: #0969da; }
+    .scenario-system { font-weight: 600; color: #1f2328; }
+    .scenario-meta { color: #656d76; font-size: 0.85rem; }
+    .scenario-body { font-size: 0.9rem; color: #1f2328; line-height: 1.55; }
+    .call-strip { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+    .call-chip { background: #f6f8fa; border: 1px solid #d0d7de; border-radius: 6px; padding: 4px 10px; font-size: 0.8rem; }
+    .call-chip .call-dur { color: #656d76; font-size: 0.75rem; margin-left: 6px; }
+    .vendor-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+    .vendor-card { background: #fff; border: 1px solid #d0d7de; border-radius: 6px; padding: 10px 12px; }
+    .vendor-card .v-name { font-weight: 600; color: #0550ae; font-size: 0.85rem; margin-bottom: 6px; }
+    .vendor-card code { display: block; margin: 2px 0; font-size: 0.78rem; background: #eef1f4; padding: 2px 6px; border-radius: 3px; }
+    .iota-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; margin: 8px 0; }
+    .iota-table th, .iota-table td { padding: 6px 8px; border: 1px solid #d0d7de; text-align: left; vertical-align: top; }
+    .iota-table th { background: #f6f8fa; color: #656d76; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.4px; }
+    .iota-table td.idShort { font-family: ui-monospace, Consolas, monospace; color: #0550ae; font-weight: 600; white-space: nowrap; }
+    .iota-table td.semId { font-family: ui-monospace, Consolas, monospace; color: #6f42c1; font-size: 0.7rem; word-break: break-all; }
+    .iota-table td.vt { font-family: ui-monospace, Consolas, monospace; color: #0a3069; font-size: 0.78rem; }
+    .iota-table td.mult { text-align: center; font-family: ui-monospace, Consolas, monospace; color: #1a7f37; font-size: 0.78rem; }
+    .event-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin: 10px 0; }
+    .event-card { background: #f6f8fa; border-left: 3px solid #0969da; border-radius: 4px; padding: 10px 12px; }
+    .event-card .ev-name { font-weight: 600; color: #0550ae; font-size: 0.85rem; }
+    .event-card .ev-params { color: #656d76; font-size: 0.78rem; margin-top: 4px; font-family: ui-monospace, Consolas, monospace; }
+    .event-card .ev-use { color: #1f2328; font-size: 0.8rem; margin-top: 6px; }
+    .kpi-formula { background: #fff; border: 2px solid #0969da; border-radius: 8px; padding: 14px 18px; margin: 10px 0; text-align: center; }
+    .kpi-formula .expr { font-family: 'Cambria Math', Georgia, serif; font-size: 1.15rem; color: #0550ae; font-weight: 600; }
+    .kpi-formula .source { color: #656d76; font-size: 0.78rem; margin-top: 6px; }
+    .kpi-components { margin-top: 12px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; text-align: left; }
+    .kpi-comp-card { background: #f6f8fa; border-radius: 6px; padding: 8px 10px; font-size: 0.82rem; }
+    .kpi-comp-card .sym { font-weight: 600; color: #0550ae; }
+    .kpi-comp-card .formula { font-family: ui-monospace, Consolas, monospace; color: #6f42c1; font-size: 0.78rem; margin-top: 2px; }
+    .kpi-example { background: #dafbe1; border-left: 4px solid #1a7f37; border-radius: 4px; padding: 10px 14px; margin-top: 10px; font-size: 0.88rem; }
+    .kpi-example .calc { font-family: 'Cambria Math', Georgia, serif; font-size: 1rem; color: #1f2328; margin: 6px 0; }
+    .kpi-example .result { font-weight: 700; color: #1a7f37; font-size: 1.1rem; }
+    .standards-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+    .std-badge { background: #fff8c5; color: #9a6700; border: 1px solid #d4a72c; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+    .std-badge a { color: inherit; text-decoration: none; }
+    .std-badge .scope { font-weight: 400; color: #6e5500; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin: 8px 0; }
+    .related-card { background: #fff; border: 1px solid #d0d7de; border-radius: 6px; padding: 8px 12px; transition: border-color 0.15s; }
+    .related-card:hover { border-color: #0969da; }
+    .related-card a { display: block; text-decoration: none; }
+    .related-card .r-name { font-weight: 600; color: #0550ae; font-size: 0.88rem; }
+    .related-card .r-desc { color: #656d76; font-size: 0.78rem; margin-top: 3px; }
+    .appendix-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+    .appendix-card { background: linear-gradient(135deg, #ddf4ff, #fff); border: 1px solid #0969da; border-radius: 8px; padding: 10px 14px; }
+    .appendix-card a { text-decoration: none; color: #0550ae; font-weight: 600; }
+    .appendix-card .a-desc { color: #1f2328; font-size: 0.82rem; margin-top: 4px; font-weight: 400; }
+    .timing-strip { background: #fff; border: 1px solid #d0d7de; border-radius: 6px; padding: 10px; margin: 10px 0; overflow-x: auto; }
+    .timing-strip table { border-collapse: collapse; font-size: 0.78rem; }
+    .timing-strip td { padding: 4px 10px; text-align: center; border: 1px solid #d0d7de; min-width: 36px; font-family: ui-monospace, Consolas, monospace; }
+    .timing-strip th { padding: 4px 10px; background: #f6f8fa; text-align: center; font-weight: 600; font-size: 0.72rem; color: #656d76; text-transform: uppercase; }
+    .timing-strip td.r { background: #dafbe1; color: #1a7f37; font-weight: 600; }
+    .timing-strip td.g { background: #ffd8b5; color: #bc4c00; font-weight: 600; }
+    .timing-strip td.f { background: #ddf4ff; color: #0969da; font-weight: 600; }
+    .timing-strip td.h { background: #eaeef2; color: #656d76; font-weight: 600; }
+    .timing-strip td.sig1 { background: #ffeaea; color: #cf222e; font-weight: 700; }
+    .timing-strip td.row-label { background: #f6f8fa; font-weight: 600; color: #1f2328; text-align: left; padding-left: 12px; padding-right: 14px; }
+    .section-sub { color: #656d76; font-size: 0.95rem; margin: 14px 0 6px 0; font-weight: 600; }
   </style>
 </head>
 <body>
@@ -59,21 +120,184 @@
   <div class="card">
     <div class="lang-block">
       <div class="label">한국어</div>
-      <div>모니터링 속성을 담는 서브모델 (알람 / 트렌드 / 상태).</div>
+      <div>모니터링 속성을 담는 서브모델 (알람/트렌드/상태)</div>
     </div>
     <div class="lang-block">
       <div class="label">English</div>
-      <div>Submodel carrying monitoring properties (alarm / trend / status).</div>
+      <div>Submodel carrying monitoring properties (alarm/trend/status)</div>
     </div>
     <div class="lang-block">
       <div class="label">Deutsch</div>
-      <div>Submodel mit Monitoring-Eigenschaften (Alarm / Trend / Status).</div>
+      <div>Submodel mit Monitoring-Eigenschaften (Alarm/Trend/Status)</div>
     </div>
   </div>
 
-  
+  <h2>다이어그램 / Diagram</h2>
+  <div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 460">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L10,5 L0,10 Z" fill="#0969da"/>
+  </marker>
+  <marker id="arrow-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L10,5 L0,10 Z" fill="#bc4c00"/>
+  </marker>
+  <style>
+    .box      { fill:#fff; stroke:#0969da; stroke-width:2; }
+    .box-act  { fill:#dafbe1; stroke:#1a7f37; stroke-width:2; }
+    .box-dev  { fill:#fff8c5; stroke:#9a6700; stroke-width:2; }
+    .box-call { fill:#ddf4ff; stroke:#0969da; stroke-width:2; }
+    .box-tok  { fill:#fdd; stroke:#cf222e; stroke-width:2; }
+    .lbl      { font:13px ui-sans-serif,system-ui,sans-serif; fill:#1f2328; }
+    .lbl-bold { font:bold 14px ui-sans-serif,system-ui,sans-serif; fill:#1f2328; }
+    .meta     { font:11px ui-sans-serif,system-ui,sans-serif; fill:#656d76; }
+    .state    { fill:#0969da; }
+    .state-r  { fill:#1a7f37; }
+    .state-g  { fill:#bc4c00; }
+    .state-f  { fill:#0969da; }
+    .state-h  { fill:#656d76; }
+    .arrow    { stroke:#0969da; stroke-width:2; fill:none; marker-end:url(#arrow); }
+    .arrow-o  { stroke:#bc4c00; stroke-width:2; fill:none; marker-end:url(#arrow-orange); }
+  </style>
+</defs>
 
-  
+      <rect class="box" x="20" y="20" width="720" height="420" rx="8"/>
+      <text class="lbl-bold" x="40" y="48">SeqMonSm — SubmodelElement Tree</text>
+      <text class="meta" x="40" y="68">IDTA 02026-1-0 · semanticId: .../sm/SequenceMonitoring/1/0</text>
+
+      <rect class="box-act" x="40" y="90" width="220" height="44" rx="6"/>
+      <text class="lbl" x="60" y="118">📊 SystemSnapshot (SMC)</text>
+
+      <rect class="box-act" x="280" y="90" width="220" height="44" rx="6"/>
+      <text class="lbl" x="300" y="118">📋 OperationalEvents (SML)</text>
+
+      <rect class="box-act" x="520" y="90" width="200" height="44" rx="6"/>
+      <text class="lbl" x="540" y="118">📈 PerformanceMetrics (SMC)</text>
+
+      <rect class="box-call" x="60" y="150" width="180" height="34" rx="5"/>
+      <text class="meta" x="80" y="172">WorkStates: Map&lt;Guid, NodeState&gt;</text>
+
+      <rect class="box-call" x="60" y="190" width="180" height="34" rx="5"/>
+      <text class="meta" x="80" y="212">CallStates: Map&lt;Guid, NodeState&gt;</text>
+
+      <rect class="box-call" x="60" y="230" width="180" height="34" rx="5"/>
+      <text class="meta" x="80" y="252">WorkProgress: Map&lt;Guid, float&gt;</text>
+
+      <rect class="box-call" x="60" y="270" width="180" height="34" rx="5"/>
+      <text class="meta" x="80" y="292">DeviceStates: Map&lt;Name, bool&gt;</text>
+
+      <rect class="box-call" x="60" y="310" width="180" height="34" rx="5"/>
+      <text class="meta" x="80" y="332">Statistics: ProductionStats</text>
+
+      <rect class="box-call" x="300" y="150" width="180" height="34" rx="5"/>
+      <text class="meta" x="320" y="172">StateChanged · ProgressUpdated</text>
+      <rect class="box-call" x="300" y="190" width="180" height="34" rx="5"/>
+      <text class="meta" x="320" y="212">CycleStarted · CycleCompleted</text>
+      <rect class="box-call" x="300" y="230" width="180" height="34" rx="5"/>
+      <text class="meta" x="320" y="252">SystemStarted · SystemStopped</text>
+      <rect class="box-call" x="300" y="270" width="180" height="34" rx="5"/>
+      <text class="meta" x="320" y="292">IOValueChanged · TcUpdated</text>
+      <rect class="box-call" x="300" y="310" width="180" height="34" rx="5"/>
+      <text class="meta" x="320" y="332">Flow/WorkMtWtUpdated</text>
+      <rect class="box-call" x="300" y="350" width="180" height="34" rx="5"/>
+      <text class="meta" x="320" y="372">AlarmOccurred</text>
+
+      <rect class="box-call" x="540" y="150" width="180" height="34" rx="5"/>
+      <text class="meta" x="560" y="172">MT (Moving Time, ms)</text>
+      <rect class="box-call" x="540" y="190" width="180" height="34" rx="5"/>
+      <text class="meta" x="560" y="212">WT (Wait Time, ms)</text>
+      <rect class="box-call" x="540" y="230" width="180" height="34" rx="5"/>
+      <text class="meta" x="560" y="252">TC = MT + WT (Total Cycle)</text>
+      <rect class="box-call" x="540" y="270" width="180" height="34" rx="5"/>
+      <text class="meta" x="560" y="292">CT (Cycle Time, per Work)</text>
+      <rect class="box-call" x="540" y="310" width="180" height="34" rx="5"/>
+      <text class="meta" x="560" y="332">→ sim/Kpi/* CD 박제</text>
+
+      <text class="meta" x="40" y="410">★ 모든 이벤트는 PostgreSQL signal_event/work/flow 테이블에 기록되어 sim/Kpi/* 산출에 사용됨.</text>
+    </svg></div>
+
+  <h2>F# 타입 정의 / Type Definition</h2>
+<pre><code>// ds2 측 SequenceMonitoringSubmodel — Work/Call 의 R/G/F/H 런타임 상태,
+// 진행률, 디바이스 IO 값, MT/WT/TC 시간 메트릭, 생산 사이클 이벤트를 수집.
+
+type SystemSnapshot = {
+    Timestamp     : DateTime
+    SystemName    : string
+    WorkStates    : Map&lt;Guid, NodeState&gt;          // R/G/F/H
+    CallStates    : Map&lt;Guid, NodeState&gt;
+    WorkProgress  : Map&lt;Guid, float&gt;              // 0.0 ~ 1.0
+    DeviceStates  : Map&lt;string, bool&gt;             // IO 값
+    Statistics    : ProductionStatistics
+}
+
+type ProductionStatistics = {
+    TotalWorks       : int
+    CompletedWorks   : int
+    TotalCalls       : int
+    CompletedCalls   : int
+    ElapsedTime      : float    // seconds
+    AverageProgress  : float    // 0.0 ~ 1.0
+}</code></pre>
+<h2>IDTA SubmodelElement Property Table</h2>
+<table class="iota-table"><thead><tr><th>idShort</th><th>semanticId</th><th>valueType</th><th>multiplicity</th><th>설명 / description</th></tr></thead><tbody><tr><td class="idShort">MonitoringConfiguration</td><td class="semId">https://admin-shell.io/IDTA/02026/1/0/MonitoringConfiguration</td><td class="vt">SubmodelElementCollection</td><td class="mult">1</td><td>샘플링 주기 / 보존 정책 / 활성 메트릭 설정</td></tr><tr><td class="idShort">SystemSnapshot</td><td class="semId">https://admin-shell.io/IDTA/02026/1/0/SystemSnapshot</td><td class="vt">SubmodelElementCollection</td><td class="mult">1</td><td>최신 상태 스냅샷</td></tr><tr><td class="idShort">WorkStates</td><td class="semId">https://admin-shell.io/IDTA/02026/1/0/WorkStates</td><td class="vt">Map&lt;Guid,NodeState&gt;</td><td class="mult">0..*</td><td>Work 별 R/G/F/H 현재 상태</td></tr><tr><td class="idShort">CallStates</td><td class="semId">https://admin-shell.io/IDTA/02026/1/0/CallStates</td><td class="vt">Map&lt;Guid,NodeState&gt;</td><td class="mult">0..*</td><td>Call 별 R/G/F/H 현재 상태</td></tr><tr><td class="idShort">WorkProgress</td><td class="semId">https://admin-shell.io/IDTA/02026/1/0/WorkProgress</td><td class="vt">Map&lt;Guid,double&gt;</td><td class="mult">0..*</td><td>Work 진행률 (0.0~1.0)</td></tr><tr><td class="idShort">DeviceStates</td><td class="semId">https://admin-shell.io/IDTA/02026/1/0/DeviceStates</td><td class="vt">Map&lt;string,bool&gt;</td><td class="mult">0..*</td><td>IO 태그 현재 값 (sensor/actuator)</td></tr><tr><td class="idShort">OperationalEvents</td><td class="semId">https://admin-shell.io/IDTA/02026/1/0/OperationalEvents</td><td class="vt">SubmodelElementList</td><td class="mult">0..*</td><td>운영 이벤트 시퀀스 (10 종)</td></tr><tr><td class="idShort">PerformanceMetrics</td><td class="semId">https://admin-shell.io/IDTA/02026/1/0/PerformanceMetrics</td><td class="vt">SubmodelElementCollection</td><td class="mult">1</td><td>MT/WT/TC + KPI 집계</td></tr><tr><td class="idShort">MT_ms</td><td class="semId">https://admin-shell.io/IDTA/02026/1/0/MT</td><td class="vt">Property:long</td><td class="mult">0..*</td><td>Moving Time — 실제 동작 시간 (ms)</td></tr><tr><td class="idShort">WT_ms</td><td class="semId">https://admin-shell.io/IDTA/02026/1/0/WT</td><td class="vt">Property:long</td><td class="mult">0..*</td><td>Wait Time — 대기 시간 (ms)</td></tr><tr><td class="idShort">TC_ms</td><td class="semId">https://admin-shell.io/IDTA/02026/1/0/TC</td><td class="vt">Property:long</td><td class="mult">0..*</td><td>Total Cycle = MT + WT (ms)</td></tr><tr><td class="idShort">StateChangeHistory</td><td class="semId">https://admin-shell.io/IDTA/02026/1/0/StateChangeHistory</td><td class="vt">SubmodelElementList</td><td class="mult">0..*</td><td>상태 전이 로그 (감사 추적용)</td></tr></tbody></table>
+<h2>운영 이벤트 / Operational Events</h2>
+<div class="event-grid"><div class="event-card"><div class="ev-name">StateChanged</div><div class="ev-params">(nodeType, nodeId, oldState, newState, ts, deviceName)</div><div class="ev-use">Work/Call 의 R→G→F→H 전이 감지. PostgreSQL: work_state, call 테이블.</div></div><div class="event-card"><div class="ev-name">ProgressUpdated</div><div class="ev-params">(nodeType, nodeId, progress 0.0~1.0, ts, deviceName)</div><div class="ev-use">Work 진행률 갱신. PostgreSQL: signal_event.progress_rate.</div></div><div class="event-card"><div class="ev-name">ProductionCycleStarted</div><div class="ev-params">(cycleNum, startTime, flowName)</div><div class="ev-use">Takt Time 측정 시작점. 한 cycle = Source Work R→F.</div></div><div class="event-card"><div class="ev-name">ProductionCycleCompleted</div><div class="ev-params">(cycleNum, success, duration, completedWorks, yield)</div><div class="ev-use">사이클 완료 시 양품률·소요시간 박제.</div></div><div class="event-card"><div class="ev-name">SystemStarted</div><div class="ev-params">(systemName, startTime, operatorId)</div><div class="ev-use">설비 가동 시작. 가동률(Availability) 분자 측정 시작.</div></div><div class="event-card"><div class="ev-name">SystemStopped</div><div class="ev-params">(systemName, stopTime, totalCycles, reason)</div><div class="ev-use">정지 사유 기록 (정상/비상/고장).</div></div><div class="event-card"><div class="ev-name">IOValueChanged</div><div class="ev-params">(signal, ioType I/O, value, ts, deviceName)</div><div class="ev-use">센서/액추에이터 값 변화. PLC 태그(%IX/%QX) → DS Tag 매핑.</div></div><div class="event-card"><div class="ev-name">TcUpdated</div><div class="ev-params">(signal, tcMs, ts)</div><div class="ev-use">실제 사이클타임 측정값. PostgreSQL: signal_event.tc.</div></div><div class="event-card"><div class="ev-name">FlowMtWtUpdated</div><div class="ev-params">(flowName, mtMs, wtMs, ts)</div><div class="ev-use">Flow 단위 MT/WT 갱신 → flow.mt, flow.wt 테이블.</div></div><div class="event-card"><div class="ev-name">WorkMtWtUpdated</div><div class="ev-params">(workGuid, workName, mtMs, wtMs, ts)</div><div class="ev-use">Work 단위 MT/WT 갱신 → work.mt, work.wt 테이블.</div></div><div class="event-card"><div class="ev-name">AlarmOccurred</div><div class="ev-params">(alarmCode, severity, message, deviceName, ts)</div><div class="ev-use">알람 (설비 이상 / 품질 / 안전) 박제.</div></div></div>
+<h2>Submodel 예제 / Submodel Example (JSON)</h2>
+<div class="ds2-snippet"><h3 class="section-sub">예제: 차체프레스 라인 1 cycle 모니터링 스냅샷</h3><div class="desc">한 시점의 SystemSnapshot SMC 의 직렬화 — 6-Work 라인이 W2(Going) 진행 중일 때.</div><pre><code>{
+  &quot;modelType&quot;: &quot;Submodel&quot;,
+  &quot;idShort&quot;: &quot;SequenceMonitoringSubmodel&quot;,
+  &quot;kind&quot;: &quot;Instance&quot;,
+  &quot;semanticId&quot;: {
+    &quot;type&quot;: &quot;ExternalReference&quot;,
+    &quot;keys&quot;: [{&quot;type&quot;:&quot;GlobalReference&quot;,&quot;value&quot;:&quot;https://dualsoftdev.github.io/aas-semantics/sm/SequenceMonitoring/1/0&quot;}]
+  },
+  &quot;submodelElements&quot;: [
+    {
+      &quot;idShort&quot;: &quot;SystemSnapshot&quot;,
+      &quot;modelType&quot;: &quot;SubmodelElementCollection&quot;,
+      &quot;value&quot;: [
+        { &quot;idShort&quot;: &quot;Timestamp&quot;,  &quot;modelType&quot;:&quot;Property&quot;, &quot;valueType&quot;:&quot;xs:dateTime&quot;, &quot;value&quot;:&quot;2026-05-07T09:30:14Z&quot; },
+        { &quot;idShort&quot;: &quot;SystemName&quot;, &quot;modelType&quot;:&quot;Property&quot;, &quot;valueType&quot;:&quot;xs:string&quot;,   &quot;value&quot;:&quot;PressLine&quot; },
+        {
+          &quot;idShort&quot;: &quot;WorkStates&quot;, &quot;modelType&quot;:&quot;SubmodelElementList&quot;,
+          &quot;value&quot;:[
+            {&quot;idShort&quot;:&quot;W1_소재투입&quot;,&quot;modelType&quot;:&quot;Property&quot;,&quot;valueType&quot;:&quot;xs:string&quot;,&quot;value&quot;:&quot;Finish&quot;},
+            {&quot;idShort&quot;:&quot;W2_1차프레스&quot;,&quot;modelType&quot;:&quot;Property&quot;,&quot;valueType&quot;:&quot;xs:string&quot;,&quot;value&quot;:&quot;Going&quot;},
+            {&quot;idShort&quot;:&quot;W3_2차프레스&quot;,&quot;modelType&quot;:&quot;Property&quot;,&quot;valueType&quot;:&quot;xs:string&quot;,&quot;value&quot;:&quot;Ready&quot;},
+            {&quot;idShort&quot;:&quot;W4_트림&quot;,    &quot;modelType&quot;:&quot;Property&quot;,&quot;valueType&quot;:&quot;xs:string&quot;,&quot;value&quot;:&quot;Ready&quot;},
+            {&quot;idShort&quot;:&quot;W5_검사&quot;,    &quot;modelType&quot;:&quot;Property&quot;,&quot;valueType&quot;:&quot;xs:string&quot;,&quot;value&quot;:&quot;Ready&quot;},
+            {&quot;idShort&quot;:&quot;W6_배출&quot;,    &quot;modelType&quot;:&quot;Property&quot;,&quot;valueType&quot;:&quot;xs:string&quot;,&quot;value&quot;:&quot;Homing&quot;}
+          ]
+        },
+        { &quot;idShort&quot;:&quot;AverageProgress&quot;,&quot;modelType&quot;:&quot;Property&quot;,&quot;valueType&quot;:&quot;xs:double&quot;,&quot;value&quot;:0.42 }
+      ]
+    },
+    {
+      &quot;idShort&quot;: &quot;OperationalEvents&quot;,
+      &quot;modelType&quot;: &quot;SubmodelElementList&quot;,
+      &quot;value&quot;: [
+        {&quot;idShort&quot;:&quot;e1&quot;,&quot;modelType&quot;:&quot;SubmodelElementCollection&quot;,&quot;value&quot;:[
+          {&quot;idShort&quot;:&quot;name&quot;,&quot;modelType&quot;:&quot;Property&quot;,&quot;valueType&quot;:&quot;xs:string&quot;,&quot;value&quot;:&quot;StateChanged&quot;},
+          {&quot;idShort&quot;:&quot;workName&quot;,&quot;modelType&quot;:&quot;Property&quot;,&quot;valueType&quot;:&quot;xs:string&quot;,&quot;value&quot;:&quot;PressLine.W2_1차프레스&quot;},
+          {&quot;idShort&quot;:&quot;old&quot;,&quot;modelType&quot;:&quot;Property&quot;,&quot;valueType&quot;:&quot;xs:string&quot;,&quot;value&quot;:&quot;Ready&quot;},
+          {&quot;idShort&quot;:&quot;new&quot;,&quot;modelType&quot;:&quot;Property&quot;,&quot;valueType&quot;:&quot;xs:string&quot;,&quot;value&quot;:&quot;Going&quot;},
+          {&quot;idShort&quot;:&quot;ts&quot;,&quot;modelType&quot;:&quot;Property&quot;,&quot;valueType&quot;:&quot;xs:dateTime&quot;,&quot;value&quot;:&quot;2026-05-07T09:30:14.120Z&quot;}
+        ]}
+      ]
+    }
+  ]
+}</code></pre></div>
+<h2>관계 / Relationships</h2>
+<div class="card"><ul class="relations"><li><code>SeqMonSm.WorkStates[*]</code> → Work (R/G/F/H 추적 대상) <a href="../../../../entity/Work/1/0/">entity/Work/1/0</a></li><li><code>SeqMonSm.CallStates[*]</code> → Call <a href="../../../../entity/Call/1/0/">entity/Call/1/0</a></li><li><code>SeqMonSm.DeviceStates[*]</code> → Device IO 태그 <a href="../../../../entity/Device/1/0/">entity/Device/1/0</a></li><li><code>SeqMonSm → sim/Kpi/*</code> 박제 데이터로 KPI 산출 <a href="../../../../sim/Kpi/OEE/1/0/">sim/Kpi/OEE/1/0</a></li></ul></div>
+<h2>AAS 매핑 / AAS Mapping</h2>
+<div class="card">SeqMonSm 은 한 AAS 안에 1 개 인스턴스. 실시간 메트릭은 PerformanceMetrics SMC 에 누적, 장기 보존이 필요한 부분은 SequenceLogging 으로 분리 저장. SimulationResult 박제 시 관련 KPI 는 sim/Kpi/* CD 의 semanticId 로 인용.</div>
+<h2>산업 표준 / Industry Standards</h2>
+<div class="standards-row"><span class="std-badge"><a href="https://industrialdigitaltwin.org/en/content-hub/submodels" target="_blank">IDTA 02026-1-0<span class="scope"> · SequenceMonitoring 표준 (Draft)</span></a></span><span class="std-badge"><a href="https://www.iso.org/standard/56847.html" target="_blank">ISO 22400-2:2014<span class="scope"> · MES KPI 정의 (가동률, OEE 등)</span></a></span><span class="std-badge">ISA-95 (IEC 62264)<span class="scope"> · Level 3 Operations Management</span></span><span class="std-badge">OPC UA Part 8<span class="scope"> · DataAccess (실시간 IO 값 송수신)</span></span></div>
+<h2>관련 CD / Related ConceptDescriptions</h2>
+<div class="related-grid"><div class="related-card"><a href="../../../../sm/SequenceModel/1/0/"><div class="r-name">SeqModelSm</div><div class="r-desc">모니터링 대상 시퀀스 모델</div></a></div><div class="related-card"><a href="../../../../sm/SequenceLogging/1/0/"><div class="r-name">SeqLogSm</div><div class="r-desc">장기 보존 로깅 (모니터링 vs 로깅 분리)</div></a></div><div class="related-card"><a href="../../../../sm/SequenceMaintenance/1/0/"><div class="r-name">SeqMaintSm</div><div class="r-desc">정비 (MTBF/MTTR 산출 기반)</div></a></div><div class="related-card"><a href="../../../../sim/Kpi/OEE/1/0/"><div class="r-name">OEEkpi</div><div class="r-desc">Availability × Performance × Quality</div></a></div><div class="related-card"><a href="../../../../sim/Kpi/CycleTime/1/0/"><div class="r-name">CTkpi</div><div class="r-desc">Work TC 박제 KPI</div></a></div><div class="related-card"><a href="../../../../entity/Work/1/0/"><div class="r-name">Work</div><div class="r-desc">추적 대상 — R/G/F/H FSM</div></a></div></div>
+<h2>학습 가이드 / Appendix Pages</h2>
+<div class="appendix-grid"><div class="appendix-card"><a href="../../../../docs/duality/">📚 Duality 8 Cases</a><div class="a-desc">Case 5: WorkBit = R⊕G⊕F⊕H FSM 의미 — 모니터링 대상</div></div></div>
+<h2>원본 코드 / Source files</h2>
+<div class="card"><ul><li><a href="https://github.com/DualsoftDev/ds2/blob/master/Solutions/Convert/Ds2.Aasx/Concepts/Catalog.fs" target="_blank">Catalog.fs (CD 카탈로그)</a></li><li><a href="https://github.com/DualsoftDev/ds2/blob/master/Solutions/Runtime/Ev2.Runtime.Sim" target="_blank">Ev2.Runtime.Sim (이벤트 발행자)</a></li></ul></div>
 
   <h2>AAS ConceptDescription 메타</h2>
   <div class="card">

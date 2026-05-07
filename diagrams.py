@@ -1,7 +1,13 @@
 """
 Sequence 엔티티별 예제 다이어그램 SVG 모음.
 generate.py 가 viewer.html 생성 시 사용.
+
+entity/* CD 11개는 통합 overview 다이어그램(overview_diagram.build_overview)을 사용한다.
+각 엔티티 CD 페이지마다 해당 엔티티가 빨간색 + glow 로 강조되는 동일한 다이어그램.
+sm/* 와 sim/* 는 별도 도식 (SubmodelElement Tree, KPI 산식 등) 사용.
 """
+
+from overview_diagram import build_overview as _build_overview
 
 # 공통 SVG 헤더 (defs + 스타일)
 _DEFS = """
@@ -39,216 +45,116 @@ def _svg(viewbox: str, body: str) -> str:
 
 DIAGRAMS = {
 
-    # ── PROJECT ────────────────────────────────────────────────────────────
-    "entity/Project/1/0": _svg("0 0 640 360", """
-      <rect class="box" x="20" y="20" width="600" height="320" rx="8"/>
-      <text class="lbl-bold" x="40" y="48">Project "MyFactory"</text>
-      <text class="meta"     x="40" y="68">Author · Version · DateTime · TokenSpecs</text>
+    "entity/Project/1/0": _build_overview("Project"),
 
-      <text class="meta"     x="40" y="100">Active Systems</text>
-      <rect class="box-act"  x="40"  y="110" width="170" height="60" rx="6"/>
-      <text class="lbl"      x="55"  y="135">DsSystem "Cell-A"</text>
-      <text class="meta"     x="55"  y="155">flows + devices</text>
-      <rect class="box-act"  x="230" y="110" width="170" height="60" rx="6"/>
-      <text class="lbl"      x="245" y="135">DsSystem "Cell-B"</text>
-      <text class="meta"     x="245" y="155">flows + devices</text>
+    "entity/System/1/0": _build_overview("System"),
 
-      <text class="meta"     x="40" y="210">Passive Systems (Devices)</text>
-      <rect class="box-dev"  x="40"  y="220" width="120" height="50" rx="6"/>
-      <text class="lbl"      x="60"  y="250">Cylinder</text>
-      <rect class="box-dev"  x="180" y="220" width="120" height="50" rx="6"/>
-      <text class="lbl"      x="215" y="250">Robot</text>
-      <rect class="box-dev"  x="320" y="220" width="120" height="50" rx="6"/>
-      <text class="lbl"      x="345" y="250">Sensor</text>
+    "entity/Device/1/0": _build_overview("Device"),
+
+    "entity/Flow/1/0": _build_overview("Flow"),
+
+    "entity/Work/1/0": _build_overview("Work"),
+
+    "entity/Call/1/0": _build_overview("Call"),
+
+    "entity/ApiDef/1/0": _build_overview("ApiDef"),
+
+    "entity/ApiCall/1/0": _build_overview("ApiCall"),
+
+    "entity/TokenSpec/1/0": _build_overview("TokenSpec"),
+
+    "entity/ArrowWork/1/0": _build_overview("ArrowWork"),
+
+    # ── SequenceMonitoring SMC tree ───────────────────────────────────────
+    "sm/SequenceMonitoring/1/0": _svg("0 0 760 460", """
+      <rect class="box" x="20" y="20" width="720" height="420" rx="8"/>
+      <text class="lbl-bold" x="40" y="48">SeqMonSm — SubmodelElement Tree</text>
+      <text class="meta" x="40" y="68">IDTA 02026-1-0 · semanticId: .../sm/SequenceMonitoring/1/0</text>
+
+      <rect class="box-act" x="40" y="90" width="220" height="44" rx="6"/>
+      <text class="lbl" x="60" y="118">📊 SystemSnapshot (SMC)</text>
+
+      <rect class="box-act" x="280" y="90" width="220" height="44" rx="6"/>
+      <text class="lbl" x="300" y="118">📋 OperationalEvents (SML)</text>
+
+      <rect class="box-act" x="520" y="90" width="200" height="44" rx="6"/>
+      <text class="lbl" x="540" y="118">📈 PerformanceMetrics (SMC)</text>
+
+      <rect class="box-call" x="60" y="150" width="180" height="34" rx="5"/>
+      <text class="meta" x="80" y="172">WorkStates: Map&lt;Guid, NodeState&gt;</text>
+
+      <rect class="box-call" x="60" y="190" width="180" height="34" rx="5"/>
+      <text class="meta" x="80" y="212">CallStates: Map&lt;Guid, NodeState&gt;</text>
+
+      <rect class="box-call" x="60" y="230" width="180" height="34" rx="5"/>
+      <text class="meta" x="80" y="252">WorkProgress: Map&lt;Guid, float&gt;</text>
+
+      <rect class="box-call" x="60" y="270" width="180" height="34" rx="5"/>
+      <text class="meta" x="80" y="292">DeviceStates: Map&lt;Name, bool&gt;</text>
+
+      <rect class="box-call" x="60" y="310" width="180" height="34" rx="5"/>
+      <text class="meta" x="80" y="332">Statistics: ProductionStats</text>
+
+      <rect class="box-call" x="300" y="150" width="180" height="34" rx="5"/>
+      <text class="meta" x="320" y="172">StateChanged · ProgressUpdated</text>
+      <rect class="box-call" x="300" y="190" width="180" height="34" rx="5"/>
+      <text class="meta" x="320" y="212">CycleStarted · CycleCompleted</text>
+      <rect class="box-call" x="300" y="230" width="180" height="34" rx="5"/>
+      <text class="meta" x="320" y="252">SystemStarted · SystemStopped</text>
+      <rect class="box-call" x="300" y="270" width="180" height="34" rx="5"/>
+      <text class="meta" x="320" y="292">IOValueChanged · TcUpdated</text>
+      <rect class="box-call" x="300" y="310" width="180" height="34" rx="5"/>
+      <text class="meta" x="320" y="332">Flow/WorkMtWtUpdated</text>
+      <rect class="box-call" x="300" y="350" width="180" height="34" rx="5"/>
+      <text class="meta" x="320" y="372">AlarmOccurred</text>
+
+      <rect class="box-call" x="540" y="150" width="180" height="34" rx="5"/>
+      <text class="meta" x="560" y="172">MT (Moving Time, ms)</text>
+      <rect class="box-call" x="540" y="190" width="180" height="34" rx="5"/>
+      <text class="meta" x="560" y="212">WT (Wait Time, ms)</text>
+      <rect class="box-call" x="540" y="230" width="180" height="34" rx="5"/>
+      <text class="meta" x="560" y="252">TC = MT + WT (Total Cycle)</text>
+      <rect class="box-call" x="540" y="270" width="180" height="34" rx="5"/>
+      <text class="meta" x="560" y="292">CT (Cycle Time, per Work)</text>
+      <rect class="box-call" x="540" y="310" width="180" height="34" rx="5"/>
+      <text class="meta" x="560" y="332">→ sim/Kpi/* CD 박제</text>
+
+      <text class="meta" x="40" y="410">★ 모든 이벤트는 PostgreSQL signal_event/work/flow 테이블에 기록되어 sim/Kpi/* 산출에 사용됨.</text>
     """),
 
-    # ── SYSTEM (active) ────────────────────────────────────────────────────
-    "entity/System/1/0": _svg("0 0 640 320", """
-      <rect class="box-act" x="20" y="20" width="600" height="280" rx="8"/>
-      <text class="lbl-bold" x="40" y="48">DsSystem "Cell-A" (active)</text>
+    # ── sim/Kpi/OEE — formula visual ──────────────────────────────────────
+    "sim/Kpi/OEE/1/0": _svg("0 0 720 360", """
+      <rect class="box" x="20" y="20" width="680" height="320" rx="8"/>
+      <text class="lbl-bold" x="40" y="50">OEE = Availability × Performance × Quality</text>
+      <text class="meta" x="40" y="72">ISO 22400-2:2014 · 종합설비효율 (Overall Equipment Effectiveness)</text>
 
-      <text class="meta" x="40" y="80">Flow "MainFlow"</text>
-      <rect class="box" x="60"  y="90" width="100" height="50" rx="6"/><text class="lbl" x="92" y="120">W1</text>
-      <rect class="box" x="200" y="90" width="100" height="50" rx="6"/><text class="lbl" x="232" y="120">W2</text>
-      <rect class="box" x="340" y="90" width="100" height="50" rx="6"/><text class="lbl" x="372" y="120">W3</text>
-      <line class="arrow" x1="160" y1="115" x2="200" y2="115"/>
-      <line class="arrow" x1="300" y1="115" x2="340" y2="115"/>
+      <rect class="box-act" x="60"  y="110" width="170" height="80" rx="8"/>
+      <text class="lbl-bold" x="100" y="140" fill="#1a7f37">Availability</text>
+      <text class="meta" x="80" y="160">실제 가동 ÷ 계획 가동</text>
+      <text class="lbl" x="115" y="180" fill="#1a7f37">0.92</text>
 
-      <text class="meta" x="40" y="190">Used Devices</text>
-      <rect class="box-dev" x="60"  y="200" width="120" height="50" rx="6"/><text class="lbl" x="80"  y="230">Cylinder1</text>
-      <rect class="box-dev" x="200" y="200" width="120" height="50" rx="6"/><text class="lbl" x="230" y="230">Robot1</text>
-      <rect class="box-dev" x="340" y="200" width="120" height="50" rx="6"/><text class="lbl" x="372" y="230">Sensor1</text>
+      <text class="lbl-bold" x="245" y="160">×</text>
+
+      <rect class="box-act" x="270" y="110" width="170" height="80" rx="8"/>
+      <text class="lbl-bold" x="305" y="140" fill="#bc4c00">Performance</text>
+      <text class="meta" x="290" y="160">목표 CT ÷ 실제 CT</text>
+      <text class="lbl" x="320" y="180" fill="#bc4c00">0.85</text>
+
+      <text class="lbl-bold" x="455" y="160">×</text>
+
+      <rect class="box-act" x="480" y="110" width="170" height="80" rx="8"/>
+      <text class="lbl-bold" x="525" y="140" fill="#0969da">Quality</text>
+      <text class="meta" x="500" y="160">양품 ÷ 총생산</text>
+      <text class="lbl" x="530" y="180" fill="#0969da">0.98</text>
+
+      <line class="arrow" x1="360" y1="200" x2="360" y2="240"/>
+
+      <rect class="box-tok" x="200" y="250" width="320" height="60" rx="8"/>
+      <text class="lbl-bold" x="240" y="280" fill="#cf222e" style="font-size:18px">OEE = 0.7676 (76.76%)</text>
+      <text class="meta" x="260" y="300">월드클래스 기준: ≥ 85%</text>
     """),
 
-    # ── DEVICE (passive) ───────────────────────────────────────────────────
-    "entity/Device/1/0": _svg("0 0 480 280", """
-      <rect class="box-dev" x="40" y="20" width="400" height="240" rx="8"/>
-      <text class="lbl-bold" x="60" y="50">Device "Cylinder1" (passive)</text>
-      <text class="meta" x="60" y="70">SystemType: Cylinder_2</text>
-
-      <text class="meta" x="60" y="100">Exposed APIs (ApiDef)</text>
-      <rect class="box" x="60"  y="115" width="110" height="40" rx="6"/><text class="lbl" x="92"  y="140">ADV</text>
-      <rect class="box" x="190" y="115" width="110" height="40" rx="6"/><text class="lbl" x="222" y="140">RET</text>
-      <rect class="box" x="320" y="115" width="110" height="40" rx="6"/><text class="lbl" x="343" y="140">DETECT</text>
-
-      <text class="meta" x="60" y="190">Tags</text>
-      <text class="lbl"  x="60" y="215">LS_Adv1, LS_Ret1, SOL_Adv, SOL_Ret …</text>
-    """),
-
-    # ── FLOW ───────────────────────────────────────────────────────────────
-    "entity/Flow/1/0": _svg("0 0 640 200", """
-      <rect class="box-act" x="20" y="20" width="600" height="160" rx="8"/>
-      <text class="lbl-bold" x="40" y="50">Flow "MainFlow"</text>
-
-      <rect class="box" x="60"  y="90" width="90" height="50" rx="6"/><text class="lbl" x="90"  y="120">W1 Pickup</text>
-      <rect class="box" x="200" y="90" width="90" height="50" rx="6"/><text class="lbl" x="225" y="120">W2 Process</text>
-      <rect class="box" x="340" y="90" width="90" height="50" rx="6"/><text class="lbl" x="365" y="120">W3 Place</text>
-      <rect class="box" x="480" y="90" width="90" height="50" rx="6"/><text class="lbl" x="505" y="120">W4 Reset</text>
-      <line class="arrow" x1="150" y1="115" x2="200" y2="115"/>
-      <line class="arrow" x1="290" y1="115" x2="340" y2="115"/>
-      <line class="arrow" x1="430" y1="115" x2="480" y2="115"/>
-    """),
-
-    # ── WORK (state machine) ───────────────────────────────────────────────
-    "entity/Work/1/0": _svg("0 0 640 280", """
-      <rect class="box" x="20" y="20" width="600" height="240" rx="8"/>
-      <text class="lbl-bold" x="40" y="48">Work "Pickup" — State Machine</text>
-      <text class="meta" x="40" y="68">R(eady) → G(oing) → F(inish) → H(oming) → R …</text>
-
-      <circle cx="120" cy="160" r="34" class="state-r"/><text class="lbl" x="113" y="166" fill="#fff">R</text>
-      <circle cx="260" cy="160" r="34" class="state-g"/><text class="lbl" x="253" y="166" fill="#fff">G</text>
-      <circle cx="400" cy="160" r="34" class="state-f"/><text class="lbl" x="393" y="166" fill="#fff">F</text>
-      <circle cx="540" cy="160" r="34" class="state-h"/><text class="lbl" x="533" y="166" fill="#fff">H</text>
-
-      <line class="arrow" x1="155" y1="160" x2="225" y2="160"/>
-      <line class="arrow" x1="295" y1="160" x2="365" y2="160"/>
-      <line class="arrow" x1="435" y1="160" x2="505" y2="160"/>
-      <path class="arrow" d="M540,194 Q540,240 120,210 L120,194"/>
-
-      <text class="meta" x="100" y="220">Ready</text>
-      <text class="meta" x="240" y="220">Going</text>
-      <text class="meta" x="380" y="220">Finish</text>
-      <text class="meta" x="520" y="220">Homing</text>
-    """),
-
-    # ── CALL ───────────────────────────────────────────────────────────────
-    "entity/Call/1/0": _svg("0 0 640 280", """
-      <rect class="box" x="20" y="20" width="600" height="240" rx="8"/>
-      <text class="lbl-bold" x="40" y="48">Work "Pickup"</text>
-      <text class="meta" x="40" y="68">Calls (sequential within a work)</text>
-
-      <rect class="box-call" x="40"  y="100" width="160" height="60" rx="6"/>
-      <text class="lbl"  x="60" y="125">Call_1</text>
-      <text class="meta" x="60" y="145">→ Robot.MOVE_TO_A</text>
-
-      <rect class="box-call" x="240" y="100" width="160" height="60" rx="6"/>
-      <text class="lbl"  x="260" y="125">Call_2</text>
-      <text class="meta" x="260" y="145">→ Gripper.GRAB</text>
-
-      <rect class="box-call" x="440" y="100" width="160" height="60" rx="6"/>
-      <text class="lbl"  x="460" y="125">Call_3</text>
-      <text class="meta" x="460" y="145">→ Robot.RETURN</text>
-
-      <line class="arrow" x1="200" y1="130" x2="240" y2="130"/>
-      <line class="arrow" x1="400" y1="130" x2="440" y2="130"/>
-
-      <text class="meta" x="40" y="200">Each Call references an ApiDef + binds runtime values.</text>
-    """),
-
-    # ── ApiDef ────────────────────────────────────────────────────────────
-    "entity/ApiDef/1/0": _svg("0 0 600 240", """
-      <rect class="box-dev" x="20" y="20" width="560" height="200" rx="8"/>
-      <text class="lbl-bold" x="40" y="48">ApiDef "MOVE_TO_A" (exposed by Robot)</text>
-
-      <rect class="box" x="80"  y="90" width="180" height="50" rx="6"/>
-      <text class="lbl" x="100" y="115">Input</text>
-      <text class="meta" x="100" y="132">InTag: M_Trigger (BOOL)</text>
-
-      <rect class="box" x="340" y="90" width="180" height="50" rx="6"/>
-      <text class="lbl" x="360" y="115">Output</text>
-      <text class="meta" x="360" y="132">OutTag: M_Done (BOOL)</text>
-
-      <line class="arrow" x1="260" y1="115" x2="340" y2="115"/>
-
-      <text class="meta" x="40" y="180">ApiDef = signature only (caller binds via ApiCall at runtime)</text>
-    """),
-
-    # ── ApiCall ───────────────────────────────────────────────────────────
-    "entity/ApiCall/1/0": _svg("0 0 640 260", """
-      <rect class="box-call" x="20" y="20" width="600" height="220" rx="8"/>
-      <text class="lbl-bold" x="40" y="50">ApiCall — runtime binding of Call ↔ ApiDef</text>
-
-      <rect class="box-call" x="40"  y="80" width="170" height="50" rx="6"/>
-      <text class="lbl" x="60" y="105">Caller (Call)</text>
-      <text class="meta" x="60" y="122">Work_Pickup.Call_1</text>
-
-      <rect class="box-dev" x="430" y="80" width="170" height="50" rx="6"/>
-      <text class="lbl" x="450" y="105">Callee (ApiDef)</text>
-      <text class="meta" x="450" y="122">Robot.MOVE_TO_A</text>
-
-      <line class="arrow" x1="210" y1="105" x2="430" y2="105"/>
-      <text class="meta" x="245" y="98">binding</text>
-
-      <rect class="box" x="40"  y="160" width="560" height="60" rx="6"/>
-      <text class="lbl"  x="60" y="185">In: M001 (M_Trigger)</text>
-      <text class="lbl"  x="320" y="185">Out: M002 (M_Done)</text>
-      <text class="meta" x="60" y="208">실제 PLC 태그가 ApiDef 의 InTag/OutTag 자리에 매핑됨.</text>
-    """),
-
-    # ── TokenSpec ─────────────────────────────────────────────────────────
-    "entity/TokenSpec/1/0": _svg("0 0 640 280", """
-      <rect class="box-tok" x="20" y="20" width="600" height="100" rx="8"/>
-      <text class="lbl-bold" x="40" y="48">TokenSpec "RecipeA"</text>
-      <text class="meta" x="40" y="70">Id=1 · Label="Steel Door" · Source=W_Start</text>
-      <text class="meta" x="40" y="92">Fields: thickness=2mm, color=red</text>
-
-      <text class="meta" x="40" y="155">Token flow at runtime:</text>
-      <circle cx="80" cy="200" r="20" class="state-r"/><text class="lbl" x="71" y="205" fill="#fff">#1</text>
-      <line class="arrow" x1="105" y1="200" x2="155" y2="200"/>
-      <rect class="box" x="155" y="180" width="80" height="40" rx="6"/><text class="lbl" x="180" y="205">W_Start</text>
-      <line class="arrow" x1="240" y1="200" x2="290" y2="200"/>
-      <rect class="box" x="290" y="180" width="80" height="40" rx="6"/><text class="lbl" x="318" y="205">W2</text>
-      <line class="arrow" x1="375" y1="200" x2="425" y2="200"/>
-      <rect class="box" x="425" y="180" width="80" height="40" rx="6"/><text class="lbl" x="453" y="205">W3</text>
-      <line class="arrow" x1="510" y1="200" x2="560" y2="200"/>
-      <text class="lbl" x="565" y="205">Done</text>
-    """),
-
-    # ── ArrowWork ─────────────────────────────────────────────────────────
-    "entity/ArrowWork/1/0": _svg("0 0 600 220", """
-      <rect class="box-act" x="20" y="20" width="560" height="180" rx="8"/>
-      <text class="lbl-bold" x="40" y="50">ArrowWork — Work 간 전이 / 리셋 규칙</text>
-
-      <rect class="box" x="80"  y="100" width="120" height="60" rx="6"/>
-      <text class="lbl" x="120" y="135">W1 (source)</text>
-
-      <rect class="box" x="380" y="100" width="120" height="60" rx="6"/>
-      <text class="lbl" x="420" y="135">W2 (target)</text>
-
-      <line class="arrow-o" x1="200" y1="130" x2="380" y2="130"/>
-      <text class="lbl" x="240" y="120">Reset / Sequence</text>
-      <text class="meta" x="220" y="155">예: W2 가 R 진입하면 W1 H→R 트리거</text>
-    """),
-
-    # ── ArrowCall ─────────────────────────────────────────────────────────
-    "entity/ArrowCall/1/0": _svg("0 0 600 220", """
-      <rect class="box" x="20" y="20" width="560" height="180" rx="8"/>
-      <text class="lbl-bold" x="40" y="50">Work "Pickup" — ArrowCall (Call 간 순서)</text>
-
-      <rect class="box-call" x="60"  y="100" width="130" height="60" rx="6"/>
-      <text class="lbl" x="85" y="135">Call_A</text>
-
-      <rect class="box-call" x="240" y="100" width="130" height="60" rx="6"/>
-      <text class="lbl" x="265" y="135">Call_B</text>
-
-      <rect class="box-call" x="420" y="100" width="130" height="60" rx="6"/>
-      <text class="lbl" x="445" y="135">Call_C</text>
-
-      <line class="arrow" x1="190" y1="130" x2="240" y2="130"/>
-      <line class="arrow" x1="370" y1="130" x2="420" y2="130"/>
-
-      <text class="meta" x="40" y="195">Work 내부 Call 들의 직렬 실행 순서를 지정.</text>
-    """),
+    "entity/ArrowCall/1/0": _build_overview("ArrowCall"),
 }
 
 

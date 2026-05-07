@@ -36,6 +36,67 @@
     .pill { display: inline-block; padding: 1px 8px; border-radius: 12px; font-size: 0.72rem; font-weight: 600;
             background: #ddf4ff; color: #0969da; margin-left: 6px; vertical-align: middle; }
     .pill-state { background: #fff8c5; color: #9a6700; }
+    /* === Phase 0 enrichment: scenarios / vendors / IDTA / events / KPI / standards / related / appendix === */
+    .scenario-card { background: #fff; border: 1px solid #d0d7de; border-radius: 8px; padding: 14px 16px; margin: 12px 0; }
+    .scenario-header { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .scenario-domain { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; background: #ddf4ff; color: #0969da; }
+    .scenario-system { font-weight: 600; color: #1f2328; }
+    .scenario-meta { color: #656d76; font-size: 0.85rem; }
+    .scenario-body { font-size: 0.9rem; color: #1f2328; line-height: 1.55; }
+    .call-strip { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+    .call-chip { background: #f6f8fa; border: 1px solid #d0d7de; border-radius: 6px; padding: 4px 10px; font-size: 0.8rem; }
+    .call-chip .call-dur { color: #656d76; font-size: 0.75rem; margin-left: 6px; }
+    .vendor-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+    .vendor-card { background: #fff; border: 1px solid #d0d7de; border-radius: 6px; padding: 10px 12px; }
+    .vendor-card .v-name { font-weight: 600; color: #0550ae; font-size: 0.85rem; margin-bottom: 6px; }
+    .vendor-card code { display: block; margin: 2px 0; font-size: 0.78rem; background: #eef1f4; padding: 2px 6px; border-radius: 3px; }
+    .iota-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; margin: 8px 0; }
+    .iota-table th, .iota-table td { padding: 6px 8px; border: 1px solid #d0d7de; text-align: left; vertical-align: top; }
+    .iota-table th { background: #f6f8fa; color: #656d76; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.4px; }
+    .iota-table td.idShort { font-family: ui-monospace, Consolas, monospace; color: #0550ae; font-weight: 600; white-space: nowrap; }
+    .iota-table td.semId { font-family: ui-monospace, Consolas, monospace; color: #6f42c1; font-size: 0.7rem; word-break: break-all; }
+    .iota-table td.vt { font-family: ui-monospace, Consolas, monospace; color: #0a3069; font-size: 0.78rem; }
+    .iota-table td.mult { text-align: center; font-family: ui-monospace, Consolas, monospace; color: #1a7f37; font-size: 0.78rem; }
+    .event-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin: 10px 0; }
+    .event-card { background: #f6f8fa; border-left: 3px solid #0969da; border-radius: 4px; padding: 10px 12px; }
+    .event-card .ev-name { font-weight: 600; color: #0550ae; font-size: 0.85rem; }
+    .event-card .ev-params { color: #656d76; font-size: 0.78rem; margin-top: 4px; font-family: ui-monospace, Consolas, monospace; }
+    .event-card .ev-use { color: #1f2328; font-size: 0.8rem; margin-top: 6px; }
+    .kpi-formula { background: #fff; border: 2px solid #0969da; border-radius: 8px; padding: 14px 18px; margin: 10px 0; text-align: center; }
+    .kpi-formula .expr { font-family: 'Cambria Math', Georgia, serif; font-size: 1.15rem; color: #0550ae; font-weight: 600; }
+    .kpi-formula .source { color: #656d76; font-size: 0.78rem; margin-top: 6px; }
+    .kpi-components { margin-top: 12px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; text-align: left; }
+    .kpi-comp-card { background: #f6f8fa; border-radius: 6px; padding: 8px 10px; font-size: 0.82rem; }
+    .kpi-comp-card .sym { font-weight: 600; color: #0550ae; }
+    .kpi-comp-card .formula { font-family: ui-monospace, Consolas, monospace; color: #6f42c1; font-size: 0.78rem; margin-top: 2px; }
+    .kpi-example { background: #dafbe1; border-left: 4px solid #1a7f37; border-radius: 4px; padding: 10px 14px; margin-top: 10px; font-size: 0.88rem; }
+    .kpi-example .calc { font-family: 'Cambria Math', Georgia, serif; font-size: 1rem; color: #1f2328; margin: 6px 0; }
+    .kpi-example .result { font-weight: 700; color: #1a7f37; font-size: 1.1rem; }
+    .standards-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+    .std-badge { background: #fff8c5; color: #9a6700; border: 1px solid #d4a72c; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+    .std-badge a { color: inherit; text-decoration: none; }
+    .std-badge .scope { font-weight: 400; color: #6e5500; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin: 8px 0; }
+    .related-card { background: #fff; border: 1px solid #d0d7de; border-radius: 6px; padding: 8px 12px; transition: border-color 0.15s; }
+    .related-card:hover { border-color: #0969da; }
+    .related-card a { display: block; text-decoration: none; }
+    .related-card .r-name { font-weight: 600; color: #0550ae; font-size: 0.88rem; }
+    .related-card .r-desc { color: #656d76; font-size: 0.78rem; margin-top: 3px; }
+    .appendix-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+    .appendix-card { background: linear-gradient(135deg, #ddf4ff, #fff); border: 1px solid #0969da; border-radius: 8px; padding: 10px 14px; }
+    .appendix-card a { text-decoration: none; color: #0550ae; font-weight: 600; }
+    .appendix-card .a-desc { color: #1f2328; font-size: 0.82rem; margin-top: 4px; font-weight: 400; }
+    .timing-strip { background: #fff; border: 1px solid #d0d7de; border-radius: 6px; padding: 10px; margin: 10px 0; overflow-x: auto; }
+    .timing-strip table { border-collapse: collapse; font-size: 0.78rem; }
+    .timing-strip td { padding: 4px 10px; text-align: center; border: 1px solid #d0d7de; min-width: 36px; font-family: ui-monospace, Consolas, monospace; }
+    .timing-strip th { padding: 4px 10px; background: #f6f8fa; text-align: center; font-weight: 600; font-size: 0.72rem; color: #656d76; text-transform: uppercase; }
+    .timing-strip td.r { background: #dafbe1; color: #1a7f37; font-weight: 600; }
+    .timing-strip td.g { background: #ffd8b5; color: #bc4c00; font-weight: 600; }
+    .timing-strip td.f { background: #ddf4ff; color: #0969da; font-weight: 600; }
+    .timing-strip td.h { background: #eaeef2; color: #656d76; font-weight: 600; }
+    .timing-strip td.sig1 { background: #ffeaea; color: #cf222e; font-weight: 700; }
+    .timing-strip td.row-label { background: #f6f8fa; font-weight: 600; color: #1f2328; text-align: left; padding-left: 12px; padding-right: 14px; }
+    .section-sub { color: #656d76; font-size: 0.95rem; margin: 14px 0 6px 0; font-weight: 600; }
   </style>
 </head>
 <body>
@@ -72,45 +133,493 @@
   </div>
 
   <h2>다이어그램 / Diagram</h2>
-  <div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280">
+  <h3 style="margin:12px 0 4px 0; color:#0550ae; font-size:1rem;">전체 구조 / Overview — 이 엔티티가 DS 안에서 위치</h3>
+  <div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 660">
 <defs>
-  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
-    <path d="M0,0 L10,5 L0,10 Z" fill="#0969da"/>
+  <linearGradient id="ov-ds-top-1" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="rgba(48,90,165,0.55)"/>
+    <stop offset="1" stop-color="rgba(28,64,128,0.45)"/>
+  </linearGradient>
+  <linearGradient id="ov-ds-right-1" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="rgba(20,52,115,0.45)"/>
+    <stop offset="1" stop-color="rgba(8,28,75,0.55)"/>
+  </linearGradient>
+  <linearGradient id="ov-ds-front-1" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="rgba(15,40,90,0.22)"/>
+    <stop offset="1" stop-color="rgba(8,25,60,0.40)"/>
+  </linearGradient>
+  <linearGradient id="ov-ds-top-passive" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="rgba(120,90,40,0.45)"/>
+    <stop offset="1" stop-color="rgba(80,60,28,0.40)"/>
+  </linearGradient>
+  <linearGradient id="ov-ds-right-passive" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="rgba(70,55,25,0.40)"/>
+    <stop offset="1" stop-color="rgba(45,35,18,0.50)"/>
+  </linearGradient>
+  <linearGradient id="ov-ds-front-passive" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="rgba(50,40,20,0.20)"/>
+    <stop offset="1" stop-color="rgba(30,24,12,0.34)"/>
+  </linearGradient>
+  <linearGradient id="ov-apidef-grad-1" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="rgba(40,80,150,0.92)"/>
+    <stop offset="1" stop-color="rgba(20,52,115,0.92)"/>
+  </linearGradient>
+  <linearGradient id="ov-apidef-grad-passive" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="rgba(150,110,40,0.92)"/>
+    <stop offset="1" stop-color="rgba(115,80,25,0.92)"/>
+  </linearGradient>
+  <linearGradient id="ov-tag-front-1" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="rgba(48,95,180,0.7)"/>
+    <stop offset="1" stop-color="rgba(20,52,115,0.7)"/>
+  </linearGradient>
+  <linearGradient id="ov-tag-right-1" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="rgba(28,64,128,0.65)"/>
+    <stop offset="1" stop-color="rgba(10,30,80,0.65)"/>
+  </linearGradient>
+  <filter id="overview-glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="6" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <marker id="ov-arr-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#3cd58a"/>
   </marker>
-  <marker id="arrow-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
-    <path d="M0,0 L10,5 L0,10 Z" fill="#bc4c00"/>
+  <marker id="ov-arr-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#ffa454"/>
   </marker>
+  <marker id="ov-arr-red" viewBox="-1 -1 12 12" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#ff8585" stroke="#ffffff" stroke-width="1.2" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<!-- Background -->
+<rect width="1400" height="660" fill="#061026"/>
+
+<!-- Project boundary (faint dashed by default) -->
+<rect x="15" y="15" width="1370" height="565" fill="none" stroke="#3d6fb5" stroke-width="0.8" stroke-dasharray="8 5" opacity="0.5" rx="6"/>
+<text x="32" y="38" fill="#9bcaff" font-size="11" font-style="italic" opacity="0.6">Project</text>
+
+<!-- TokenSpec card (top-left, faint when not highlighted) -->
+<g>
+  <rect x="40" y="50" width="125" height="50" fill="rgba(252,211,77,0.08)" stroke="#fcd34d" stroke-width="1.4" rx="3"/>
+  <polygon points="153,50 165,50 165,62 153,50" fill="rgba(252,211,77,0.20)" stroke="#fcd34d" stroke-width="0.8"/>
+</g>
+<text x="50" y="70" fill="#fef3c7" font-size="12" font-weight="700">TokenSpec</text>
+<text x="50" y="88" fill="#fcd34d" font-size="9" font-style="italic">Recipe · #1</text>
+
+<!-- ════════════ ACTIVE DsSystem 3D Wireframe ════════════ -->
+<line x1="220" y1="160" x2="220" y2="480" stroke="#3d6fb5" stroke-width="1" stroke-dasharray="3 4" opacity="0.55"/>
+<line x1="220" y1="480" x2="740" y2="480" stroke="#3d6fb5" stroke-width="1" stroke-dasharray="3 4" opacity="0.55"/>
+<line x1="220" y1="480" x2="160" y2="530" stroke="#3d6fb5" stroke-width="1" stroke-dasharray="3 4" opacity="0.55"/>
+<polygon points="160,210 680,210 740,160 220,160" fill="url(#ov-ds-top-1)" stroke="#54aeff" stroke-width="1.6"/>
+<polygon points="680,210 680,530 740,480 740,160" fill="url(#ov-ds-right-1)" stroke="#54aeff" stroke-width="1.6"/>
+<rect x="160" y="210" width="520" height="320" fill="url(#ov-ds-front-1)" stroke="#54aeff" stroke-width="2"/>
+
+<!-- Active Physical Backdrop (production line) -->
+<g opacity="0.45" stroke="#7dd3fc" fill="none">
+  <rect x="180" y="232" width="80" height="100" stroke-width="1.5"/>
+  <rect x="172" y="226" width="96" height="10" stroke-width="1.4"/>
+  <rect x="200" y="276" width="40" height="22" stroke-width="1.3"/>
+  <line x1="220" y1="236" x2="220" y2="276" stroke-width="1"/>
+  <rect x="178" y="328" width="84" height="10" stroke-width="1.4"/>
+  <line x1="195" y1="232" x2="195" y2="328" stroke-width="0.7"/>
+  <line x1="245" y1="232" x2="245" y2="328" stroke-width="0.7"/>
+  <rect x="556" y="298" width="80" height="34" stroke-width="1.5"/>
+  <line x1="596" y1="298" x2="596" y2="262" stroke-width="2"/>
+  <line x1="596" y1="262" x2="635" y2="232" stroke-width="2"/>
+  <line x1="635" y1="232" x2="628" y2="216" stroke-width="1.7"/>
+  <circle cx="596" cy="298" r="8" stroke-width="1.4"/>
+  <circle cx="596" cy="262" r="6" stroke-width="1.2"/>
+  <circle cx="635" cy="232" r="6" stroke-width="1.2"/>
+  <rect x="618" y="208" width="22" height="12" stroke-width="1.2"/>
+  <rect x="358" y="282" width="98" height="50" stroke-width="1.5"/>
+  <rect x="370" y="290" width="74" height="34" stroke-width="1"/>
+  <rect x="386" y="270" width="42" height="14" stroke-width="1.1"/>
+  <line x1="407" y1="270" x2="407" y2="282" stroke-width="0.9"/>
+</g>
+<g opacity="0.55" stroke="#7dd3fc" fill="none">
+  <rect x="180" y="510" width="490" height="16" stroke-width="1.5"/>
+  <line x1="180" y1="514" x2="670" y2="514" stroke-width="0.7"/>
+  <line x1="180" y1="522" x2="670" y2="522" stroke-width="0.7"/>
+  <circle cx="200" cy="518" r="6" stroke-width="1"/>
+  <circle cx="240" cy="518" r="6" stroke-width="1"/>
+  <circle cx="280" cy="518" r="6" stroke-width="1"/>
+  <circle cx="320" cy="518" r="6" stroke-width="1"/>
+  <circle cx="360" cy="518" r="6" stroke-width="1"/>
+  <circle cx="400" cy="518" r="6" stroke-width="1"/>
+  <circle cx="440" cy="518" r="6" stroke-width="1"/>
+  <circle cx="480" cy="518" r="6" stroke-width="1"/>
+  <circle cx="520" cy="518" r="6" stroke-width="1"/>
+  <circle cx="560" cy="518" r="6" stroke-width="1"/>
+  <circle cx="600" cy="518" r="6" stroke-width="1"/>
+  <circle cx="640" cy="518" r="6" stroke-width="1"/>
+</g>
+
+<!-- DsSystem big label -->
+<text x="370" y="288" fill="#dbeefe" font-size="40" font-weight="700"
+      font-family="'Segoe UI', Inter, system-ui, sans-serif" letter-spacing="-1" opacity="0.92">DsSystem</text>
+
+<!-- Active LEFT ApiDefs -->
+<polygon points="186,162 186,222 116,222 86,192 116,162" fill="url(#ov-apidef-grad-1)" stroke="#54aeff" stroke-width="1.5" opacity="0.75"/>
+<line x1="60" y1="222" x2="86" y2="192" stroke="#54aeff" stroke-width="1" opacity="0.5"/>
+<polygon points="170,192 170,252 90,252 60,222 90,192" fill="url(#ov-apidef-grad-1)" stroke="#54aeff" stroke-width="1.5"/>
+<text x="100" y="228" fill="#dbeefe" font-size="14" font-weight="600">ApiDef</text>
+<polygon points="170,332 170,392 90,392 60,362 90,332" fill="url(#ov-apidef-grad-1)" stroke="#54aeff" stroke-width="1.5"/>
+<text x="100" y="368" fill="#dbeefe" font-size="14" font-weight="600">ApiDef</text>
+
+<!-- TAG pyramid (semantic, lower-left) -->
+<line x1="90" y1="475" x2="75" y2="540" stroke="#3d6fb5" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+<line x1="75" y1="540" x2="135" y2="540" stroke="#3d6fb5" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+<line x1="75" y1="540" x2="50" y2="560" stroke="#3d6fb5" stroke-width="1" stroke-dasharray="3 3" opacity="0.6"/>
+<polygon points="90,475 110,560 135,540" fill="url(#ov-tag-right-1)" stroke="#54aeff" stroke-width="1.3"/>
+<polygon points="90,475 50,560 110,560" fill="url(#ov-tag-front-1)" stroke="#54aeff" stroke-width="1.5"/>
+<text x="58" y="585" fill="#dbeefe" font-size="13" font-weight="600">TAG</text>
+<path d="M 92 475 Q 70 360 92 252" fill="none" stroke="#54aeff" stroke-width="1.2"
+      stroke-dasharray="3 3" opacity="0.7"/>
+
+<!-- Inside Active: Flow ⊃ Work★ ⊃ Call ⊃ ApiCall -->
+<rect x="210" y="345" width="450" height="160" fill="rgba(30,60,140,0.18)" stroke="#54aeff" stroke-width="1.5" rx="4"/>
+<text x="226" y="367" fill="#9bcaff" font-size="18" font-weight="700">Flow</text>
+
+<rect x="232" y="378" width="330" height="122" fill="rgba(60,120,200,0.18)" stroke="#9bcaff" stroke-width="1.8" rx="4"/>
+<text x="335" y="408" fill="#dbeefe" font-size="20" font-weight="700">Work</text>
+
+<ellipse cx="315" cy="465" rx="68" ry="28" fill="rgba(255,255,255,0.16)" stroke="#fff" stroke-width="1.5"/>
+<text x="298" y="447" fill="#dbeefe" font-size="13" font-weight="700">Call</text>
+
+<ellipse cx="330" cy="471" rx="32" ry="13" fill="rgba(255,255,255,0.22)" stroke="#fff" stroke-width="1.2"/>
+<text x="310" y="475" fill="#dbeefe" font-size="10" font-weight="600">ApiCall</text>
+
+<!-- CallArrow (Call₁ → Call₂) -->
+
+<line x1="388" y1="465" x2="415" y2="465" stroke="#ffd17a" stroke-width="2.5" marker-end="url(#ov-arr-orange)"/>
+
+<!-- Call₂ (sibling, dimmed unless ArrowCall is highlighted) -->
+<ellipse cx="475" cy="465" rx="50" ry="22" fill="rgba(255,255,255,0.06)"
+         stroke="#fff" stroke-width="1.2" stroke-dasharray="3 3" opacity="0.7"/>
+<text x="461" y="469" fill="rgba(255,255,255,0.7)" font-size="11" font-style="italic">Call₂</text>
+
+<!-- WorkArrow (Work★ → Work₂) -->
+
+<line x1="565" y1="438" x2="585" y2="438" stroke="#3cd58a" stroke-width="2.5" marker-end="url(#ov-arr-green)"/>
+
+<!-- Work₂ (sibling, dimmed) -->
+<rect x="588" y="395" width="68" height="100" fill="rgba(255,255,255,0.04)"
+      stroke="#3d6fb5" stroke-width="1.5" stroke-dasharray="3 3" rx="4" opacity="0.75"/>
+<text x="603" y="450" fill="#9bcaff" font-size="12" font-style="italic">Work₂</text>
+
+<!-- Bus 1 → Passive 1 (Cylinder) -->
+<polygon points="680,275 680,305 720,290" fill="url(#ov-tag-front-1)" stroke="#7dd3fc" stroke-width="1.5"/>
+<text x="680" y="268" fill="#7dd3fc" font-size="11" font-weight="700">Write</text>
+<line x1="722" y1="290" x2="813" y2="290" stroke="#7dd3fc" stroke-width="3" stroke-dasharray="8 4"/>
+<polygon points="815,275 815,305 845,290" fill="url(#ov-tag-front-1)" stroke="#7dd3fc" stroke-width="1.5"/>
+<text x="817" y="268" fill="#7dd3fc" font-size="11" font-weight="700">Read</text>
+
+<!-- Bus 2 → Passive 2 (Motor) -->
+<path d="M 362 471 Q 470 540 680 460" fill="none" stroke="#54aeff"
+      stroke-width="1.2" stroke-dasharray="2 3" opacity="0.7"/>
+<polygon points="680,445 680,475 720,460" fill="url(#ov-tag-front-1)" stroke="#7dd3fc" stroke-width="1.5"/>
+<text x="680" y="438" fill="#7dd3fc" font-size="11" font-weight="700">Write</text>
+<line x1="722" y1="460" x2="813" y2="460" stroke="#7dd3fc" stroke-width="3" stroke-dasharray="8 4"/>
+<polygon points="815,445 815,475 845,460" fill="url(#ov-tag-front-1)" stroke="#7dd3fc" stroke-width="1.5"/>
+<text x="817" y="438" fill="#7dd3fc" font-size="11" font-weight="700">Read</text>
+
+<!-- ════════════ PASSIVE 1: Cylinder ════════════ -->
+<line x1="990" y1="180" x2="990" y2="320" stroke="#7a5d2c" stroke-width="1" stroke-dasharray="3 4" opacity="0.55"/>
+<line x1="990" y1="320" x2="1340" y2="320" stroke="#7a5d2c" stroke-width="1" stroke-dasharray="3 4" opacity="0.55"/>
+<line x1="990" y1="320" x2="940" y2="355" stroke="#7a5d2c" stroke-width="1" stroke-dasharray="3 4" opacity="0.55"/>
+<polygon points="940,215 1290,215 1340,180 990,180" fill="rgba(207,34,46,0.45)" stroke="#ff8585" stroke-width="3" filter="url(#overview-glow)"/>
+<polygon points="1290,215 1290,355 1340,320 1340,180" fill="rgba(207,34,46,0.35)" stroke="#ff8585" stroke-width="3"/>
+<rect x="940" y="215" width="350" height="140" fill="rgba(207,34,46,0.22)" stroke="#ff8585" stroke-width="3"/>
+
+<!-- Passive 1 Physical: Cylinder -->
+<g opacity="0.55" stroke="#fcd34d" fill="none">
+  <rect x="1015" y="278" width="170" height="42" fill="rgba(252,211,77,0.04)" stroke-width="1.5" rx="3"/>
+  <rect x="1009" y="276" width="9" height="46" stroke-width="1"/>
+  <rect x="1182" y="276" width="9" height="46" stroke-width="1"/>
+  <rect x="1191" y="293" width="48" height="12" fill="rgba(252,211,77,0.08)" stroke-width="1.2"/>
+  <rect x="1236" y="289" width="9" height="20" fill="rgba(252,211,77,0.12)" stroke-width="1.2"/>
+  <circle cx="1042" cy="273" r="3.5" stroke-width="1"/>
+  <circle cx="1158" cy="273" r="3.5" stroke-width="1"/>
+  <line x1="1042" y1="269" x2="1042" y2="278" stroke-width="0.8"/>
+  <line x1="1158" y1="269" x2="1158" y2="278" stroke-width="0.8"/>
+  <line x1="1015" y1="328" x2="1185" y2="328" stroke-width="0.8"/>
+  <line x1="1030" y1="320" x2="1030" y2="335" stroke-width="0.8"/>
+  <line x1="1170" y1="320" x2="1170" y2="335" stroke-width="0.8"/>
+  <line x1="1100" y1="278" x2="1100" y2="320" stroke-width="0.8" stroke-dasharray="3 2"/>
+</g>
+
+<text x="970" y="240" fill="#ff8585" font-size="20" font-weight="700"
+      font-family="'Segoe UI', Inter, system-ui, sans-serif" opacity="0.85">DsSystem ★</text>
+
+<rect x="1005" y="258" width="240" height="82" fill="rgba(125,211,252,0.04)" stroke="#7dd3fc" stroke-width="1.2" stroke-dasharray="4 3" rx="3"/>
+<text x="1009" y="271" fill="#7dd3fc" font-size="11" font-weight="700">Work</text>
+
+<ellipse cx="1140" cy="302" rx="45" ry="16" fill="rgba(125,211,252,0.10)" stroke="#7dd3fc" stroke-width="1.2"/>
+<text x="1126" y="295" fill="#7dd3fc" font-size="11" font-weight="700">Call</text>
+
+<ellipse cx="1156" cy="306" rx="22" ry="8" fill="rgba(125,211,252,0.18)" stroke="#7dd3fc" stroke-width="1"/>
+<text x="1140" y="309" fill="#7dd3fc" font-size="9" font-weight="600">ApiCall</text>
+
+<polygon points="940,275 940,305 880,305 855,290 880,275" fill="url(#ov-apidef-grad-passive)" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="884" y="295" fill="#fef3c7" font-size="11" font-weight="600">ApiDef</text>
+
+<!-- Passive 1 outgoing Tag chain (모두 viewBox 안에) -->
+<polygon points="1290,300 1290,316 1308,308" fill="url(#ov-tag-front-1)" stroke="#7dd3fc" stroke-width="1"/>
+<line x1="1310" y1="308" x2="1352" y2="308" stroke="#7dd3fc" stroke-width="2" stroke-dasharray="5 3"/>
+<polygon points="1366,302 1366,314 1354,314 1352,308 1354,302" fill="rgba(115,80,25,0.6)" stroke="#fcd34d" stroke-width="1"/>
+<text x="1310" y="334" fill="#9bcaff" font-size="9" font-style="italic">→ DsSystem</text>
+
+<!-- ════════════ PASSIVE 2: Motor ════════════ -->
+<line x1="990" y1="350" x2="990" y2="495" stroke="#7a5d2c" stroke-width="1" stroke-dasharray="3 4" opacity="0.55"/>
+<line x1="990" y1="495" x2="1340" y2="495" stroke="#7a5d2c" stroke-width="1" stroke-dasharray="3 4" opacity="0.55"/>
+<line x1="990" y1="495" x2="940" y2="530" stroke="#7a5d2c" stroke-width="1" stroke-dasharray="3 4" opacity="0.55"/>
+<polygon points="940,385 1290,385 1340,350 990,350" fill="rgba(207,34,46,0.45)" stroke="#ff8585" stroke-width="3" filter="url(#overview-glow)"/>
+<polygon points="1290,385 1290,530 1340,495 1340,350" fill="rgba(207,34,46,0.35)" stroke="#ff8585" stroke-width="3"/>
+<rect x="940" y="385" width="350" height="145" fill="rgba(207,34,46,0.22)" stroke="#ff8585" stroke-width="3"/>
+
+<!-- Passive 2 Physical: Motor -->
+<g opacity="0.55" stroke="#fcd34d" fill="none">
+  <rect x="1015" y="438" width="125" height="68" fill="rgba(252,211,77,0.04)" stroke-width="1.5" rx="4"/>
+  <line x1="1030" y1="448" x2="1030" y2="496" stroke-width="0.8"/>
+  <line x1="1045" y1="448" x2="1045" y2="496" stroke-width="0.8"/>
+  <line x1="1060" y1="448" x2="1060" y2="496" stroke-width="0.8"/>
+  <line x1="1075" y1="448" x2="1075" y2="496" stroke-width="0.8"/>
+  <line x1="1090" y1="448" x2="1090" y2="496" stroke-width="0.8"/>
+  <line x1="1105" y1="448" x2="1105" y2="496" stroke-width="0.8"/>
+  <line x1="1120" y1="448" x2="1120" y2="496" stroke-width="0.8"/>
+  <rect x="1055" y="425" width="38" height="14" fill="rgba(252,211,77,0.08)" stroke-width="1"/>
+  <rect x="1140" y="448" width="18" height="48" fill="rgba(252,211,77,0.08)" stroke-width="1.3"/>
+  <rect x="1158" y="466" width="44" height="12" fill="rgba(252,211,77,0.08)" stroke-width="1.2"/>
+  <rect x="1200" y="461" width="11" height="22" fill="rgba(252,211,77,0.12)" stroke-width="1.2"/>
+  <rect x="1212" y="468" width="38" height="8" fill="rgba(252,211,77,0.08)" stroke-width="1"/>
+  <rect x="1020" y="506" width="22" height="9" fill="none" stroke-width="1"/>
+  <rect x="1115" y="506" width="22" height="9" fill="none" stroke-width="1"/>
+</g>
+
+<text x="970" y="412" fill="#ff8585" font-size="20" font-weight="700"
+      font-family="'Segoe UI', Inter, system-ui, sans-serif" opacity="0.85">DsSystem</text>
+
+<rect x="1005" y="425" width="240" height="98" fill="rgba(125,211,252,0.04)" stroke="#7dd3fc" stroke-width="1.2" stroke-dasharray="4 3" rx="3"/>
+<text x="1009" y="438" fill="#7dd3fc" font-size="11" font-weight="700">Work</text>
+
+<ellipse cx="1175" cy="472" rx="50" ry="16" fill="rgba(125,211,252,0.10)" stroke="#7dd3fc" stroke-width="1.2"/>
+<text x="1158" y="466" fill="#7dd3fc" font-size="11" font-weight="700">Call</text>
+
+<ellipse cx="1188" cy="476" rx="26" ry="8" fill="rgba(125,211,252,0.18)" stroke="#7dd3fc" stroke-width="1"/>
+<text x="1170" y="479" fill="#7dd3fc" font-size="9" font-weight="600">ApiCall</text>
+
+<polygon points="940,445 940,475 880,475 855,460 880,445" fill="url(#ov-apidef-grad-passive)" stroke="#fcd34d" stroke-width="1.5"/>
+<text x="884" y="465" fill="#fef3c7" font-size="11" font-weight="600">ApiDef</text>
+
+<!-- Passive 2 outgoing Tag chain (모두 viewBox 안에) -->
+<polygon points="1290,470 1290,486 1308,478" fill="url(#ov-tag-front-1)" stroke="#7dd3fc" stroke-width="1"/>
+<line x1="1310" y1="478" x2="1352" y2="478" stroke="#7dd3fc" stroke-width="2" stroke-dasharray="5 3"/>
+<polygon points="1366,472 1366,484 1354,484 1352,478 1354,472" fill="rgba(115,80,25,0.6)" stroke="#fcd34d" stroke-width="1"/>
+<text x="1310" y="504" fill="#9bcaff" font-size="9" font-style="italic">→ DsSystem</text>
+
+<!-- ════════════ Bottom legend ════════════ -->
+
+<line x1="240" y1="600" x2="350" y2="600" stroke="#3cd58a" stroke-width="2.5" marker-end="url(#ov-arr-green)"/>
+<text x="246" y="620" fill="#3cd58a" font-size="13" font-weight="700">ArrowWork</text>
+
+
+<line x1="450" y1="600" x2="560" y2="600" stroke="#ffd17a" stroke-width="2.5" marker-end="url(#ov-arr-orange)"/>
+<text x="450" y="620" fill="#ffa454" font-size="13" font-weight="700">ArrowCall</text>
+
+<line x1="700" y1="600" x2="810" y2="600" stroke="#7dd3fc" stroke-width="3" stroke-dasharray="8 4"/>
+<text x="700" y="620" fill="#7dd3fc" font-size="13" font-weight="700">Tag-Pair Bus</text>
+
+<!-- ════════════ Highlight enhancements (halo + callouts) ════════════ -->
+
+  <rect x="940" y="540" width="170" height="24" rx="12" fill="#cf222e"
+        stroke="#ff8585" stroke-width="1.5" filter="url(#overview-glow)"/>
+  <text x="1025" y="557" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">★ Device (Passive ×2)</text>
+</svg></div>
+  <h3 style="margin:18px 0 4px 0; color:#0550ae; font-size:1rem;">엔티티 상세 / Entity Detail — 내부 구조 · 동작</h3>
+  <div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500">
+<defs>
+  <!-- State machine gradients -->
+  <radialGradient id="grad-r" cx="0.35" cy="0.35" r="0.7">
+    <stop offset="0" stop-color="#3fb950"/>
+    <stop offset="1" stop-color="#116329"/>
+  </radialGradient>
+  <radialGradient id="grad-g" cx="0.35" cy="0.35" r="0.7">
+    <stop offset="0" stop-color="#fb8500"/>
+    <stop offset="1" stop-color="#a04100"/>
+  </radialGradient>
+  <radialGradient id="grad-f" cx="0.35" cy="0.35" r="0.7">
+    <stop offset="0" stop-color="#54aeff"/>
+    <stop offset="1" stop-color="#0550ae"/>
+  </radialGradient>
+  <radialGradient id="grad-h" cx="0.35" cy="0.35" r="0.7">
+    <stop offset="0" stop-color="#a4adb8"/>
+    <stop offset="1" stop-color="#4f5660"/>
+  </radialGradient>
+
+  <!-- Card gradients -->
+  <linearGradient id="card-blue" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ddf4ff"/>
+    <stop offset="1" stop-color="#b6e3ff"/>
+  </linearGradient>
+  <linearGradient id="card-green" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#dafbe1"/>
+    <stop offset="1" stop-color="#aceebb"/>
+  </linearGradient>
+  <linearGradient id="card-amber" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#fff8c5"/>
+    <stop offset="1" stop-color="#f7e07a"/>
+  </linearGradient>
+  <linearGradient id="card-purple" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#fbefff"/>
+    <stop offset="1" stop-color="#ecd5ff"/>
+  </linearGradient>
+  <linearGradient id="card-red" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ffebe9"/>
+    <stop offset="1" stop-color="#ffcecb"/>
+  </linearGradient>
+
+  <!-- Drop shadow -->
+  <filter id="dshadow" x="-10%" y="-10%" width="120%" height="120%">
+    <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="rgba(15,30,60,0.18)"/>
+  </filter>
+  <filter id="dshadow-strong" x="-10%" y="-10%" width="120%" height="120%">
+    <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="rgba(15,30,60,0.25)"/>
+  </filter>
+
+  <!-- Arrow markers -->
+  <marker id="m-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#0969da"/>
+  </marker>
+  <marker id="m-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#1a7f37"/>
+  </marker>
+  <marker id="m-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#bc4c00"/>
+  </marker>
+  <marker id="m-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#cf222e"/>
+  </marker>
+  <marker id="m-purple" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#7c3aed"/>
+  </marker>
+  <marker id="m-gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+    <path d="M0,0 L10,5 L0,10 z" fill="#656d76"/>
+  </marker>
+
+  <!-- Common text styles -->
   <style>
-    .box      { fill:#fff; stroke:#0969da; stroke-width:2; }
-    .box-act  { fill:#dafbe1; stroke:#1a7f37; stroke-width:2; }
-    .box-dev  { fill:#fff8c5; stroke:#9a6700; stroke-width:2; }
-    .box-call { fill:#ddf4ff; stroke:#0969da; stroke-width:2; }
-    .box-tok  { fill:#fdd; stroke:#cf222e; stroke-width:2; }
-    .lbl      { font:13px ui-sans-serif,system-ui,sans-serif; fill:#1f2328; }
-    .lbl-bold { font:bold 14px ui-sans-serif,system-ui,sans-serif; fill:#1f2328; }
-    .meta     { font:11px ui-sans-serif,system-ui,sans-serif; fill:#656d76; }
-    .state    { fill:#0969da; }
-    .state-r  { fill:#1a7f37; }
-    .state-g  { fill:#bc4c00; }
-    .state-f  { fill:#0969da; }
-    .state-h  { fill:#656d76; }
-    .arrow    { stroke:#0969da; stroke-width:2; fill:none; marker-end:url(#arrow); }
-    .arrow-o  { stroke:#bc4c00; stroke-width:2; fill:none; marker-end:url(#arrow-orange); }
+    .d-title    { font: 700 18px Inter, 'Segoe UI', system-ui, sans-serif; fill: #0550ae; }
+    .d-subtitle { font: italic 12px Inter, 'Segoe UI', system-ui, sans-serif; fill: #656d76; }
+    .d-section  { font: 700 13px Inter, 'Segoe UI', system-ui, sans-serif; fill: #1f2328; }
+    .d-label    { font: 600 13px Inter, 'Segoe UI', system-ui, sans-serif; fill: #1f2328; }
+    .d-text     { font: 12px Inter, 'Segoe UI', system-ui, sans-serif; fill: #1f2328; }
+    .d-meta     { font: 11px Inter, 'Segoe UI', system-ui, sans-serif; fill: #656d76; }
+    .d-tiny     { font: 10px Inter, 'Segoe UI', system-ui, sans-serif; fill: #656d76; }
+    .d-mono     { font: 11px ui-monospace, 'SF Mono', Consolas, monospace; fill: #6f42c1; }
+    .d-mono-key { font: 600 11px ui-monospace, 'SF Mono', Consolas, monospace; fill: #0550ae; }
+    .d-state-name { font: 700 32px Inter, system-ui, sans-serif; fill: #fff; text-anchor: middle; }
+    .d-state-sub  { font: 600 10px Inter, system-ui, sans-serif; fill: rgba(255,255,255,0.95); text-anchor: middle; }
+    .d-cond     { font: 600 11px Inter, system-ui, sans-serif; fill: #1f2328; text-anchor: middle; }
   </style>
 </defs>
 
-      <rect class="box-dev" x="40" y="20" width="400" height="240" rx="8"/>
-      <text class="lbl-bold" x="60" y="50">Device "Cylinder1" (passive)</text>
-      <text class="meta" x="60" y="70">SystemType: Cylinder_2</text>
+  <rect width="960" height="500" fill="#fdfdff"/>
+  <text x="36" y="38" class="d-title">🔧 Device (Passive DsSystem) — API 계약 + I/O Tag 매핑</text>
+  <text x="36" y="58" class="d-subtitle">Active 가 호출하는 시스템 — ApiDefs 노출 + IOTags 로 PLC 주소 바인딩</text>
 
-      <text class="meta" x="60" y="100">Exposed APIs (ApiDef)</text>
-      <rect class="box" x="60"  y="115" width="110" height="40" rx="6"/><text class="lbl" x="92"  y="140">ADV</text>
-      <rect class="box" x="190" y="115" width="110" height="40" rx="6"/><text class="lbl" x="222" y="140">RET</text>
-      <rect class="box" x="320" y="115" width="110" height="40" rx="6"/><text class="lbl" x="343" y="140">DETECT</text>
+  <!-- Device header -->
+  <rect x="36" y="80" width="888" height="60" rx="6" fill="url(#card-amber)" stroke="#9a6700" stroke-width="2" filter="url(#dshadow)"/>
+  <text x="60" y="106" class="d-section" fill="#9a6700" font-size="16">Device "Cylinder1" (passive)</text>
+  <text x="60" y="125" class="d-mono">SystemType="Cylinder_2" · IRI="https://factory.example.com/devices/cyl-1" · Make: Festo</text>
 
-      <text class="meta" x="60" y="190">Tags</text>
-      <text class="lbl"  x="60" y="215">LS_Adv1, LS_Ret1, SOL_Adv, SOL_Ret …</text>
-    </svg></div>
+  <!-- Section: Exposed APIs -->
+  <text x="36" y="172" class="d-section">노출 APIs (apiDefs[*]) — 외부 시스템이 호출 가능한 메서드</text>
+  <line x1="36" y1="180" x2="924" y2="180" stroke="#d0d7de"/>
+
+  <g transform="translate(36, 192)">
+    <!-- ADV -->
+    <rect x="0" y="0" width="210" height="86" rx="6" fill="#fff" stroke="#9a6700" stroke-width="1.5" filter="url(#dshadow)"/>
+    <polygon points="0,12 -16,30 0,48 0,12" fill="url(#card-amber)" stroke="#9a6700" stroke-width="1.5"/>
+    <text x="14" y="22" class="d-label" fill="#9a6700">ADV</text>
+    <text x="14" y="40" class="d-tiny">Advance / 전진</text>
+    <text x="14" y="58" class="d-mono">action: <tspan fill="#0550ae">Pulse</tspan></text>
+    <text x="14" y="74" class="d-mono">timeout: 2000ms</text>
+
+    <!-- RET -->
+    <rect x="226" y="0" width="210" height="86" rx="6" fill="#fff" stroke="#9a6700" stroke-width="1.5" filter="url(#dshadow)"/>
+    <polygon points="226,12 210,30 226,48 226,12" fill="url(#card-amber)" stroke="#9a6700" stroke-width="1.5"/>
+    <text x="240" y="22" class="d-label" fill="#9a6700">RET</text>
+    <text x="240" y="40" class="d-tiny">Retract / 후진</text>
+    <text x="240" y="58" class="d-mono">action: <tspan fill="#0550ae">Pulse</tspan></text>
+    <text x="240" y="74" class="d-mono">timeout: 2000ms</text>
+
+    <!-- DETECT -->
+    <rect x="452" y="0" width="210" height="86" rx="6" fill="#fff" stroke="#9a6700" stroke-width="1.5" filter="url(#dshadow)"/>
+    <polygon points="452,12 436,30 452,48 452,12" fill="url(#card-amber)" stroke="#9a6700" stroke-width="1.5"/>
+    <text x="466" y="22" class="d-label" fill="#9a6700">DETECT</text>
+    <text x="466" y="40" class="d-tiny">Sense object / 감지</text>
+    <text x="466" y="58" class="d-mono">action: <tspan fill="#0550ae">Normal</tspan></text>
+    <text x="466" y="74" class="d-mono">→ BOOL result</text>
+
+    <!-- HOME -->
+    <rect x="678" y="0" width="210" height="86" rx="6" fill="#fff" stroke="#9a6700" stroke-width="1.5" filter="url(#dshadow)"/>
+    <polygon points="678,12 662,30 678,48 678,12" fill="url(#card-amber)" stroke="#9a6700" stroke-width="1.5"/>
+    <text x="692" y="22" class="d-label" fill="#9a6700">HOME</text>
+    <text x="692" y="40" class="d-tiny">Reset to home / 원점</text>
+    <text x="692" y="58" class="d-mono">action: <tspan fill="#0550ae">Time(3000)</tspan></text>
+    <text x="692" y="74" class="d-mono">3s 후 자동 완료</text>
+  </g>
+
+  <!-- Section: I/O Tag Table -->
+  <text x="36" y="316" class="d-section">I/O Tags — Semantic ⊕ PhysicalBinding (Duality Case 7)</text>
+  <line x1="36" y1="324" x2="924" y2="324" stroke="#d0d7de"/>
+
+  <!-- Table header -->
+  <rect x="36" y="334" width="888" height="28" rx="4" fill="#f6f8fa" stroke="#d0d7de"/>
+  <text x="50" y="352" class="d-meta" font-weight="700">SEMANTIC NAME</text>
+  <text x="200" y="352" class="d-meta" font-weight="700">DIRECTION</text>
+  <text x="320" y="352" class="d-meta" font-weight="700">PLC ADDRESS</text>
+  <text x="500" y="352" class="d-meta" font-weight="700">DATA TYPE</text>
+  <text x="610" y="352" class="d-meta" font-weight="700">USED BY API</text>
+  <text x="780" y="352" class="d-meta" font-weight="700">ROLE</text>
+
+  <!-- Rows -->
+  <g font-family="ui-monospace, Consolas, monospace" font-size="11">
+    <rect x="36" y="362" width="888" height="24" fill="#fff" stroke="#d0d7de" stroke-width="0.5"/>
+    <text x="50" y="378" fill="#0550ae" font-weight="600">LS_Adv1</text>
+    <text x="200" y="378" fill="#1a7f37">Input ▶</text>
+    <text x="320" y="378" fill="#1f2328">%IX0.0</text>
+    <text x="500" y="378" fill="#cf222e">BOOL</text>
+    <text x="610" y="378" fill="#0550ae">ADV</text>
+    <text x="780" y="378" fill="#656d76">limit switch (전진완)</text>
+
+    <rect x="36" y="386" width="888" height="24" fill="#f6f8fa" stroke="#d0d7de" stroke-width="0.5"/>
+    <text x="50" y="402" fill="#0550ae" font-weight="600">LS_Ret1</text>
+    <text x="200" y="402" fill="#1a7f37">Input ▶</text>
+    <text x="320" y="402" fill="#1f2328">%IX0.1</text>
+    <text x="500" y="402" fill="#cf222e">BOOL</text>
+    <text x="610" y="402" fill="#0550ae">RET</text>
+    <text x="780" y="402" fill="#656d76">limit switch (후진완)</text>
+
+    <rect x="36" y="410" width="888" height="24" fill="#fff" stroke="#d0d7de" stroke-width="0.5"/>
+    <text x="50" y="426" fill="#0550ae" font-weight="600">SOL_Adv</text>
+    <text x="200" y="426" fill="#bc4c00">Output ◀</text>
+    <text x="320" y="426" fill="#1f2328">%QX0.0</text>
+    <text x="500" y="426" fill="#cf222e">BOOL</text>
+    <text x="610" y="426" fill="#0550ae">ADV</text>
+    <text x="780" y="426" fill="#656d76">solenoid trigger</text>
+
+    <rect x="36" y="434" width="888" height="24" fill="#f6f8fa" stroke="#d0d7de" stroke-width="0.5"/>
+    <text x="50" y="450" fill="#0550ae" font-weight="600">SOL_Ret</text>
+    <text x="200" y="450" fill="#bc4c00">Output ◀</text>
+    <text x="320" y="450" fill="#1f2328">%QX0.1</text>
+    <text x="500" y="450" fill="#cf222e">BOOL</text>
+    <text x="610" y="450" fill="#0550ae">RET</text>
+    <text x="780" y="450" fill="#656d76">solenoid trigger</text>
+  </g>
+
+  <text x="36" y="490" class="d-tiny">★ ApiDefActionType: Normal · Push · Pulse · Time(ms) — 디바이스 동작 타입에 따라 Tx/Rx 시그널 패턴 결정</text>
+</svg></div>
 
   <div class="card"><strong>상속 체인 / Inheritance:</strong> <a href="https://github.com/DualsoftDev/ds2/blob/master/Solutions/Core/Ds2.Core/AbstractClass.fs" target="_blank">DsEntity</a></div>
 <h2>F# 타입 정의 / Type Definition</h2>

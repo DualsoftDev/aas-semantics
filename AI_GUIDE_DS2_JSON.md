@@ -6,7 +6,7 @@
 > 2. **출력 결과물은 항상 `*.ds2.json` 한 파일.**
 > 3. 사용자가 그 파일을 **Promaker** 에 열어서 (File → Open) 검토한 뒤, GUI 의 *Save As → AASX* 메뉴로 자동 패키징한다.
 > 4. ds2 ↔ AASX 변환은 사용자 도구가 책임진다. AI 는 절대 변환을 시도하지 말라.
-> 5. **`technicalData` 필드는 생성하지 말라.** 시뮬 결과 박제용 메타데이터로, Promaker 가 시뮬 후 자동 생성한다.
+> 5. **AAS 표준/시뮬레이션 메타 필드는 생성하지 말라.** `nameplate`, `handoverDocumentation`, `technicalData`, `simulationResult` 는 Promaker/AASX export 가 템플릿 또는 시뮬레이션 결과에서 채운다.
 
 ---
 
@@ -83,7 +83,7 @@ Call.apiCalls[].originFlowId  → Flow.id       (이 ApiCall 이 속한 Active F
   "tokenSpecs":       []
 }
 ```
-> ❌ `technicalData` 는 생성하지 말 것 — 시뮬 결과 박제 영역. Promaker 가 시뮬 후 자동 채움.
+> ❌ `nameplate`, `handoverDocumentation`, `technicalData`, `simulationResult` 는 생성하지 말 것 — AASX 표준 Submodel 또는 SequenceSimulation 박제 영역이다.
 
 ### system (Active 시퀀스 또는 Passive 디바이스)
 ```json
@@ -95,7 +95,7 @@ Call.apiCalls[].originFlowId  → Flow.id       (이 ApiCall 이 속한 Active F
 }
 ```
 - `systemType` 권장 값:
-  - **Active 시스템**: 보통 생략 또는 `"Unit"`.
+  - **Active 시스템**: `"Unit"` 또는 설비 타입명. 생략하면 구버전 호환 마이그레이션에서 기본 디바이스 타입이 들어갈 수 있으므로 명시 권장.
   - **Passive 디바이스**: `"Unit"`, `"Cylinder_1".."Cylinder_10"`, `"RobotWeldGrip"`, `"Part"` 등.
 
 ### flow
@@ -274,7 +274,7 @@ ArrowWorks: parentId=S1.id, sourceId=F1.W1, targetId=F2.W1, arrowType=3 (StartRe
 - [ ] 모든 `call.apiCalls[].originFlowId` = Active `flow.id`.
 - [ ] 컬렉션 키와 값의 `id` 동일.
 - [ ] `position`: `x`, `y`, `w`, `h` (소문자 단일 글자).
-- [ ] `technicalData` 필드 **없음** (시뮬 결과는 Promaker 가 채움).
+- [ ] `nameplate`/`handoverDocumentation`/`technicalData`/`simulationResult` 필드 **없음**.
 
 ---
 
@@ -287,7 +287,7 @@ ArrowWorks: parentId=S1.id, sourceId=F1.W1, targetId=F2.W1, arrowType=3 (StartRe
 | `position: { Width:120, Height:40 }`         | `position: { x:.., y:.., w:120, h:40 }`   |
 | `arrowWorks.parentId = flow.id`             | `arrowWorks.parentId = system.id`         |
 | `apiCalls` 를 별도 최상위 컬렉션으로        | 각 Call 안에 `apiCalls:[...]` 인라인       |
-| `technicalData` 채워서 출력                 | `technicalData` 필드 자체 출력하지 않음   |
+| `technicalData`/`simulationResult` 채워서 출력 | 해당 필드 자체 출력하지 않음              |
 | `apiDefActionType: "Normal"` (문자열)       | `apiDefActionType: { "Case": "Normal" }` |
 | `inputSpec: null`                           | `inputSpec: { "Case": "UndefinedValue" }` |
 | `duration: 500` 또는 `"500ms"`              | `duration: "00:00:00.5000000"`            |
@@ -302,4 +302,4 @@ ArrowWorks: parentId=S1.id, sourceId=F1.W1, targetId=F2.W1, arrowType=3 (StartRe
 
 ## LLM system prompt 한 줄 요약
 
-> *Your output for any DS2/sequence-control modeling request must be a single `*.ds2.json` file conforming to the DsStore schema in `AI_GUIDE_DS2_JSON.md`. Use **camelCase keys**. ArrowBetweenWorks `parentId` is the **System** id (not Flow). **DO NOT produce `.aasx`** and **DO NOT include `technicalData`** — the user opens the JSON in Promaker which packages AASX and fills simulation data.*
+> *Your output for any DS2/sequence-control modeling request must be a single `*.ds2.json` file conforming to the DsStore schema in `AI_GUIDE_DS2_JSON.md`. Use **camelCase keys**. ArrowBetweenWorks `parentId` is the **System** id (not Flow). **DO NOT produce `.aasx`** and **DO NOT include `nameplate`, `handoverDocumentation`, `technicalData`, or `simulationResult`** — the user opens the JSON in Promaker which packages AASX and fills standard/simulation data.*

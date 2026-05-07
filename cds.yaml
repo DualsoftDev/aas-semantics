@@ -34,7 +34,7 @@ cds:
     en: "Active system"
     de: "Aktives System"
     ko: "활성 시스템"
-    defEn: "Active control system (plant / line / cell) composed of flows and devices."
+    defEn: "Active control system (plant/line/cell) composed of flows and devices"
     defDe: "Aktives Steuersystem (Anlage/Linie/Zelle) bestehend aus Flows und Geräten."
     defKo: "Flow 와 Device 로 구성된 능동 제어 시스템 (설비/라인/셀)."
     dataType: "STRING"
@@ -145,9 +145,9 @@ cds:
     en: "Simulation submodel"
     de: "Simulations-Submodel"
     ko: "시뮬레이션 서브모델"
-    defEn: "Submodel carrying simulation properties for each System / Flow / Work / Call, plus the embedded SimulationResult snapshot (meta + KPI groups). Previously embedded under TechnicalData; relocated for AAS standard SM separation."
-    defDe: "Submodel mit Simulationseigenschaften je System / Flow / Work / Call sowie eingebettetem SimulationResult-Snapshot (Meta + KPI-Gruppen). Zuvor in TechnicalData; gemäß AAS-Standardtrennung verlagert."
-    defKo: "System / Flow / Work / Call 별 시뮬레이션 속성 + SimulationResult 박제(메타 + KPI 그룹) 를 함께 보유. 이전엔 TechnicalData 안에 있었으나 AAS 표준 SM 분리 정책에 따라 이전됨."
+    defEn: "Submodel carrying simulation properties for each System/Flow/Work/Call"
+    defDe: "Submodel mit Simulationseigenschaften je System/Flow/Work/Call"
+    defKo: "System/Flow/Work/Call 별 시뮬레이션 속성을 담는 서브모델"
     dataType: "STRING"
 
   - path: "sm/SequenceControl/1/0"
@@ -165,9 +165,9 @@ cds:
     en: "Monitoring submodel"
     de: "Monitoring-Submodel"
     ko: "모니터링 서브모델"
-    defEn: "Submodel carrying monitoring properties (alarm / trend / status)."
-    defDe: "Submodel mit Monitoring-Eigenschaften (Alarm / Trend / Status)."
-    defKo: "모니터링 속성을 담는 서브모델 (알람 / 트렌드 / 상태)."
+    defEn: "Submodel carrying monitoring properties (alarm/trend/status)"
+    defDe: "Submodel mit Monitoring-Eigenschaften (Alarm/Trend/Status)"
+    defKo: "모니터링 속성을 담는 서브모델 (알람/트렌드/상태)"
     dataType: "STRING"
 
   - path: "sm/SequenceLogging/1/0"
@@ -197,7 +197,7 @@ cds:
     ko: "HMI 서브모델"
     defEn: "Submodel carrying HMI properties (screens, aliases, controls)."
     defDe: "Submodel mit HMI-Eigenschaften (Bildschirme, Aliase, Bedienelemente)."
-    defKo: "HMI 속성을 담는 서브모델 (화면 / 별칭 / 조작 요소)."
+    defKo: "HMI 속성을 담는 서브모델 (화면/별칭/조작 요소)"
     dataType: "STRING"
 
   - path: "sm/SequenceQuality/1/0"
@@ -207,7 +207,7 @@ cds:
     ko: "품질 서브모델"
     defEn: "Submodel carrying quality properties (inspection, SPC, defects)."
     defDe: "Submodel mit Qualitätseigenschaften (Inspektion, SPC, Defekte)."
-    defKo: "품질 속성을 담는 서브모델 (검사 / SPC / 결함)."
+    defKo: "품질 속성을 담는 서브모델 (검사/SPC/결함)"
     dataType: "STRING"
 
   - path: "sm/SequenceCostAnalysis/1/0"
@@ -215,9 +215,9 @@ cds:
     en: "Cost analysis submodel"
     de: "Kostenanalyse-Submodel"
     ko: "비용 분석 서브모델"
-    defEn: "Submodel carrying cost analysis properties (material / labor / overhead costs)."
+    defEn: "Submodel carrying cost analysis properties (material/labor/overhead costs)"
     defDe: "Submodel mit Kostenanalyse-Eigenschaften (Materialkosten, Arbeitskosten, Gemeinkosten)."
-    defKo: "비용 분석 속성을 담는 서브모델 (재료비 / 인건비 / 간접비)."
+    defKo: "비용 분석 속성을 담는 서브모델 (재료비/인건비/간접비)"
     dataType: "STRING"
 
   # ── SIMULATION (9) ───────────────────────────────────────────────────────
@@ -225,7 +225,7 @@ cds:
   #       단일 진실 원천을 공유. 텍스트(en/de/ko/def*) 는 소스와 일치시킨다.
   #
   # PLACEMENT: 모든 sim/* CD 는 SequenceSimulation 서브모델(SeqSimSm) 안의
-  #            SimulationResult SMC (top-level) 하위에서 참조됨.
+  #            SystemProperties / SimulationResult SMC 하위에서 참조됨.
   #            (이전엔 TechnicalData 서브모델 안에 있었음 — AAS 표준 SM 분리에 따라 이동)
   - path: "sim/Result/1/0"
     idShort: "SimResult"

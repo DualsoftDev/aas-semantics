@@ -36,6 +36,67 @@
     .pill { display: inline-block; padding: 1px 8px; border-radius: 12px; font-size: 0.72rem; font-weight: 600;
             background: #ddf4ff; color: #0969da; margin-left: 6px; vertical-align: middle; }
     .pill-state { background: #fff8c5; color: #9a6700; }
+    /* === Phase 0 enrichment: scenarios / vendors / IDTA / events / KPI / standards / related / appendix === */
+    .scenario-card { background: #fff; border: 1px solid #d0d7de; border-radius: 8px; padding: 14px 16px; margin: 12px 0; }
+    .scenario-header { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .scenario-domain { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; background: #ddf4ff; color: #0969da; }
+    .scenario-system { font-weight: 600; color: #1f2328; }
+    .scenario-meta { color: #656d76; font-size: 0.85rem; }
+    .scenario-body { font-size: 0.9rem; color: #1f2328; line-height: 1.55; }
+    .call-strip { display: flex; gap: 6px; margin-top: 8px; flex-wrap: wrap; }
+    .call-chip { background: #f6f8fa; border: 1px solid #d0d7de; border-radius: 6px; padding: 4px 10px; font-size: 0.8rem; }
+    .call-chip .call-dur { color: #656d76; font-size: 0.75rem; margin-left: 6px; }
+    .vendor-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+    .vendor-card { background: #fff; border: 1px solid #d0d7de; border-radius: 6px; padding: 10px 12px; }
+    .vendor-card .v-name { font-weight: 600; color: #0550ae; font-size: 0.85rem; margin-bottom: 6px; }
+    .vendor-card code { display: block; margin: 2px 0; font-size: 0.78rem; background: #eef1f4; padding: 2px 6px; border-radius: 3px; }
+    .iota-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; margin: 8px 0; }
+    .iota-table th, .iota-table td { padding: 6px 8px; border: 1px solid #d0d7de; text-align: left; vertical-align: top; }
+    .iota-table th { background: #f6f8fa; color: #656d76; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.4px; }
+    .iota-table td.idShort { font-family: ui-monospace, Consolas, monospace; color: #0550ae; font-weight: 600; white-space: nowrap; }
+    .iota-table td.semId { font-family: ui-monospace, Consolas, monospace; color: #6f42c1; font-size: 0.7rem; word-break: break-all; }
+    .iota-table td.vt { font-family: ui-monospace, Consolas, monospace; color: #0a3069; font-size: 0.78rem; }
+    .iota-table td.mult { text-align: center; font-family: ui-monospace, Consolas, monospace; color: #1a7f37; font-size: 0.78rem; }
+    .event-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin: 10px 0; }
+    .event-card { background: #f6f8fa; border-left: 3px solid #0969da; border-radius: 4px; padding: 10px 12px; }
+    .event-card .ev-name { font-weight: 600; color: #0550ae; font-size: 0.85rem; }
+    .event-card .ev-params { color: #656d76; font-size: 0.78rem; margin-top: 4px; font-family: ui-monospace, Consolas, monospace; }
+    .event-card .ev-use { color: #1f2328; font-size: 0.8rem; margin-top: 6px; }
+    .kpi-formula { background: #fff; border: 2px solid #0969da; border-radius: 8px; padding: 14px 18px; margin: 10px 0; text-align: center; }
+    .kpi-formula .expr { font-family: 'Cambria Math', Georgia, serif; font-size: 1.15rem; color: #0550ae; font-weight: 600; }
+    .kpi-formula .source { color: #656d76; font-size: 0.78rem; margin-top: 6px; }
+    .kpi-components { margin-top: 12px; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; text-align: left; }
+    .kpi-comp-card { background: #f6f8fa; border-radius: 6px; padding: 8px 10px; font-size: 0.82rem; }
+    .kpi-comp-card .sym { font-weight: 600; color: #0550ae; }
+    .kpi-comp-card .formula { font-family: ui-monospace, Consolas, monospace; color: #6f42c1; font-size: 0.78rem; margin-top: 2px; }
+    .kpi-example { background: #dafbe1; border-left: 4px solid #1a7f37; border-radius: 4px; padding: 10px 14px; margin-top: 10px; font-size: 0.88rem; }
+    .kpi-example .calc { font-family: 'Cambria Math', Georgia, serif; font-size: 1rem; color: #1f2328; margin: 6px 0; }
+    .kpi-example .result { font-weight: 700; color: #1a7f37; font-size: 1.1rem; }
+    .standards-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0; }
+    .std-badge { background: #fff8c5; color: #9a6700; border: 1px solid #d4a72c; padding: 3px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; }
+    .std-badge a { color: inherit; text-decoration: none; }
+    .std-badge .scope { font-weight: 400; color: #6e5500; }
+    .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 8px; margin: 8px 0; }
+    .related-card { background: #fff; border: 1px solid #d0d7de; border-radius: 6px; padding: 8px 12px; transition: border-color 0.15s; }
+    .related-card:hover { border-color: #0969da; }
+    .related-card a { display: block; text-decoration: none; }
+    .related-card .r-name { font-weight: 600; color: #0550ae; font-size: 0.88rem; }
+    .related-card .r-desc { color: #656d76; font-size: 0.78rem; margin-top: 3px; }
+    .appendix-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; }
+    .appendix-card { background: linear-gradient(135deg, #ddf4ff, #fff); border: 1px solid #0969da; border-radius: 8px; padding: 10px 14px; }
+    .appendix-card a { text-decoration: none; color: #0550ae; font-weight: 600; }
+    .appendix-card .a-desc { color: #1f2328; font-size: 0.82rem; margin-top: 4px; font-weight: 400; }
+    .timing-strip { background: #fff; border: 1px solid #d0d7de; border-radius: 6px; padding: 10px; margin: 10px 0; overflow-x: auto; }
+    .timing-strip table { border-collapse: collapse; font-size: 0.78rem; }
+    .timing-strip td { padding: 4px 10px; text-align: center; border: 1px solid #d0d7de; min-width: 36px; font-family: ui-monospace, Consolas, monospace; }
+    .timing-strip th { padding: 4px 10px; background: #f6f8fa; text-align: center; font-weight: 600; font-size: 0.72rem; color: #656d76; text-transform: uppercase; }
+    .timing-strip td.r { background: #dafbe1; color: #1a7f37; font-weight: 600; }
+    .timing-strip td.g { background: #ffd8b5; color: #bc4c00; font-weight: 600; }
+    .timing-strip td.f { background: #ddf4ff; color: #0969da; font-weight: 600; }
+    .timing-strip td.h { background: #eaeef2; color: #656d76; font-weight: 600; }
+    .timing-strip td.sig1 { background: #ffeaea; color: #cf222e; font-weight: 700; }
+    .timing-strip td.row-label { background: #f6f8fa; font-weight: 600; color: #1f2328; text-align: left; padding-left: 12px; padding-right: 14px; }
+    .section-sub { color: #656d76; font-size: 0.95rem; margin: 14px 0 6px 0; font-weight: 600; }
   </style>
 </head>
 <body>
@@ -71,9 +132,124 @@
     </div>
   </div>
 
-  
+  <h2>다이어그램 / Diagram</h2>
+  <div class="diagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L10,5 L0,10 Z" fill="#0969da"/>
+  </marker>
+  <marker id="arrow-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+    <path d="M0,0 L10,5 L0,10 Z" fill="#bc4c00"/>
+  </marker>
+  <style>
+    .box      { fill:#fff; stroke:#0969da; stroke-width:2; }
+    .box-act  { fill:#dafbe1; stroke:#1a7f37; stroke-width:2; }
+    .box-dev  { fill:#fff8c5; stroke:#9a6700; stroke-width:2; }
+    .box-call { fill:#ddf4ff; stroke:#0969da; stroke-width:2; }
+    .box-tok  { fill:#fdd; stroke:#cf222e; stroke-width:2; }
+    .lbl      { font:13px ui-sans-serif,system-ui,sans-serif; fill:#1f2328; }
+    .lbl-bold { font:bold 14px ui-sans-serif,system-ui,sans-serif; fill:#1f2328; }
+    .meta     { font:11px ui-sans-serif,system-ui,sans-serif; fill:#656d76; }
+    .state    { fill:#0969da; }
+    .state-r  { fill:#1a7f37; }
+    .state-g  { fill:#bc4c00; }
+    .state-f  { fill:#0969da; }
+    .state-h  { fill:#656d76; }
+    .arrow    { stroke:#0969da; stroke-width:2; fill:none; marker-end:url(#arrow); }
+    .arrow-o  { stroke:#bc4c00; stroke-width:2; fill:none; marker-end:url(#arrow-orange); }
+  </style>
+</defs>
 
-  
+      <rect class="box" x="20" y="20" width="680" height="320" rx="8"/>
+      <text class="lbl-bold" x="40" y="50">OEE = Availability × Performance × Quality</text>
+      <text class="meta" x="40" y="72">ISO 22400-2:2014 · 종합설비효율 (Overall Equipment Effectiveness)</text>
+
+      <rect class="box-act" x="60"  y="110" width="170" height="80" rx="8"/>
+      <text class="lbl-bold" x="100" y="140" fill="#1a7f37">Availability</text>
+      <text class="meta" x="80" y="160">실제 가동 ÷ 계획 가동</text>
+      <text class="lbl" x="115" y="180" fill="#1a7f37">0.92</text>
+
+      <text class="lbl-bold" x="245" y="160">×</text>
+
+      <rect class="box-act" x="270" y="110" width="170" height="80" rx="8"/>
+      <text class="lbl-bold" x="305" y="140" fill="#bc4c00">Performance</text>
+      <text class="meta" x="290" y="160">목표 CT ÷ 실제 CT</text>
+      <text class="lbl" x="320" y="180" fill="#bc4c00">0.85</text>
+
+      <text class="lbl-bold" x="455" y="160">×</text>
+
+      <rect class="box-act" x="480" y="110" width="170" height="80" rx="8"/>
+      <text class="lbl-bold" x="525" y="140" fill="#0969da">Quality</text>
+      <text class="meta" x="500" y="160">양품 ÷ 총생산</text>
+      <text class="lbl" x="530" y="180" fill="#0969da">0.98</text>
+
+      <line class="arrow" x1="360" y1="200" x2="360" y2="240"/>
+
+      <rect class="box-tok" x="200" y="250" width="320" height="60" rx="8"/>
+      <text class="lbl-bold" x="240" y="280" fill="#cf222e" style="font-size:18px">OEE = 0.7676 (76.76%)</text>
+      <text class="meta" x="260" y="300">월드클래스 기준: ≥ 85%</text>
+    </svg></div>
+
+  <h2>F# 타입 정의 / Type Definition</h2>
+<pre><code>// Ds2.Core/SequenceSubmodels/01_Simulation.fs
+type KpiOeeItem() =
+    member val ResourceName              = &quot;&quot; with get, set
+    member val CalculationDate           = DateTime.MinValue with get, set
+    member val CalculationPeriod_s       = 0.0 with get, set
+    member val Availability              = 0.0 with get, set
+    member val Performance               = 0.0 with get, set
+    member val Quality                   = 0.0 with get, set
+    member val OEE                       = 0.0 with get, set
+    member val PlannedOperatingTime_s    = 0.0 with get, set
+    member val ActualOperatingTime_s     = 0.0 with get, set
+    member val PlannedProductionQty      = 0 with get, set
+    member val ActualProductionQty       = 0 with get, set
+    member val GoodProductQty            = 0 with get, set
+    member val DefectQty                 = 0 with get, set
+    member val TimeLoss_pct              = 0.0 with get, set
+    member val SpeedLoss_pct             = 0.0 with get, set
+    member val QualityLoss_pct           = 0.0 with get, set
+    member val TargetOEE                 = 0.0 with get, set
+    member val OeeGap                    = 0.0 with get, set
+    member val OeeClass                  = &quot;&quot; with get, set</code></pre>
+<h2>Submodel 예제 / Submodel Example (JSON)</h2>
+<div class="ds2-snippet"><h3 class="section-sub">sim/Kpi/OEE 박제 위치 — SequenceSimulation/SystemProperties/SimulationResult/KPI_OEE</h3><div class="desc">Promaker 가 시뮬 또는 실가동 데이터를 박제할 때 ds2 export 가 생성하는 OEE 그룹 형태.</div><pre><code>{
+  &quot;idShort&quot;: &quot;KPI_OEE&quot;,
+  &quot;modelType&quot;: &quot;SubmodelElementList&quot;,
+  &quot;semanticId&quot;: {
+    &quot;type&quot;: &quot;ExternalReference&quot;,
+    &quot;keys&quot;: [{&quot;type&quot;:&quot;GlobalReference&quot;,&quot;value&quot;:&quot;https://dualsoftdev.github.io/aas-semantics/sim/Kpi/OEE/1/0&quot;}]
+  },
+  &quot;value&quot;: [
+    { &quot;idShort&quot;:&quot;OeeItem&quot;, &quot;modelType&quot;:&quot;SubmodelElementCollection&quot;, &quot;value&quot;:[
+      { &quot;idShort&quot;:&quot;ResourceName&quot;,           &quot;modelType&quot;:&quot;Property&quot;,&quot;valueType&quot;:&quot;xs:string&quot;,&quot;value&quot;:&quot;PressLine&quot; },
+      { &quot;idShort&quot;:&quot;CalculationDate&quot;,        &quot;modelType&quot;:&quot;Property&quot;,&quot;valueType&quot;:&quot;xs:dateTime&quot;,&quot;value&quot;:&quot;2026-05-07T09:30:14Z&quot; },
+      { &quot;idShort&quot;:&quot;CalculationPeriod_s&quot;,    &quot;modelType&quot;:&quot;Property&quot;,&quot;valueType&quot;:&quot;xs:double&quot;,&quot;value&quot;:28800 },
+      { &quot;idShort&quot;:&quot;Availability&quot;,           &quot;modelType&quot;:&quot;Property&quot;,&quot;valueType&quot;:&quot;xs:double&quot;,&quot;value&quot;:0.92 },
+      { &quot;idShort&quot;:&quot;Performance&quot;,            &quot;modelType&quot;:&quot;Property&quot;,&quot;valueType&quot;:&quot;xs:double&quot;,&quot;value&quot;:0.85 },
+      { &quot;idShort&quot;:&quot;Quality&quot;,                &quot;modelType&quot;:&quot;Property&quot;,&quot;valueType&quot;:&quot;xs:double&quot;,&quot;value&quot;:0.98 },
+      { &quot;idShort&quot;:&quot;OEE&quot;,                    &quot;modelType&quot;:&quot;Property&quot;,&quot;valueType&quot;:&quot;xs:double&quot;,&quot;value&quot;:0.7676 },
+      { &quot;idShort&quot;:&quot;PlannedOperatingTime_s&quot;, &quot;modelType&quot;:&quot;Property&quot;,&quot;valueType&quot;:&quot;xs:double&quot;,&quot;value&quot;:28800 },
+      { &quot;idShort&quot;:&quot;ActualOperatingTime_s&quot;,  &quot;modelType&quot;:&quot;Property&quot;,&quot;valueType&quot;:&quot;xs:double&quot;,&quot;value&quot;:26496 },
+      { &quot;idShort&quot;:&quot;GoodProductQty&quot;,         &quot;modelType&quot;:&quot;Property&quot;,&quot;valueType&quot;:&quot;xs:int&quot;,   &quot;value&quot;:4725 },
+      { &quot;idShort&quot;:&quot;DefectQty&quot;,              &quot;modelType&quot;:&quot;Property&quot;,&quot;valueType&quot;:&quot;xs:int&quot;,   &quot;value&quot;:96 }
+    ]}
+  ]
+}</code></pre></div>
+<h2>KPI 산식 / Formula</h2>
+<div class="kpi-formula"><div class="expr">OEE = Availability × Performance × Quality</div><div class="source">출처: ISO 22400-2:2014 (Manufacturing operations management — KPIs Part 2)</div><div class="kpi-components"><div class="kpi-comp-card"><div class="sym">Availability (가동률)</div><div class="formula">Run Time ÷ Planned Production Time</div><div>정지·고장 시간 제외한 실제 가동 비율</div></div><div class="kpi-comp-card"><div class="sym">Performance (성능률)</div><div class="formula">(Ideal CT × Total Units) ÷ Run Time</div><div>이상 사이클타임 대비 실제 처리속도</div></div><div class="kpi-comp-card"><div class="sym">Quality (양품률)</div><div class="formula">Good Units ÷ Total Units</div><div>재작업/폐기 제외 양품 비율</div></div></div></div><div class="kpi-example"><div><strong>예제:</strong> PressLine 1 시프트 (8h) — 도금 라인 평일 야간 운영</div><div>입력: PlannedTimeMs = 28,800,000 (8h); RunTimeMs = 26,496,000 (3분 공구교체 + 휴식 제외); IdealCtMs = 4,300 / ActualCtMs avg = 5,058; GoodUnits = 4,725 / TotalUnits = 4,821</div><div class="calc">Availability=0.92 · Performance=0.85 · Quality=0.98</div><div class="result">→ OEE = 0.92 × 0.85 × 0.98 = 0.7676 (76.76%)</div></div>
+<h2>관계 / Relationships</h2>
+<div class="card"><ul class="relations"><li><code>KPI_OEE ⊂ SimulationResult</code> ← SequenceSimulation/SystemProperties 하위 <a href="../../../../../sim/Result/1/0/">sim/Result/1/0</a></li><li><code>OEEkpi ← sm/SequenceMonitoring</code> ← 모니터링 데이터로 산출 <a href="../../../../../sm/SequenceMonitoring/1/0/">sm/SequenceMonitoring/1/0</a></li><li><code>Performance ← Cycle Time</code> → 이상/실제 CT 비교 <a href="../../../../../sim/Kpi/CycleTime/1/0/">sim/Kpi/CycleTime/1/0</a></li></ul></div>
+<h2>AAS 매핑 / AAS Mapping</h2>
+<div class="card">OEEkpi CD 는 SequenceSimulation/SystemProperties/SimulationResult/KPI_OEE 에 semanticId 로 붙는다. ds2 v2026 이전엔 TechnicalData(IDTA 02003) 안에 있었으나 표준 SM 분리 정책에 따라 이전됨.</div>
+<h2>산업 표준 / Industry Standards</h2>
+<div class="standards-row"><span class="std-badge"><a href="https://www.iso.org/standard/56847.html" target="_blank">ISO 22400-2:2014<span class="scope"> · OEE 정의 단일 진실 원천</span></a></span><span class="std-badge">VDMA 66412-1<span class="scope"> · OEE 산업 가이드라인</span></span><span class="std-badge">ISA-95 (IEC 62264)<span class="scope"> · MES KPI 모델</span></span><span class="std-badge">World Class OEE<span class="scope"> · 벤치마크 ≥ 85% (이산제조)</span></span></div>
+<h2>관련 CD / Related ConceptDescriptions</h2>
+<div class="related-grid"><div class="related-card"><a href="../../../../../sim/Result/1/0/"><div class="r-name">SimResult</div><div class="r-desc">OEE 가 박제되는 컨테이너</div></a></div><div class="related-card"><a href="../../../../../sim/Kpi/CycleTime/1/0/"><div class="r-name">CTkpi</div><div class="r-desc">Performance 분자 (Ideal CT) / 분모 (Actual CT)</div></a></div><div class="related-card"><a href="../../../../../sim/Kpi/Throughput/1/0/"><div class="r-name">TPkpi</div><div class="r-desc">Capacity 와 함께 처리 능력 표현</div></a></div><div class="related-card"><a href="../../../../../sim/Kpi/ResourceUtilization/1/0/"><div class="r-name">RUkpi</div><div class="r-desc">Availability 의 보조 지표</div></a></div><div class="related-card"><a href="../../../../../sm/SequenceMonitoring/1/0/"><div class="r-name">SeqMonSm</div><div class="r-desc">OEE 산출의 원천 데이터</div></a></div><div class="related-card"><a href="../../../../../sm/SequenceQuality/1/0/"><div class="r-name">SeqQualSm</div><div class="r-desc">Quality 분자 (양품 수) 원천</div></a></div></div>
+<h2>학습 가이드 / Appendix Pages</h2>
+<div class="appendix-grid"><div class="appendix-card"><a href="../../../../../docs/duality/">📚 Duality 8 Cases</a><div class="a-desc">Case 6 (φ(θ) 위상) 으로 디지털 트윈 ↔ 실설비 동기화 판단</div></div></div>
+<h2>원본 코드 / Source files</h2>
+<div class="card"><ul><li><a href="https://github.com/DualsoftDev/ds2/blob/master/Solutions/Convert/Ds2.Aasx/Concepts/Catalog.fs" target="_blank">Catalog.fs (simulationConceptDescriptionInfos)</a></li></ul></div>
 
   <h2>AAS ConceptDescription 메타</h2>
   <div class="card">

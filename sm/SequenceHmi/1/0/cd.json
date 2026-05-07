@@ -27,7 +27,7 @@
     },
     {
       "language": "ko",
-      "text": "HMI 속성을 담는 서브모델 (화면 / 별칭 / 조작 요소)."
+      "text": "HMI 속성을 담는 서브모델 (화면/별칭/조작 요소)"
     }
   ],
   "embeddedDataSpecifications": [
@@ -74,7 +74,7 @@
           },
           {
             "language": "ko",
-            "text": "HMI 속성을 담는 서브모델 (화면 / 별칭 / 조작 요소)."
+            "text": "HMI 속성을 담는 서브모델 (화면/별칭/조작 요소)"
           }
         ],
         "dataType": "STRING"

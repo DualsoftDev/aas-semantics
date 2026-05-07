@@ -27,7 +27,7 @@
     },
     {
       "language": "ko",
-      "text": "품질 속성을 담는 서브모델 (검사 / SPC / 결함)."
+      "text": "품질 속성을 담는 서브모델 (검사/SPC/결함)"
     }
   ],
   "embeddedDataSpecifications": [
@@ -74,7 +74,7 @@
           },
           {
             "language": "ko",
-            "text": "품질 속성을 담는 서브모델 (검사 / SPC / 결함)."
+            "text": "품질 속성을 담는 서브모델 (검사/SPC/결함)"
           }
         ],
         "dataType": "STRING"

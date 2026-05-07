@@ -61,10 +61,10 @@ IDTA 표준 .aasx ───┘    (템플릿이 구조/CD/언어슬롯 정의, d
 |---|---|---|---|
 | **Entities** | [`entity/`](entity/) | 11 | ds2 핵심 엔티티 (Project · System · Device · Flow · Work · Call · ApiDef · ApiCall · TokenSpec · ArrowWork · ArrowCall) |
 | **Submodels** | [`sm/`](sm/) | 9 | ds2 자체 서브모델 (SequenceModel + 8 도메인). IDTA 표준 SM 은 본 리포 비관여 |
-| **Simulation** | [`sim/`](sim/) | 9 | 시뮬결과 박제 (Result · Meta + 7 KPI). **SequenceSimulation 서브모델 안의 SimulationResult SMC 하위에서 참조됨** |
+| **Simulation** | [`sim/`](sim/) | 9 | 시뮬결과 박제 (Result · Meta + 7 KPI). **SequenceSimulation/SystemProperties/SimulationResult SMC 하위에서 참조됨** |
 
 > **참고**: `SimulationResult` 박제는 ds2 v2026 이전에 TechnicalData (IDTA 02003) 안에 있었으나,
-> AAS 표준 SM 분리 정책에 따라 **SequenceSimulation 서브모델 (sm/SequenceSimulation/1/0)** 으로 이동했습니다.
+> AAS 표준 SM 분리 정책에 따라 **SequenceSimulation 서브모델의 `SystemProperties/SimulationResult`** 로 이동했습니다.
 
 ## CD 형식
 

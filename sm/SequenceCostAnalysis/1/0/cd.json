@@ -19,7 +19,7 @@
   "description": [
     {
       "language": "en",
-      "text": "Submodel carrying cost analysis properties (material / labor / overhead costs)."
+      "text": "Submodel carrying cost analysis properties (material/labor/overhead costs)"
     },
     {
       "language": "de",
@@ -27,7 +27,7 @@
     },
     {
       "language": "ko",
-      "text": "비용 분석 속성을 담는 서브모델 (재료비 / 인건비 / 간접비)."
+      "text": "비용 분석 속성을 담는 서브모델 (재료비/인건비/간접비)"
     }
   ],
   "embeddedDataSpecifications": [
@@ -66,7 +66,7 @@
         "definition": [
           {
             "language": "en",
-            "text": "Submodel carrying cost analysis properties (material / labor / overhead costs)."
+            "text": "Submodel carrying cost analysis properties (material/labor/overhead costs)"
           },
           {
             "language": "de",
@@ -74,7 +74,7 @@
           },
           {
             "language": "ko",
-            "text": "비용 분석 속성을 담는 서브모델 (재료비 / 인건비 / 간접비)."
+            "text": "비용 분석 속성을 담는 서브모델 (재료비/인건비/간접비)"
           }
         ],
         "dataType": "STRING"

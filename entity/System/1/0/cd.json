@@ -19,7 +19,7 @@
   "description": [
     {
       "language": "en",
-      "text": "Active control system (plant / line / cell) composed of flows and devices."
+      "text": "Active control system (plant/line/cell) composed of flows and devices"
     },
     {
       "language": "de",
@@ -66,7 +66,7 @@
         "definition": [
           {
             "language": "en",
-            "text": "Active control system (plant / line / cell) composed of flows and devices."
+            "text": "Active control system (plant/line/cell) composed of flows and devices"
           },
           {
             "language": "de",

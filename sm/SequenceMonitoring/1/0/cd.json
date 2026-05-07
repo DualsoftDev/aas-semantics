@@ -19,15 +19,15 @@
   "description": [
     {
       "language": "en",
-      "text": "Submodel carrying monitoring properties (alarm / trend / status)."
+      "text": "Submodel carrying monitoring properties (alarm/trend/status)"
     },
     {
       "language": "de",
-      "text": "Submodel mit Monitoring-Eigenschaften (Alarm / Trend / Status)."
+      "text": "Submodel mit Monitoring-Eigenschaften (Alarm/Trend/Status)"
     },
     {
       "language": "ko",
-      "text": "모니터링 속성을 담는 서브모델 (알람 / 트렌드 / 상태)."
+      "text": "모니터링 속성을 담는 서브모델 (알람/트렌드/상태)"
     }
   ],
   "embeddedDataSpecifications": [
@@ -66,15 +66,15 @@
         "definition": [
           {
             "language": "en",
-            "text": "Submodel carrying monitoring properties (alarm / trend / status)."
+            "text": "Submodel carrying monitoring properties (alarm/trend/status)"
           },
           {
             "language": "de",
-            "text": "Submodel mit Monitoring-Eigenschaften (Alarm / Trend / Status)."
+            "text": "Submodel mit Monitoring-Eigenschaften (Alarm/Trend/Status)"
           },
           {
             "language": "ko",
-            "text": "모니터링 속성을 담는 서브모델 (알람 / 트렌드 / 상태)."
+            "text": "모니터링 속성을 담는 서브모델 (알람/트렌드/상태)"
           }
         ],
         "dataType": "STRING"
